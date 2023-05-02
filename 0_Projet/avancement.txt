@@ -1,0 +1,22 @@
+Journal d'avancement du projet de jeu de plateau "le jeud du moulin":
+
+J1:
+    -Création du réseau de noeuds (place où déposer les pions)
+    -Phase 0, phase de placement:
+        -Lorsque l'on clique sur un noeud, on y dépose le pion du joueur en cours
+        -On vérifie si le joueur en cours a encore des pions à placer
+        -Tant que c'est le cas pour les deux, on continue la phase 0
+        -Vérifier que le noeud cliqué est bien vide. Si il est utilisé ET que nous sommes en phase 0
+            alors on demande au joueur de cliquer sur un autre noeuds
+            
+    -Phase 1, phase de déplacement:
+        -A faire: 
+            -Lorsque l'on clique sur un noeud, on vérifie si il est adjacent au noeud précédemment cliqué
+            -Si oui, on déplace le pion du joueur en cours sur ce noeud
+            -Si non, on demande au joueur de cliquer sur un autre noeud
+            -On pose un marqueur vert sur le noeud précédemment cliqué pour le mettre en évidence
+            -On pose la question jusqu'à ce qu'il y a un alignement de 3 pions de la même couleur
+    -A optimiser:
+        -Cela ne sert à rien d'avoir une key "color" dans le dico nodes puisqu'en tout temps, la couleur du
+            node correspond à celle du "pion" qu'il y a dessus. Au début tous les pions sont bruns.
+            Cette erreur est due à l'historique (et la flemme de réadapter)
