@@ -148,5 +148,6 @@ def create_node(node_id_start, node_size):
         nodes[node_id_start] = {"id":node_id_start,"rect": node_rect, "color": BRWON,"neighbours": [],"piece": node_piece}
         node_id_start += 1
     find_neighbours(nodes)# Find neighboring nodes
+
     return nodes
    
