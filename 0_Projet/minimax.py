@@ -1,6 +1,5 @@
 from bot import Bot
 import copy
-from common import MINIMAX, EMPTY, ROW_COUNT, COLUMN_COUNT, WINDOW_LENGTH
 import random
 import math
 
