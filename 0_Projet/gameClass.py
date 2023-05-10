@@ -92,6 +92,15 @@ class Player_manager(Setup_manager):
             return self.first_player.get_nodes_id()
         else:
             return self.second_player.get_nodes_id()
+    def current_player(self):
+        """
+            Rien de compliqué. Cette fonction permet de connaitre le joueur en cours
+        """
+        if self.who_play == 0:
+            return self.first_player
+        else:
+            return self.second_player
+        
     def ennemy_player_dict(self):
         """
             Rien de compliqué. Cette fonction permet de connaitre le dictionnaire du joueur adverse
@@ -181,11 +190,11 @@ class Board(Player_manager):
                     if isinstance(neighbour_1_data["piece"],pion_classe.Pion) and isinstance(neighbour_2_data["piece"],pion_classe.Pion):
                         if neighbour_1_data["piece"].getColor() == color and neighbour_2_data["piece"].getColor() == color:
                             #print(f'Voici les noeuds comparés ({node_data["id"]}:{color}),({neighbour_1_data["id"]},{neighbour_1_data["piece"].getColor()}),({neighbour_2_data["id"]},{neighbour_2_data["piece"].getColor()}) : first_layer_are_aligned')
-                            node_data_position = node_data["rect"].center
-                            neighbour_1_position = neighbour_1_data["rect"].center
-                            neighbour_2_position = neighbour_2_data["rect"].center
+                            node_data_position = node_data["rect"].center; node_data_id = node_data["id"]
+                            neighbour_1_position = neighbour_1_data["rect"].center; neighbour_1_id = neighbour_1_data["id"]
+                            neighbour_2_position = neighbour_2_data["rect"].center; neighbour_2_id = neighbour_2_data["id"]
                             if self.nodes_share_same_position(node_data_position,neighbour_1_position,neighbour_2_position):
-                                print("    Allignement de 3 pions en __1__ couches de la même couleur!")
+                                print(f"    Allignement de 3 pions en __1__ couches de la même couleur! {neighbour_1_id}-{node_data_id}-{neighbour_2_id}")
                                 return True
 
         ### Si aucune pair de voisins (droite-gauche ou haut-bas) n'est alignée et de même couleur, on retourne False 
@@ -212,11 +221,11 @@ class Board(Player_manager):
                             if isinstance(neighbour_2_data["piece"],pion_classe.Pion):
                                 if neighbour_2_data["color"]==color:
                                     #print(f'Voici les noeuds comparés ({node_data["id"]}:{color}),({neighbour_1_data["id"]},{neighbour_1_data["piece"].getColor()}),({neighbour_2_data["id"]},{neighbour_2_data["piece"].getColor()}) : second_layer_are_aligned')
-                                    node_data_position = node_data["rect"].center
-                                    neighbour_1_position = neighbour_1_data["rect"].center
-                                    neighbour_2_position = neighbour_2_data["rect"].center
+                                    node_data_position = node_data["rect"].center; node_data_id = node_data["id"]
+                                    neighbour_1_position = neighbour_1_data["rect"].center; neighbour_1_id = neighbour_1_data["id"]
+                                    neighbour_2_position = neighbour_2_data["rect"].center; neighbour_2_id = neighbour_2_data["id"]
                                     if self.nodes_share_same_position(node_data_position,neighbour_1_position,neighbour_2_position):
-                                        print("    Allignement de 3 pions en __2__ couches de la même couleur!")
+                                        print(f"    Allignement de 3 pions en __2__ couches de la même couleur! {node_data_id}-{neighbour_1_id}-{neighbour_2_id}")
                                         return True
     def is_in_allignement(self,node_data):
         """
@@ -267,19 +276,31 @@ class Board(Player_manager):
             Fonction qui permet de supprimer un pion ennemi
         """
         ennemy_dict = self.ennemy_player_dict()
-        random_key = random.choice(list(ennemy_dict.keys()))
-        node_data = self.nodes[random_key]
-        if not self.is_in_allignement(node_data):
-            if isinstance(node_data["piece"],pion_classe.Pion):
-                old_color = node_data["piece"].getColor()
-                node_data["piece"].setColor(BRWON)
-                node_data["color"] = BRWON
-                print(f"    ___Here's the {self.ennemy_player_name()} dict: {self.ennemy_player_dict()}")
-                print(f"    ___Le joueur {self.current_player_name()} vient de supprimer le pion {random_key} de couleur {self.translate_to_color(old_color)}")
-                self.ennemy_player_dict().pop(random_key)
-                print(f"    ___Here's the {self.ennemy_player_name()} dict: {self.ennemy_player_dict()}")
-                if len(self.ennemy_player_dict()) <= 2:
-                    self.game_over(self.current_player_name())
+        ennemy_list = list(ennemy_dict.keys())
+        
+        didnt_delete = True
+        while(didnt_delete):
+            random_key = self.current_player().choose_random_node(ennemy_list)
+            node_data = self.nodes[random_key]
+            if not self.is_in_allignement(node_data):
+                #On peut supprimer le pion car en allignement
+                if isinstance(node_data["piece"],pion_classe.Pion):
+                    old_color = node_data["piece"].getColor()
+                    node_data["piece"].setColor(BRWON)
+                    node_data["color"] = BRWON
+                    print(f"    ___Here's the {self.ennemy_player_name()} dict: {self.ennemy_player_dict()}")
+                    print(f"    ___Le joueur {self.current_player_name()} vient de supprimer le pion {random_key} de couleur {self.translate_to_color(old_color)}")
+                    self.ennemy_player_dict().pop(random_key)
+                    print(f"    ___Here's the {self.ennemy_player_name()} dict: {self.ennemy_player_dict()}")
+                    didnt_delete = False
+                    if len(self.ennemy_player_dict()) <= 2:
+                        self.game_over(self.current_player_name())
+            else:
+                print(f".\ {random_key}")
+            ennemy_list.remove(random_key)
+            
+            
+    
     def check_if_nodes_are_adjacent(self,node_data_1,node_data_2):
         """
             Rien de compliqué. Cette fonction permet de savoir si deux noeuds sont adjacents basé sur leur 
@@ -355,7 +376,8 @@ class Game(Board):
                 un nombre aléatoire entre 0 et le nombre de noeuds sur le plateau. On retourne ensuite 
                 le noeud correspondant à ce nombre.
         """
-        random_key = random.choice(list(self.nodes.keys()))
+
+        random_key = self.current_player().choose_random_node(list(self.nodes.keys()))
         my_node = self.nodes[random_key]
         return my_node
     
@@ -368,9 +390,8 @@ class Game(Board):
         node_data = self.choose_random_node_IA()
         
         while (isinstance(node_data["piece"],pion_classe.Pion) and node_data["piece"].getColor() != BRWON):
+            print(f". /{node_data['id']}")
             node_data = self.choose_random_node_IA()
-            print(".")
-            #print(f'Il a fallu séléctionner un autre noeud, le noeud : {node_data["id"]}')
 
         self.current_player_dict()[node_data["id"]] = node_data["id"]
         print(f'Le joueur {self.current_player_name()} a sélectionné le noeud: {node_data["id"]} de couleur {self.translate_to_color(node_data["piece"].getColor())}')
@@ -388,7 +409,7 @@ class Game(Board):
         print(f"l'IA {self.current_player_name()} va chercher deux noeuds à échanger")
         current_player_list_ID = list(self.current_player_dict().keys())
         while(didnt_play):
-            random_key = random.choice(current_player_list_ID)
+            random_key = self.current_player().choose_random_node(current_player_list_ID)
             my_node = self.nodes[random_key]
             for neigbour_id in my_node["neighbours"]:
                 if self.piece_can_switch(my_node,self.nodes[neigbour_id]):
