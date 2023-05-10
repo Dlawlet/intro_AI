@@ -33,8 +33,8 @@ class Setup_manager():
         self.pion_nbr = 8 #Nombre de pions par joueur
         self.first_player = Player_IA(0,RED,"RED",self.pion_nbr)
         self.second_player = Player_IA(1,BLUE,"BLUE",self.pion_nbr)
-        
 
+        self.accessible_nodes = list(self.nodes.keys()) #Liste des noeuds accessibles
         self.temp_list = [] #Permet l'échange de pions pour la deuxieme phase
     
     ### Fonction pour afficher dans le terminal
@@ -138,12 +138,12 @@ class Player_manager(Setup_manager):
         else:
             if self.second_player.get_pion_nbr() >0:
                 self.second_player.decrement_pion_nbr()
-        if self.second_player.get_pion_nbr()==0 and self.second_player.get_pion_nbr()==0:
+        if self.first_player.get_pion_nbr()==0 and self.second_player.get_pion_nbr()==0:
             
             print("\n____________________________________________________________________\n")
             print(f"Voici les noeuds utilisé par le joueur RED: {self.first_player.get_nodes_id()}")
             print(f"Voici les noeuds utilisé par le joueur BLUE : {self.second_player.get_nodes_id()}")
-            
+            print(f"Voici les noeuds accessibles : {self.accessible_nodes}")
             print("____________________On passe à la deuxieme phase!!____________________\n")
             self.phase = 1
 
@@ -292,6 +292,7 @@ class Board(Player_manager):
                     print(f"    ___Le joueur {self.current_player_name()} vient de supprimer le pion {random_key} de couleur {self.translate_to_color(old_color)}")
                     self.ennemy_player_dict().pop(random_key)
                     print(f"    ___Here's the {self.ennemy_player_name()} dict: {self.ennemy_player_dict()}")
+                    self.accessible_nodes.append(random_key)
                     didnt_delete = False
                     if len(self.ennemy_player_dict()) <= 2:
                         self.game_over(self.current_player_name())
@@ -340,10 +341,9 @@ class Board(Player_manager):
             print("Error : Vous n'avez pas sélectionné deux pions")
             return False
     def switch_pieces_nodes(self):
-        """
-            Rien de compliqué. Cette fonction permet d'échanger les pions de deux noeuds
-        """
 
+        #Rappel: Lors de l'appel de cette fonction, le premier noeud est TOUJOURS celui de couleur 
+            #et le deuxième est TOUJOURS celui brun
 
         [node_data_1,node_data_2] = self.temp_list
         [id_1,id_2] = [node_data_1["id"],node_data_2["id"]]
@@ -351,21 +351,30 @@ class Board(Player_manager):
         if isinstance(node_data_1["piece"],pion_classe.Pion) and isinstance(node_data_2["piece"],pion_classe.Pion):
             if self.piece_can_switch(node_data_1,node_data_2,is_print=False):
                 print(f"    Le joueur {self.current_player_name()} va perdre le noeud {id_1} et gagner {id_2}")
-                
-                #ATTENTION : IL SEMBLERAIT QUE LES COULEURS NE SOIENT PAS CHANGÉES A CAUSE DE OLD_COLOR
-                    #APFYANERFÏAPEFNPAE
+
+                    #Changement de couleur des pions
                 old_color = node_data_1["piece"].getColor()
                 node_data_1["piece"].setColor(node_data_2["piece"].getColor())
                 node_data_2["piece"].setColor(old_color)
-                
+                    #Changement de couleur des noeuds
                 node_data_1["color"] = node_data_1["piece"].getColor()
                 node_data_2["color"] = node_data_2["piece"].getColor()
-
+                    #Changement de dict
                 print(f"    ___AVANT : Voici les noeuds utilisés par le joueur {self.current_player_name()} : {self.current_player_dict()}")
                 self.current_player_dict()[node_data_2["id"]] = node_data_2["id"]
                 self.current_player_dict().pop(id_1,None)
                 print(f"    ___APRES : Voici les noeuds utilisés par le joueur {self.current_player_name()} : {self.current_player_dict()}")
-
+                    #Changement de la liste des noeuds accessibles
+                
+                index_to_remove = self.accessible_nodes.index(id_2)
+                print(f"        ___Voici les noeuds accessibles {self.accessible_nodes}")
+                print(f"        Remove ID {id_2} at the index {index_to_remove}. Then add the ID {id_1}")
+                
+                self.accessible_nodes.remove(id_2)
+                self.accessible_nodes.append(id_1)
+                print(f"        ___Voici les nouveaux noeuds accessibles {self.accessible_nodes}")
+                
+                
                 self.temp_list = []
 
 class Game(Board):
@@ -397,8 +406,10 @@ class Game(Board):
         print(f'Le joueur {self.current_player_name()} a sélectionné le noeud: {node_data["id"]} de couleur {self.translate_to_color(node_data["piece"].getColor())}')
         if node_data["piece"].getColor() == BRWON:
             self.change_piece_color(node_data)
-            self.is_there_winner(node_data)
+            
             self.decrement_player_pions()
+            self.accessible_nodes.remove(node_data["id"])
+            self.is_there_winner(node_data)
             self.switch_player()
             
         else:
@@ -413,11 +424,14 @@ class Game(Board):
             my_node = self.nodes[random_key]
             for neigbour_id in my_node["neighbours"]:
                 if self.piece_can_switch(my_node,self.nodes[neigbour_id]):
+
                     self.temp_list.append(my_node)
                     self.temp_list.append(self.nodes[neigbour_id])
-
                     self.switch_pieces_nodes()
+
                     self.is_there_winner(self.nodes[neigbour_id])
+
+                    
                     didnt_play = False
                     break #Otherwise we would continue to check on all neighbours!!!
             current_player_list_ID.pop(current_player_list_ID.index(random_key))
@@ -462,6 +476,7 @@ class Game(Board):
             self.current_player_dict()[node_data["id"]] = node_data["id"]
             self.change_piece_color(node_data=node_data)
             self.decrement_player_pions()
+            self.accessible_nodes.remove(node_data["id"])
             self.is_there_winner(node_data)
             self.switch_player()
             print("")
