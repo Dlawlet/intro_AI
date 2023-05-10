@@ -8,6 +8,7 @@ class Player():
         self.pion_nbr = pion_nbr
         self.nodes_id = {}
         self.possible_moves = {}
+        self.alligned_nodes = []
     
     def get_id(self):
         return self.id
@@ -22,6 +23,9 @@ class Player():
     
     def decrement_pion_nbr(self):
         self.pion_nbr -= 1
+
+    def add_line(self, line):
+        self.alligned_nodes.append(line)
 
 class Player_IA(Player):
     def __init__(self, id, color, name, pion_nbr):

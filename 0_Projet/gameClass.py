@@ -194,7 +194,9 @@ class Board(Player_manager):
                             neighbour_1_position = neighbour_1_data["rect"].center; neighbour_1_id = neighbour_1_data["id"]
                             neighbour_2_position = neighbour_2_data["rect"].center; neighbour_2_id = neighbour_2_data["id"]
                             if self.nodes_share_same_position(node_data_position,neighbour_1_position,neighbour_2_position):
-                                print(f"    Allignement de 3 pions en __1__ couches de la même couleur! {neighbour_1_id}-{node_data_id}-{neighbour_2_id}")
+                                current_line = [neighbour_1_id,node_data_id,neighbour_2_id]
+                                self.current_player().add_line(current_line)
+                                print(f"    Allignement de 3 pions en __1__ couches de la même couleur! {current_line}")
                                 return True
 
         ### Si aucune pair de voisins (droite-gauche ou haut-bas) n'est alignée et de même couleur, on retourne False 
@@ -225,7 +227,9 @@ class Board(Player_manager):
                                     neighbour_1_position = neighbour_1_data["rect"].center; neighbour_1_id = neighbour_1_data["id"]
                                     neighbour_2_position = neighbour_2_data["rect"].center; neighbour_2_id = neighbour_2_data["id"]
                                     if self.nodes_share_same_position(node_data_position,neighbour_1_position,neighbour_2_position):
-                                        print(f"    Allignement de 3 pions en __2__ couches de la même couleur! {node_data_id}-{neighbour_1_id}-{neighbour_2_id}")
+                                        current_line = [node_data_id,neighbour_1_id,neighbour_2_id]
+                                        self.current_player().add_line(current_line)
+                                        print(f"    Allignement de 3 pions en __2__ couches de la même couleur! {current_line}")
                                         return True
     def is_in_allignement(self,node_data):
         """
