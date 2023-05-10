@@ -1,6 +1,7 @@
 from setup import *
 import random
 from time import sleep
+from player import Player_IA
 """
 A modifer:
     -REFACTOR LE CODE: 
@@ -28,10 +29,10 @@ class Setup_manager():
         self.nodes = create_node(node_id_start=0, node_size=15) #Create the nodes with neighbohood
         self.screen = setup_screen()
         self.phase = 0 #0: placement, 1: déplacement
-        self.first_player_pions = 8
-        self.second_player_pions = 8
-        self.red_nodes_id = {}
-        self.blue_nodes_id = {}
+
+        self.pion_nbr = 8 #Nombre de pions par joueur
+        self.first_player = Player_IA(0,RED,"RED",self.pion_nbr)
+        self.second_player = Player_IA(1,BLUE,"BLUE",self.pion_nbr)
         
 
         self.temp_list = [] #Permet l'échange de pions pour la deuxieme phase
@@ -70,43 +71,43 @@ class Player_manager(Setup_manager):
             Rien de compliqué. Cette fonction permet de connaitre le nom du joueur en cours
         """
         if self.who_play == 0:
-            return "RED"
+            return self.first_player.get_name()
         else:
-            return "BLUE"
+            return self.second_player.get_name()
     def current_player_color(self):
         """
             Rien de compliqué. Cette fonction permet de connaitre la couleur du joueur en cours
         """
         if self.who_play == 0:
             #print("Player RED just played")
-            return RED
+            return self.first_player.get_color()
         else:
             #print("Player BLUE just played")
-            return BLUE
+            return self.second_player.get_color()
     def current_player_dict(self):
         """
             Rien de compliqué. Cette fonction permet de connaitre le dictionnaire du joueur en cours
         """
         if self.who_play == 0:
-            return self.red_nodes_id
+            return self.first_player.get_nodes_id()
         else:
-            return self.blue_nodes_id
+            return self.second_player.get_nodes_id()
     def ennemy_player_dict(self):
         """
             Rien de compliqué. Cette fonction permet de connaitre le dictionnaire du joueur adverse
         """
         if self.who_play == 0:
-            return self.blue_nodes_id
+            return self.second_player.get_nodes_id()
         else:
-            return self.red_nodes_id
+            return self.first_player.get_nodes_id()
     def ennemy_player_name(self):
         """
             Rien de compliqué. Cette fonction permet de connaitre le nom du joueur adverse
         """
         if self.who_play == 0:
-            return "BLUE"
+            return self.second_player.get_name()
         else:
-            return "RED"
+            return self.first_player.get_name()
         
     def switch_player(self):
         """
@@ -123,19 +124,19 @@ class Player_manager(Setup_manager):
             Une fois le nombre de pions à 0, on passe à la phase 1
         """
         if self.who_play == 0:
-            if self.first_player_pions > 0:
-                self.first_player_pions -= 1
+            if self.first_player.get_pion_nbr() > 0:
+                self.first_player.decrement_pion_nbr()
         else:
-            if self.second_player_pions>0:
-                self.second_player_pions -= 1
-        #print(f"Le joueur _{self.who_play}_ a encore {self.second_player_pions} pions")
-        if self.first_player_pions==0 and self.second_player_pions==0:
-            self.phase = 1
+            if self.second_player.get_pion_nbr() >0:
+                self.second_player.decrement_pion_nbr()
+        if self.second_player.get_pion_nbr()==0 and self.second_player.get_pion_nbr()==0:
+            
             print("\n____________________________________________________________________\n")
-            print(f"Voici les noeuds utilisé par le joueur RED: {self.red_nodes_id}")
-            print(f"Voici les noeuds utilisé par le joueur BLUE : {self.blue_nodes_id}")
+            print(f"Voici les noeuds utilisé par le joueur RED: {self.first_player.get_nodes_id()}")
+            print(f"Voici les noeuds utilisé par le joueur BLUE : {self.second_player.get_nodes_id()}")
             
             print("____________________On passe à la deuxieme phase!!____________________\n")
+            self.phase = 1
 
 class Board(Player_manager):
     def __init__(self):
@@ -184,7 +185,7 @@ class Board(Player_manager):
                             neighbour_1_position = neighbour_1_data["rect"].center
                             neighbour_2_position = neighbour_2_data["rect"].center
                             if self.nodes_share_same_position(node_data_position,neighbour_1_position,neighbour_2_position):
-                                print("Allignement de 3 pions en __1__ couches de la même couleur!")
+                                print("    Allignement de 3 pions en __1__ couches de la même couleur!")
                                 return True
 
         ### Si aucune pair de voisins (droite-gauche ou haut-bas) n'est alignée et de même couleur, on retourne False 
@@ -215,7 +216,7 @@ class Board(Player_manager):
                                     neighbour_1_position = neighbour_1_data["rect"].center
                                     neighbour_2_position = neighbour_2_data["rect"].center
                                     if self.nodes_share_same_position(node_data_position,neighbour_1_position,neighbour_2_position):
-                                        print("Allignement de 3 pions en __2__ couches de la même couleur!")
+                                        print("    Allignement de 3 pions en __2__ couches de la même couleur!")
                                         return True
     def is_in_allignement(self,node_data):
         """
@@ -258,8 +259,7 @@ class Board(Player_manager):
             print(f"___Here's the {self.current_player_name()} dict: {self.current_player_dict()}")
             print(f"___Here's the {self.ennemy_player_name()} dict: {self.ennemy_player_dict()}")
             print("__________________________________THE END__________________________________")
-
-        self.running = False
+            self.running = False
 
     
     def delete_ennemy_piece_IA(self):
@@ -274,10 +274,10 @@ class Board(Player_manager):
                 old_color = node_data["piece"].getColor()
                 node_data["piece"].setColor(BRWON)
                 node_data["color"] = BRWON
-                print(f"___Here's the {self.ennemy_player_name()} dict: {self.ennemy_player_dict()}")
-                print(f"___Le joueur {self.current_player_name()} vient de supprimer le pion {random_key} de couleur {self.translate_to_color(old_color)}")
+                print(f"    ___Here's the {self.ennemy_player_name()} dict: {self.ennemy_player_dict()}")
+                print(f"    ___Le joueur {self.current_player_name()} vient de supprimer le pion {random_key} de couleur {self.translate_to_color(old_color)}")
                 self.ennemy_player_dict().pop(random_key)
-                print(f"___Here's the {self.ennemy_player_name()} dict: {self.ennemy_player_dict()}")
+                print(f"    ___Here's the {self.ennemy_player_name()} dict: {self.ennemy_player_dict()}")
                 if len(self.ennemy_player_dict()) <= 2:
                     self.game_over(self.current_player_name())
     def check_if_nodes_are_adjacent(self,node_data_1,node_data_2):
@@ -329,7 +329,7 @@ class Board(Player_manager):
 
         if isinstance(node_data_1["piece"],pion_classe.Pion) and isinstance(node_data_2["piece"],pion_classe.Pion):
             if self.piece_can_switch(node_data_1,node_data_2,is_print=False):
-                print(f"Le joueur {self.current_player_name()} va perdre le noeud {id_1} et gagner {id_2}")
+                print(f"    Le joueur {self.current_player_name()} va perdre le noeud {id_1} et gagner {id_2}")
                 
                 #ATTENTION : IL SEMBLERAIT QUE LES COULEURS NE SOIENT PAS CHANGÉES A CAUSE DE OLD_COLOR
                     #APFYANERFÏAPEFNPAE
@@ -340,10 +340,10 @@ class Board(Player_manager):
                 node_data_1["color"] = node_data_1["piece"].getColor()
                 node_data_2["color"] = node_data_2["piece"].getColor()
 
-                print(f"___AVANT : Voici les noeuds utilisés par le joueur {self.current_player_name()} : {self.current_player_dict()}")
+                print(f"    ___AVANT : Voici les noeuds utilisés par le joueur {self.current_player_name()} : {self.current_player_dict()}")
                 self.current_player_dict()[node_data_2["id"]] = node_data_2["id"]
                 self.current_player_dict().pop(id_1,None)
-                print(f"___APRES : Voici les noeuds utilisés par le joueur {self.current_player_name()} : {self.current_player_dict()}")
+                print(f"    ___APRES : Voici les noeuds utilisés par le joueur {self.current_player_name()} : {self.current_player_dict()}")
 
                 self.temp_list = []
 
@@ -419,8 +419,12 @@ class Game(Board):
         """
         if(self.phase == 0):
             self.play_phase_0_IA()
+            
         elif(self.phase == 1):
+            #self.game_over(winner_name=self.current_player_name())
             self.play_phase_1_IA()
+            
+            
               
     ### Fonction qui permet de faire des plays en tant que joueur
     def play_phase_0_human(self,node_data):
