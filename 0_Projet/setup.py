@@ -12,6 +12,8 @@ BLUE = (0, 0, 255)
 RED = (255, 0, 0)
 WHITE = (255, 255, 255)
 BRWON = (139,69,19)
+
+
 def setup_screen():
     # Set up the game window
     screen_width = 425
@@ -120,6 +122,19 @@ def find_neighbours(nodes_dict):
                     if are_good_neighbor(node_id,neighbor_id):
                         node_data["neighbours"].append(neighbor_id)
                     #if distance <= 150  and (node_x == neighbor_x or node_y == neighbor_y):
+
+def _check_possible_move(node_data,nodes_dict):
+    #Cette fonction ne devrait jamais être appelée en dehors de get_possible_moves()
+    res = 0
+    for neighbor_id in node_data["neighbours"]:
+        if nodes_dict[neighbor_id]["color"] == BRWON:
+            res+=1
+    return res
+
+def get_possible_moves_nbr(node_data,nodes_dict):
+    node_data["possible_move_nbr"] = _check_possible_move(node_data,nodes_dict)
+    return node_data["possible_move_nbr"]
+
 def create_node(node_id_start, node_size):
     """Create a dictionary of nodes.
     We cheat by hardcoding the positions of the nodes.
@@ -145,7 +160,7 @@ def create_node(node_id_start, node_size):
     for position in positions:
         node_rect = pygame.Rect(position[0], position[1], node_size, node_size)
         node_piece = pion_classe.Pion(BRWON,position[0],position[1])
-        nodes[node_id_start] = {"id":node_id_start,"rect": node_rect, "color": BRWON,"neighbours": [],"piece": node_piece}
+        nodes[node_id_start] = {"id":node_id_start,"rect": node_rect, "color": BRWON,"neighbours": [],"possible_move_nbr":0,"piece": node_piece}
         node_id_start += 1
     find_neighbours(nodes)# Find neighboring nodes
 

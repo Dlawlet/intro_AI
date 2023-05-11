@@ -28,8 +28,9 @@ class Setup_manager():
         self.who_play = 0
         self.nodes = create_node(node_id_start=0, node_size=15) #Create the nodes with neighbohood
         self.screen = setup_screen()
+        
         self.phase = 0 #0: placement, 1: déplacement
-
+        self.winner_name = None #Id du gagnant
         self.pion_nbr = 8 #Nombre de pions par joueur
         self.first_player = Player_IA(0,RED,"RED",self.pion_nbr)
         self.second_player = Player_IA(1,BLUE,"BLUE",self.pion_nbr)
@@ -147,6 +148,8 @@ class Player_manager(Setup_manager):
             print("____________________On passe à la deuxieme phase!!____________________\n")
             self.phase = 1
 
+    def give_current_game_state(self):
+        return [self.accessible_nodes,self.ennemy_player_dict()]
 class Board(Player_manager):
     def __init__(self):
         super().__init__()
@@ -267,11 +270,12 @@ class Board(Player_manager):
     def game_over(self, winner_name):
         if self.phase==1:
             print("\n\n___________________________________________________________________________")
-            print(f"Le joueur {winner_name} a gagné!")
-            print(f"___Here's the ennemy dict: {self.current_player_dict()}")
+            print(f"Youhou! Le joueur {winner_name} a gagné!")
+            print(f"___Here's the current dict: {self.current_player_dict()}")
             print(f"___Here's the ennemy dict: {self.ennemy_player_dict()}")
             print("__________________________________THE END__________________________________")
             self.running = False
+            self.winner_name = winner_name
 
     
     def delete_ennemy_piece_IA(self):
@@ -283,7 +287,7 @@ class Board(Player_manager):
         
         didnt_delete = True
         while(didnt_delete):
-            random_key = self.current_player().choose_random_node(ennemy_list)
+            random_key = self.current_player().choose_node_to_delete(ennemy_list)
             node_data = self.nodes[random_key]
             if not self.is_in_allignement(node_data):
                 #On peut supprimer le pion car en allignement
@@ -392,7 +396,10 @@ class Game(Board):
                 le noeud correspondant à ce nombre.
         """
 
-        random_key = self.current_player().choose_random_node(list(self.nodes.keys()))
+        list_of_keys = list(self.nodes.keys())
+        random_key = self.current_player().choose_random_node(list_of_keys)
+        ###random_key = self.current_player().choose_node_to_move(self.give_current_game_state())
+        
         my_node = self.nodes[random_key]
         return my_node
     
@@ -586,4 +593,5 @@ class Game(Board):
 
         # Quit Pygame
         pygame.quit()
+        return self.winner_name
     
