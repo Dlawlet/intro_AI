@@ -1,1319 +1,1206 @@
 pygame 2.4.0 (SDL 2.26.4, Python 3.10.6)
 Hello from the pygame community. https://www.pygame.org/contribute.html
-Le joueur RED a sélectionné le noeud: 2 de couleur BRWON
-Voici la liste des noeuds utilisés par le joueur RED : {2: 2}
-
-Le joueur BLUE a sélectionné le noeud: 11 de couleur BRWON
-Voici la liste des noeuds utilisés par le joueur BLUE : {11: 11}
-
-Le joueur RED a sélectionné le noeud: 6 de couleur BRWON
-Voici la liste des noeuds utilisés par le joueur RED : {2: 2, 6: 6}
-
-Le joueur BLUE a sélectionné le noeud: 19 de couleur BRWON
-Voici la liste des noeuds utilisés par le joueur BLUE : {11: 11, 19: 19}
-
 Le joueur RED a sélectionné le noeud: 14 de couleur BRWON
-Voici la liste des noeuds utilisés par le joueur RED : {2: 2, 6: 6, 14: 14}
-
-Le joueur BLUE a sélectionné le noeud: 9 de couleur BRWON
-Voici la liste des noeuds utilisés par le joueur BLUE : {11: 11, 19: 19, 9: 9}
-
-Le joueur RED a sélectionné le noeud: 3 de couleur BRWON
-Voici la liste des noeuds utilisés par le joueur RED : {2: 2, 6: 6, 14: 14, 3: 3}
+Voici la liste des noeuds utilisés par le joueur RED : {14: 14}
 
 Le joueur BLUE a sélectionné le noeud: 7 de couleur BRWON
-Voici la liste des noeuds utilisés par le joueur BLUE : {11: 11, 19: 19, 9: 9, 7: 7}
+Voici la liste des noeuds utilisés par le joueur BLUE : {7: 7}
 
-. /11
-. /2
-Le joueur RED a sélectionné le noeud: 23 de couleur BRWON
-Voici la liste des noeuds utilisés par le joueur RED : {2: 2, 6: 6, 14: 14, 3: 3, 23: 23}
-    Allignement de 3 pions en __2__ couches de la même couleur! [23, 14, 2]
-    ___Here's the BLUE dict: {11: 11, 19: 19, 9: 9, 7: 7}
-    ___Le joueur RED vient de supprimer le pion 19 de couleur BLUE
-    ___Here's the BLUE dict: {11: 11, 9: 9, 7: 7}
-___________________________________________________________________________
+Le joueur RED a sélectionné le noeud: 15 de couleur BRWON
+Voici la liste des noeuds utilisés par le joueur RED : {14: 14, 15: 15}
 
-Le joueur BLUE a sélectionné le noeud: 0 de couleur BRWON
-Voici la liste des noeuds utilisés par le joueur BLUE : {11: 11, 9: 9, 7: 7, 0: 0}
+Le joueur BLUE a sélectionné le noeud: 16 de couleur BRWON
+Voici la liste des noeuds utilisés par le joueur BLUE : {7: 7, 16: 16}
+
+Le joueur RED a sélectionné le noeud: 4 de couleur BRWON
+Voici la liste des noeuds utilisés par le joueur RED : {14: 14, 15: 15, 4: 4}
+
+Le joueur BLUE a sélectionné le noeud: 10 de couleur BRWON
+Voici la liste des noeuds utilisés par le joueur BLUE : {7: 7, 16: 16, 10: 10}
 
 . /14
-Le joueur RED a sélectionné le noeud: 12 de couleur BRWON
-Voici la liste des noeuds utilisés par le joueur RED : {2: 2, 6: 6, 14: 14, 3: 3, 23: 23, 12: 12}
+Le joueur RED a sélectionné le noeud: 8 de couleur BRWON
+Voici la liste des noeuds utilisés par le joueur RED : {14: 14, 15: 15, 4: 4, 8: 8}
 
-Le joueur BLUE a sélectionné le noeud: 8 de couleur BRWON
-Voici la liste des noeuds utilisés par le joueur BLUE : {11: 11, 9: 9, 7: 7, 0: 0, 8: 8}
-
-. /9
-Le joueur RED a sélectionné le noeud: 5 de couleur BRWON
-Voici la liste des noeuds utilisés par le joueur RED : {2: 2, 6: 6, 14: 14, 3: 3, 23: 23, 12: 12, 5: 5}
-
+. /7
+. /8
 Le joueur BLUE a sélectionné le noeud: 20 de couleur BRWON
-Voici la liste des noeuds utilisés par le joueur BLUE : {11: 11, 9: 9, 7: 7, 0: 0, 8: 8, 20: 20}
+Voici la liste des noeuds utilisés par le joueur BLUE : {7: 7, 16: 16, 10: 10, 20: 20}
 
-Le joueur RED a sélectionné le noeud: 13 de couleur BRWON
-Voici la liste des noeuds utilisés par le joueur RED : {2: 2, 6: 6, 14: 14, 3: 3, 23: 23, 12: 12, 5: 5, 13: 13}
-    Allignement de 3 pions en __1__ couches de la même couleur! [12, 13, 14]
-    ___Here's the BLUE dict: {11: 11, 9: 9, 7: 7, 0: 0, 8: 8, 20: 20}
+Le joueur RED a sélectionné le noeud: 3 de couleur BRWON
+Voici la liste des noeuds utilisés par le joueur RED : {14: 14, 15: 15, 4: 4, 8: 8, 3: 3}
+
+. /8
+. /20
+Le joueur BLUE a sélectionné le noeud: 0 de couleur BRWON
+Voici la liste des noeuds utilisés par le joueur BLUE : {7: 7, 16: 16, 10: 10, 20: 20, 0: 0}
+
+. /8
+Le joueur RED a sélectionné le noeud: 9 de couleur BRWON
+Voici la liste des noeuds utilisés par le joueur RED : {14: 14, 15: 15, 4: 4, 8: 8, 3: 3, 9: 9}
+
+Le joueur BLUE a sélectionné le noeud: 17 de couleur BRWON
+Voici la liste des noeuds utilisés par le joueur BLUE : {7: 7, 16: 16, 10: 10, 20: 20, 0: 0, 17: 17}
+
+. /8
+Le joueur RED a sélectionné le noeud: 11 de couleur BRWON
+Voici la liste des noeuds utilisés par le joueur RED : {14: 14, 15: 15, 4: 4, 8: 8, 3: 3, 9: 9, 11: 11}
+
+Le joueur BLUE a sélectionné le noeud: 12 de couleur BRWON
+Voici la liste des noeuds utilisés par le joueur BLUE : {7: 7, 16: 16, 10: 10, 20: 20, 0: 0, 17: 17, 12: 12}
+
+Le joueur RED a sélectionné le noeud: 6 de couleur BRWON
+Voici la liste des noeuds utilisés par le joueur RED : {14: 14, 15: 15, 4: 4, 8: 8, 3: 3, 9: 9, 11: 11, 6: 6}
+    Allignement de 3 pions en __2__ couches de la même couleur! [6, 11, 15]
+    ___Here's the ennemy dict: {7: 7, 16: 16, 10: 10, 20: 20, 0: 0, 17: 17, 12: 12}
     ___Le joueur RED vient de supprimer le pion 0 de couleur BLUE
-    ___Here's the BLUE dict: {11: 11, 9: 9, 7: 7, 8: 8, 20: 20}
+    ___Here's the ennemy dict: {7: 7, 16: 16, 10: 10, 20: 20, 17: 17, 12: 12}
 ___________________________________________________________________________
 
-. /11
-. /2
 . /9
-Le joueur BLUE a sélectionné le noeud: 18 de couleur BRWON
-Voici la liste des noeuds utilisés par le joueur BLUE : {11: 11, 9: 9, 7: 7, 8: 8, 20: 20, 18: 18}
+Le joueur BLUE a sélectionné le noeud: 13 de couleur BRWON
+Voici la liste des noeuds utilisés par le joueur BLUE : {7: 7, 16: 16, 10: 10, 20: 20, 17: 17, 12: 12, 13: 13}
 
 ____________________________________________________________________
 
-Voici les noeuds utilisé par le joueur RED: {2: 2, 6: 6, 14: 14, 3: 3, 23: 23, 12: 12, 5: 5, 13: 13}
-Voici les noeuds utilisé par le joueur BLUE : {11: 11, 9: 9, 7: 7, 8: 8, 20: 20, 18: 18}
-Voici les noeuds accessibles : [1, 4, 10, 15, 16, 17, 18, 21, 22, 19, 0]
+Voici les noeuds utilisé par le joueur RED: {14: 14, 15: 15, 4: 4, 8: 8, 3: 3, 9: 9, 11: 11, 6: 6}
+Voici les noeuds utilisé par le joueur BLUE : {7: 7, 16: 16, 10: 10, 20: 20, 17: 17, 12: 12, 13: 13}
+Voici les noeuds accessibles : [1, 2, 5, 13, 18, 19, 21, 22, 23, 0]
 ____________________On passe à la deuxieme phase!!____________________
 
 
 l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 12/8 avec comme couleur RED/BLUE
-    RED vient de comparer 12/13 avec comme couleur RED/RED
-    RED vient de comparer 12/17 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 12 et gagner 17
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {2: 2, 6: 6, 14: 14, 3: 3, 23: 23, 12: 12, 5: 5, 13: 13}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {2: 2, 6: 6, 14: 14, 3: 3, 23: 23, 5: 5, 13: 13, 17: 17}
-        ___Voici les noeuds accessibles [1, 4, 10, 15, 16, 17, 21, 22, 19, 0]
-        Remove ID 17 at the index 5. Then add the ID 12
-        ___Voici les nouveaux noeuds accessibles [1, 4, 10, 15, 16, 21, 22, 19, 0, 12]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 18/10 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 18 et gagner 10
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {11: 11, 9: 9, 7: 7, 8: 8, 20: 20, 18: 18}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {11: 11, 9: 9, 7: 7, 8: 8, 20: 20, 10: 10}
-        ___Voici les noeuds accessibles [1, 4, 10, 15, 16, 21, 22, 19, 0, 12]
-        Remove ID 10 at the index 2. Then add the ID 18
-        ___Voici les nouveaux noeuds accessibles [1, 4, 15, 16, 21, 22, 19, 0, 12, 18]
-    Allignement de 3 pions en __1__ couches de la même couleur! [9, 10, 11]
-    ___Here's the RED dict: {2: 2, 6: 6, 14: 14, 3: 3, 23: 23, 5: 5, 13: 13, 17: 17}
-    ___Le joueur BLUE vient de supprimer le pion 6 de couleur RED
-    ___Here's the RED dict: {2: 2, 14: 14, 3: 3, 23: 23, 5: 5, 13: 13, 17: 17}
-___________________________________________________________________________
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 5/4 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 5 et gagner 4
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {2: 2, 14: 14, 3: 3, 23: 23, 5: 5, 13: 13, 17: 17}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {2: 2, 14: 14, 3: 3, 23: 23, 13: 13, 17: 17, 4: 4}
-        ___Voici les noeuds accessibles [1, 4, 15, 16, 21, 22, 19, 0, 12, 18, 6]
-        Remove ID 4 at the index 1. Then add the ID 5
-        ___Voici les nouveaux noeuds accessibles [1, 15, 16, 21, 22, 19, 0, 12, 18, 6, 5]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 10/3 avec comme couleur BLUE/RED
-    BLUE vient de comparer 10/9 avec comme couleur BLUE/BLUE
-    BLUE vient de comparer 10/11 avec comme couleur BLUE/BLUE
-    BLUE vient de comparer 10/18 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 10 et gagner 18
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {11: 11, 9: 9, 7: 7, 8: 8, 20: 20, 10: 10}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {11: 11, 9: 9, 7: 7, 8: 8, 20: 20, 18: 18}
-        ___Voici les noeuds accessibles [1, 15, 16, 21, 22, 19, 0, 12, 18, 6, 5]
-        Remove ID 18 at the index 8. Then add the ID 10
-        ___Voici les nouveaux noeuds accessibles [1, 15, 16, 21, 22, 19, 0, 12, 6, 5, 10]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 15/11 avec comme couleur RED/RED
+    RED vient de comparer 15/16 avec comme couleur RED/BLUE
+    RED vient de comparer 6/7 avec comme couleur RED/BLUE
+    RED vient de comparer 6/11 avec comme couleur RED/RED
     RED vient de comparer 4/1 avec comme couleur RED/BRWON
     Le joueur RED va perdre le noeud 4 et gagner 1
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {2: 2, 14: 14, 3: 3, 23: 23, 13: 13, 17: 17, 4: 4}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {2: 2, 14: 14, 3: 3, 23: 23, 13: 13, 17: 17, 1: 1}
-        ___Voici les noeuds accessibles [1, 15, 16, 21, 22, 19, 0, 12, 6, 5, 10]
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {14: 14, 15: 15, 4: 4, 8: 8, 3: 3, 9: 9, 11: 11, 6: 6}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {14: 14, 15: 15, 8: 8, 3: 3, 9: 9, 11: 11, 6: 6, 1: 1}
+        ___Voici les noeuds accessibles [1, 2, 5, 18, 19, 21, 22, 23, 0]
         Remove ID 1 at the index 0. Then add the ID 4
-        ___Voici les nouveaux noeuds accessibles [15, 16, 21, 22, 19, 0, 12, 6, 5, 10, 4]
+        ___Voici les nouveaux noeuds accessibles [2, 5, 18, 19, 21, 22, 23, 0, 4]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 13/5 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 13 et gagner 5
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {7: 7, 16: 16, 10: 10, 20: 20, 17: 17, 12: 12, 13: 13}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {7: 7, 16: 16, 10: 10, 20: 20, 17: 17, 12: 12, 5: 5}
+        ___Voici les noeuds accessibles [2, 5, 18, 19, 21, 22, 23, 0, 4]
+        Remove ID 5 at the index 1. Then add the ID 13
+        ___Voici les nouveaux noeuds accessibles [2, 18, 19, 21, 22, 23, 0, 4, 13]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 11/6 avec comme couleur RED/RED
+    RED vient de comparer 11/10 avec comme couleur RED/BLUE
+    RED vient de comparer 11/15 avec comme couleur RED/RED
+    RED vient de comparer 9/0 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 9 et gagner 0
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {14: 14, 15: 15, 8: 8, 3: 3, 9: 9, 11: 11, 6: 6, 1: 1}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {14: 14, 15: 15, 8: 8, 3: 3, 11: 11, 6: 6, 1: 1, 0: 0}
+        ___Voici les noeuds accessibles [2, 18, 19, 21, 22, 23, 0, 4, 13]
+        Remove ID 0 at the index 6. Then add the ID 9
+        ___Voici les nouveaux noeuds accessibles [2, 18, 19, 21, 22, 23, 4, 13, 9]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 16/15 avec comme couleur BLUE/RED
+    BLUE vient de comparer 16/17 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 16/19 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 16 et gagner 19
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {7: 7, 16: 16, 10: 10, 20: 20, 17: 17, 12: 12, 5: 5}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {7: 7, 10: 10, 20: 20, 17: 17, 12: 12, 5: 5, 19: 19}
+        ___Voici les noeuds accessibles [2, 18, 19, 21, 22, 23, 4, 13, 9]
+        Remove ID 19 at the index 2. Then add the ID 16
+        ___Voici les nouveaux noeuds accessibles [2, 18, 21, 22, 23, 4, 13, 9, 16]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 0/1 avec comme couleur RED/RED
+    RED vient de comparer 0/9 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 0 et gagner 9
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {14: 14, 15: 15, 8: 8, 3: 3, 11: 11, 6: 6, 1: 1, 0: 0}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {14: 14, 15: 15, 8: 8, 3: 3, 11: 11, 6: 6, 1: 1, 9: 9}
+        ___Voici les noeuds accessibles [2, 18, 21, 22, 23, 4, 13, 9, 16]
+        Remove ID 9 at the index 7. Then add the ID 0
+        ___Voici les nouveaux noeuds accessibles [2, 18, 21, 22, 23, 4, 13, 16, 0]
 l'IA RED a échangé deux noeuds
 
 l'IA BLUE va chercher deux noeuds à échanger
     BLUE vient de comparer 7/4 avec comme couleur BLUE/BRWON
     Le joueur BLUE va perdre le noeud 7 et gagner 4
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {11: 11, 9: 9, 7: 7, 8: 8, 20: 20, 18: 18}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {11: 11, 9: 9, 8: 8, 20: 20, 18: 18, 4: 4}
-        ___Voici les noeuds accessibles [15, 16, 21, 22, 19, 0, 12, 6, 5, 10, 4]
-        Remove ID 4 at the index 10. Then add the ID 7
-        ___Voici les nouveaux noeuds accessibles [15, 16, 21, 22, 19, 0, 12, 6, 5, 10, 7]
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {7: 7, 10: 10, 20: 20, 17: 17, 12: 12, 5: 5, 19: 19}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {10: 10, 20: 20, 17: 17, 12: 12, 5: 5, 19: 19, 4: 4}
+        ___Voici les noeuds accessibles [2, 18, 21, 22, 23, 4, 13, 16, 0]
+        Remove ID 4 at the index 5. Then add the ID 7
+        ___Voici les nouveaux noeuds accessibles [2, 18, 21, 22, 23, 13, 16, 0, 7]
 l'IA BLUE a échangé deux noeuds
 
 l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 2/1 avec comme couleur RED/RED
-    RED vient de comparer 2/14 avec comme couleur RED/RED
-    RED vient de comparer 3/4 avec comme couleur RED/BLUE
-    RED vient de comparer 3/10 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 3 et gagner 10
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {2: 2, 14: 14, 3: 3, 23: 23, 13: 13, 17: 17, 1: 1}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {2: 2, 14: 14, 23: 23, 13: 13, 17: 17, 1: 1, 10: 10}
-        ___Voici les noeuds accessibles [15, 16, 21, 22, 19, 0, 12, 6, 5, 10, 7]
-        Remove ID 10 at the index 9. Then add the ID 3
-        ___Voici les nouveaux noeuds accessibles [15, 16, 21, 22, 19, 0, 12, 6, 5, 7, 3]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 11/6 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 11 et gagner 6
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {11: 11, 9: 9, 8: 8, 20: 20, 18: 18, 4: 4}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {9: 9, 8: 8, 20: 20, 18: 18, 4: 4, 6: 6}
-        ___Voici les noeuds accessibles [15, 16, 21, 22, 19, 0, 12, 6, 5, 7, 3]
-        Remove ID 6 at the index 7. Then add the ID 11
-        ___Voici les nouveaux noeuds accessibles [15, 16, 21, 22, 19, 0, 12, 5, 7, 3, 11]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 13/5 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 13 et gagner 5
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {2: 2, 14: 14, 23: 23, 13: 13, 17: 17, 1: 1, 10: 10}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {2: 2, 14: 14, 23: 23, 17: 17, 1: 1, 10: 10, 5: 5}
-        ___Voici les noeuds accessibles [15, 16, 21, 22, 19, 0, 12, 5, 7, 3, 11]
-        Remove ID 5 at the index 7. Then add the ID 13
-        ___Voici les nouveaux noeuds accessibles [15, 16, 21, 22, 19, 0, 12, 7, 3, 11, 13]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 8/7 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 8 et gagner 7
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {9: 9, 8: 8, 20: 20, 18: 18, 4: 4, 6: 6}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {9: 9, 20: 20, 18: 18, 4: 4, 6: 6, 7: 7}
-        ___Voici les noeuds accessibles [15, 16, 21, 22, 19, 0, 12, 7, 3, 11, 13]
-        Remove ID 7 at the index 7. Then add the ID 8
-        ___Voici les nouveaux noeuds accessibles [15, 16, 21, 22, 19, 0, 12, 3, 11, 13, 8]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 10/3 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 10 et gagner 3
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {2: 2, 14: 14, 23: 23, 17: 17, 1: 1, 10: 10, 5: 5}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {2: 2, 14: 14, 23: 23, 17: 17, 1: 1, 5: 5, 3: 3}
-        ___Voici les noeuds accessibles [15, 16, 21, 22, 19, 0, 12, 3, 11, 13, 8]
-        Remove ID 3 at the index 7. Then add the ID 10
-        ___Voici les nouveaux noeuds accessibles [15, 16, 21, 22, 19, 0, 12, 11, 13, 8, 10]
+    RED vient de comparer 9/0 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 9 et gagner 0
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {14: 14, 15: 15, 8: 8, 3: 3, 11: 11, 6: 6, 1: 1, 9: 9}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {14: 14, 15: 15, 8: 8, 3: 3, 11: 11, 6: 6, 1: 1, 0: 0}
+        ___Voici les noeuds accessibles [2, 18, 21, 22, 23, 13, 16, 0, 7]
+        Remove ID 0 at the index 7. Then add the ID 9
+        ___Voici les nouveaux noeuds accessibles [2, 18, 21, 22, 23, 13, 16, 7, 9]
 l'IA RED a échangé deux noeuds
 
 l'IA BLUE va chercher deux noeuds à échanger
     BLUE vient de comparer 20/13 avec comme couleur BLUE/BRWON
     Le joueur BLUE va perdre le noeud 20 et gagner 13
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {9: 9, 20: 20, 18: 18, 4: 4, 6: 6, 7: 7}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {9: 9, 18: 18, 4: 4, 6: 6, 7: 7, 13: 13}
-        ___Voici les noeuds accessibles [15, 16, 21, 22, 19, 0, 12, 11, 13, 8, 10]
-        Remove ID 13 at the index 8. Then add the ID 20
-        ___Voici les nouveaux noeuds accessibles [15, 16, 21, 22, 19, 0, 12, 11, 8, 10, 20]
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {10: 10, 20: 20, 17: 17, 12: 12, 5: 5, 19: 19, 4: 4}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {10: 10, 17: 17, 12: 12, 5: 5, 19: 19, 4: 4, 13: 13}
+        ___Voici les noeuds accessibles [2, 18, 21, 22, 23, 13, 16, 7, 9]
+        Remove ID 13 at the index 5. Then add the ID 20
+        ___Voici les nouveaux noeuds accessibles [2, 18, 21, 22, 23, 16, 7, 9, 20]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 11/6 avec comme couleur RED/RED
+    RED vient de comparer 11/10 avec comme couleur RED/BLUE
+    RED vient de comparer 11/15 avec comme couleur RED/RED
+    RED vient de comparer 0/1 avec comme couleur RED/RED
+    RED vient de comparer 0/9 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 0 et gagner 9
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {14: 14, 15: 15, 8: 8, 3: 3, 11: 11, 6: 6, 1: 1, 0: 0}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {14: 14, 15: 15, 8: 8, 3: 3, 11: 11, 6: 6, 1: 1, 9: 9}
+        ___Voici les noeuds accessibles [2, 18, 21, 22, 23, 16, 7, 9, 20]
+        Remove ID 9 at the index 7. Then add the ID 0
+        ___Voici les nouveaux noeuds accessibles [2, 18, 21, 22, 23, 16, 7, 20, 0]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 10/3 avec comme couleur BLUE/RED
+    BLUE vient de comparer 10/9 avec comme couleur BLUE/RED
+    BLUE vient de comparer 10/11 avec comme couleur BLUE/RED
+    BLUE vient de comparer 10/18 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 10 et gagner 18
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {10: 10, 17: 17, 12: 12, 5: 5, 19: 19, 4: 4, 13: 13}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {17: 17, 12: 12, 5: 5, 19: 19, 4: 4, 13: 13, 18: 18}
+        ___Voici les noeuds accessibles [2, 18, 21, 22, 23, 16, 7, 20, 0]
+        Remove ID 18 at the index 1. Then add the ID 10
+        ___Voici les nouveaux noeuds accessibles [2, 21, 22, 23, 16, 7, 20, 0, 10]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 9/0 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 9 et gagner 0
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {14: 14, 15: 15, 8: 8, 3: 3, 11: 11, 6: 6, 1: 1, 9: 9}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {14: 14, 15: 15, 8: 8, 3: 3, 11: 11, 6: 6, 1: 1, 0: 0}
+        ___Voici les noeuds accessibles [2, 21, 22, 23, 16, 7, 20, 0, 10]
+        Remove ID 0 at the index 7. Then add the ID 9
+        ___Voici les nouveaux noeuds accessibles [2, 21, 22, 23, 16, 7, 20, 10, 9]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 13/5 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 13/12 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 13/14 avec comme couleur BLUE/RED
+    BLUE vient de comparer 13/20 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 13 et gagner 20
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {17: 17, 12: 12, 5: 5, 19: 19, 4: 4, 13: 13, 18: 18}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {17: 17, 12: 12, 5: 5, 19: 19, 4: 4, 18: 18, 20: 20}
+        ___Voici les noeuds accessibles [2, 21, 22, 23, 16, 7, 20, 10, 9]
+        Remove ID 20 at the index 6. Then add the ID 13
+        ___Voici les nouveaux noeuds accessibles [2, 21, 22, 23, 16, 7, 10, 9, 13]
+    Allignement de 3 pions en __2__ couches de la même couleur! [20, 19, 18]
+    Allignement de 3 pions en __2__ couches de la même couleur! [6, 11, 15]
+6 appartient à un alignement de 3 pions de la même couleur. On ne peut pas le supprimer
+    ___Here's the ennemy dict: {14: 14, 15: 15, 8: 8, 3: 3, 11: 11, 6: 6, 1: 1, 0: 0}
+    ___Le joueur BLUE vient de supprimer le pion 14 de couleur RED
+    ___Here's the ennemy dict: {15: 15, 8: 8, 3: 3, 11: 11, 6: 6, 1: 1, 0: 0}
+___________________________________________________________________________
 l'IA BLUE a échangé deux noeuds
 
 l'IA RED va chercher deux noeuds à échanger
     RED vient de comparer 3/4 avec comme couleur RED/BLUE
     RED vient de comparer 3/10 avec comme couleur RED/BRWON
     Le joueur RED va perdre le noeud 3 et gagner 10
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {2: 2, 14: 14, 23: 23, 17: 17, 1: 1, 5: 5, 3: 3}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {2: 2, 14: 14, 23: 23, 17: 17, 1: 1, 5: 5, 10: 10}
-        ___Voici les noeuds accessibles [15, 16, 21, 22, 19, 0, 12, 11, 8, 10, 20]
-        Remove ID 10 at the index 9. Then add the ID 3
-        ___Voici les nouveaux noeuds accessibles [15, 16, 21, 22, 19, 0, 12, 11, 8, 20, 3]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 7/4 avec comme couleur BLUE/BLUE
-    BLUE vient de comparer 7/6 avec comme couleur BLUE/BLUE
-    BLUE vient de comparer 7/8 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 7 et gagner 8
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {9: 9, 18: 18, 4: 4, 6: 6, 7: 7, 13: 13}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {9: 9, 18: 18, 4: 4, 6: 6, 13: 13, 8: 8}
-        ___Voici les noeuds accessibles [15, 16, 21, 22, 19, 0, 12, 11, 8, 20, 3]
-        Remove ID 8 at the index 8. Then add the ID 7
-        ___Voici les nouveaux noeuds accessibles [15, 16, 21, 22, 19, 0, 12, 11, 20, 3, 7]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 1/0 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 1 et gagner 0
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {2: 2, 14: 14, 23: 23, 17: 17, 1: 1, 5: 5, 10: 10}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {2: 2, 14: 14, 23: 23, 17: 17, 5: 5, 10: 10, 0: 0}
-        ___Voici les noeuds accessibles [15, 16, 21, 22, 19, 0, 12, 11, 20, 3, 7]
-        Remove ID 0 at the index 5. Then add the ID 1
-        ___Voici les nouveaux noeuds accessibles [15, 16, 21, 22, 19, 12, 11, 20, 3, 7, 1]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 13/5 avec comme couleur BLUE/RED
-    BLUE vient de comparer 13/12 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 13 et gagner 12
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {9: 9, 18: 18, 4: 4, 6: 6, 13: 13, 8: 8}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {9: 9, 18: 18, 4: 4, 6: 6, 8: 8, 12: 12}
-        ___Voici les noeuds accessibles [15, 16, 21, 22, 19, 12, 11, 20, 3, 7, 1]
-        Remove ID 12 at the index 5. Then add the ID 13
-        ___Voici les nouveaux noeuds accessibles [15, 16, 21, 22, 19, 11, 20, 3, 7, 1, 13]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 14/2 avec comme couleur RED/RED
-    RED vient de comparer 14/13 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 14 et gagner 13
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {2: 2, 14: 14, 23: 23, 17: 17, 5: 5, 10: 10, 0: 0}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {2: 2, 23: 23, 17: 17, 5: 5, 10: 10, 0: 0, 13: 13}
-        ___Voici les noeuds accessibles [15, 16, 21, 22, 19, 11, 20, 3, 7, 1, 13]
-        Remove ID 13 at the index 10. Then add the ID 14
-        ___Voici les nouveaux noeuds accessibles [15, 16, 21, 22, 19, 11, 20, 3, 7, 1, 14]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 4/1 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 4 et gagner 1
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {9: 9, 18: 18, 4: 4, 6: 6, 8: 8, 12: 12}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {9: 9, 18: 18, 6: 6, 8: 8, 12: 12, 1: 1}
-        ___Voici les noeuds accessibles [15, 16, 21, 22, 19, 11, 20, 3, 7, 1, 14]
-        Remove ID 1 at the index 9. Then add the ID 4
-        ___Voici les nouveaux noeuds accessibles [15, 16, 21, 22, 19, 11, 20, 3, 7, 14, 4]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 2/1 avec comme couleur RED/BLUE
-    RED vient de comparer 2/14 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 2 et gagner 14
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {2: 2, 23: 23, 17: 17, 5: 5, 10: 10, 0: 0, 13: 13}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {23: 23, 17: 17, 5: 5, 10: 10, 0: 0, 13: 13, 14: 14}
-        ___Voici les noeuds accessibles [15, 16, 21, 22, 19, 11, 20, 3, 7, 14, 4]
-        Remove ID 14 at the index 9. Then add the ID 2
-        ___Voici les nouveaux noeuds accessibles [15, 16, 21, 22, 19, 11, 20, 3, 7, 4, 2]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 9/0 avec comme couleur BLUE/RED
-    BLUE vient de comparer 9/10 avec comme couleur BLUE/RED
-    BLUE vient de comparer 9/21 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 9 et gagner 21
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {9: 9, 18: 18, 6: 6, 8: 8, 12: 12, 1: 1}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {18: 18, 6: 6, 8: 8, 12: 12, 1: 1, 21: 21}
-        ___Voici les noeuds accessibles [15, 16, 21, 22, 19, 11, 20, 3, 7, 4, 2]
-        Remove ID 21 at the index 2. Then add the ID 9
-        ___Voici les nouveaux noeuds accessibles [15, 16, 22, 19, 11, 20, 3, 7, 4, 2, 9]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 0/1 avec comme couleur RED/BLUE
-    RED vient de comparer 0/9 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 0 et gagner 9
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {23: 23, 17: 17, 5: 5, 10: 10, 0: 0, 13: 13, 14: 14}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {23: 23, 17: 17, 5: 5, 10: 10, 13: 13, 14: 14, 9: 9}
-        ___Voici les noeuds accessibles [15, 16, 22, 19, 11, 20, 3, 7, 4, 2, 9]
-        Remove ID 9 at the index 10. Then add the ID 0
-        ___Voici les nouveaux noeuds accessibles [15, 16, 22, 19, 11, 20, 3, 7, 4, 2, 0]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 21/9 avec comme couleur BLUE/RED
-    BLUE vient de comparer 21/22 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 21 et gagner 22
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {18: 18, 6: 6, 8: 8, 12: 12, 1: 1, 21: 21}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {18: 18, 6: 6, 8: 8, 12: 12, 1: 1, 22: 22}
-        ___Voici les noeuds accessibles [15, 16, 22, 19, 11, 20, 3, 7, 4, 2, 0]
-        Remove ID 22 at the index 2. Then add the ID 21
-        ___Voici les nouveaux noeuds accessibles [15, 16, 19, 11, 20, 3, 7, 4, 2, 0, 21]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 5/4 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 5 et gagner 4
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {23: 23, 17: 17, 5: 5, 10: 10, 13: 13, 14: 14, 9: 9}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {23: 23, 17: 17, 10: 10, 13: 13, 14: 14, 9: 9, 4: 4}
-        ___Voici les noeuds accessibles [15, 16, 19, 11, 20, 3, 7, 4, 2, 0, 21]
-        Remove ID 4 at the index 7. Then add the ID 5
-        ___Voici les nouveaux noeuds accessibles [15, 16, 19, 11, 20, 3, 7, 2, 0, 21, 5]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 6/7 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 6 et gagner 7
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {18: 18, 6: 6, 8: 8, 12: 12, 1: 1, 22: 22}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {18: 18, 8: 8, 12: 12, 1: 1, 22: 22, 7: 7}
-        ___Voici les noeuds accessibles [15, 16, 19, 11, 20, 3, 7, 2, 0, 21, 5]
-        Remove ID 7 at the index 6. Then add the ID 6
-        ___Voici les nouveaux noeuds accessibles [15, 16, 19, 11, 20, 3, 2, 0, 21, 5, 6]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 4/1 avec comme couleur RED/BLUE
-    RED vient de comparer 4/3 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 4 et gagner 3
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {23: 23, 17: 17, 10: 10, 13: 13, 14: 14, 9: 9, 4: 4}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {23: 23, 17: 17, 10: 10, 13: 13, 14: 14, 9: 9, 3: 3}
-        ___Voici les noeuds accessibles [15, 16, 19, 11, 20, 3, 2, 0, 21, 5, 6]
-        Remove ID 3 at the index 5. Then add the ID 4
-        ___Voici les nouveaux noeuds accessibles [15, 16, 19, 11, 20, 2, 0, 21, 5, 6, 4]
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {15: 15, 8: 8, 3: 3, 11: 11, 6: 6, 1: 1, 0: 0}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {15: 15, 8: 8, 11: 11, 6: 6, 1: 1, 0: 0, 10: 10}
+        ___Voici les noeuds accessibles [2, 21, 22, 23, 16, 7, 10, 9, 13, 14]
+        Remove ID 10 at the index 6. Then add the ID 3
+        ___Voici les nouveaux noeuds accessibles [2, 21, 22, 23, 16, 7, 9, 13, 14, 3]
 l'IA RED a échangé deux noeuds
 
 l'IA BLUE va chercher deux noeuds à échanger
     BLUE vient de comparer 18/10 avec comme couleur BLUE/RED
-    BLUE vient de comparer 18/19 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 18 et gagner 19
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {18: 18, 8: 8, 12: 12, 1: 1, 22: 22, 7: 7}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {8: 8, 12: 12, 1: 1, 22: 22, 7: 7, 19: 19}
-        ___Voici les noeuds accessibles [15, 16, 19, 11, 20, 2, 0, 21, 5, 6, 4]
-        Remove ID 19 at the index 2. Then add the ID 18
-        ___Voici les nouveaux noeuds accessibles [15, 16, 11, 20, 2, 0, 21, 5, 6, 4, 18]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 23/14 avec comme couleur RED/RED
-    RED vient de comparer 23/22 avec comme couleur RED/BLUE
-    RED vient de comparer 10/3 avec comme couleur RED/RED
-    RED vient de comparer 10/9 avec comme couleur RED/RED
-    RED vient de comparer 10/11 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 10 et gagner 11
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {23: 23, 17: 17, 10: 10, 13: 13, 14: 14, 9: 9, 3: 3}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {23: 23, 17: 17, 13: 13, 14: 14, 9: 9, 3: 3, 11: 11}
-        ___Voici les noeuds accessibles [15, 16, 11, 20, 2, 0, 21, 5, 6, 4, 18]
-        Remove ID 11 at the index 2. Then add the ID 10
-        ___Voici les nouveaux noeuds accessibles [15, 16, 20, 2, 0, 21, 5, 6, 4, 18, 10]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 7/4 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 7 et gagner 4
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {8: 8, 12: 12, 1: 1, 22: 22, 7: 7, 19: 19}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {8: 8, 12: 12, 1: 1, 22: 22, 19: 19, 4: 4}
-        ___Voici les noeuds accessibles [15, 16, 20, 2, 0, 21, 5, 6, 4, 18, 10]
-        Remove ID 4 at the index 8. Then add the ID 7
-        ___Voici les nouveaux noeuds accessibles [15, 16, 20, 2, 0, 21, 5, 6, 18, 10, 7]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 23/14 avec comme couleur RED/RED
-    RED vient de comparer 23/22 avec comme couleur RED/BLUE
-    RED vient de comparer 9/0 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 9 et gagner 0
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {23: 23, 17: 17, 13: 13, 14: 14, 9: 9, 3: 3, 11: 11}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {23: 23, 17: 17, 13: 13, 14: 14, 3: 3, 11: 11, 0: 0}
-        ___Voici les noeuds accessibles [15, 16, 20, 2, 0, 21, 5, 6, 18, 10, 7]
-        Remove ID 0 at the index 4. Then add the ID 9
-        ___Voici les nouveaux noeuds accessibles [15, 16, 20, 2, 21, 5, 6, 18, 10, 7, 9]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 8/7 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 8 et gagner 7
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {8: 8, 12: 12, 1: 1, 22: 22, 19: 19, 4: 4}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 1: 1, 22: 22, 19: 19, 4: 4, 7: 7}
-        ___Voici les noeuds accessibles [15, 16, 20, 2, 21, 5, 6, 18, 10, 7, 9]
-        Remove ID 7 at the index 9. Then add the ID 8
-        ___Voici les nouveaux noeuds accessibles [15, 16, 20, 2, 21, 5, 6, 18, 10, 9, 8]
-    Allignement de 3 pions en __2__ couches de la même couleur! [7, 4, 1]
-    ___Here's the RED dict: {23: 23, 17: 17, 13: 13, 14: 14, 3: 3, 11: 11, 0: 0}
-    ___Le joueur BLUE vient de supprimer le pion 3 de couleur RED
-    ___Here's the RED dict: {23: 23, 17: 17, 13: 13, 14: 14, 11: 11, 0: 0}
+    BLUE vient de comparer 18/19 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 12/8 avec comme couleur BLUE/RED
+    BLUE vient de comparer 12/13 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 12 et gagner 13
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {17: 17, 12: 12, 5: 5, 19: 19, 4: 4, 18: 18, 20: 20}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {17: 17, 5: 5, 19: 19, 4: 4, 18: 18, 20: 20, 13: 13}
+        ___Voici les noeuds accessibles [2, 21, 22, 23, 16, 7, 9, 13, 14, 3]
+        Remove ID 13 at the index 7. Then add the ID 12
+        ___Voici les nouveaux noeuds accessibles [2, 21, 22, 23, 16, 7, 9, 14, 3, 12]
+    Allignement de 3 pions en __1__ couches de la même couleur! [5, 13, 20]
+    ___Here's the ennemy dict: {15: 15, 8: 8, 11: 11, 6: 6, 1: 1, 0: 0, 10: 10}
+    ___Le joueur BLUE vient de supprimer le pion 1 de couleur RED
+    ___Here's the ennemy dict: {15: 15, 8: 8, 11: 11, 6: 6, 0: 0, 10: 10}
 ___________________________________________________________________________
 l'IA BLUE a échangé deux noeuds
 
 l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 11/6 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 11 et gagner 6
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {23: 23, 17: 17, 13: 13, 14: 14, 11: 11, 0: 0}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {23: 23, 17: 17, 13: 13, 14: 14, 0: 0, 6: 6}
-        ___Voici les noeuds accessibles [15, 16, 20, 2, 21, 5, 6, 18, 10, 9, 8, 3]
-        Remove ID 6 at the index 6. Then add the ID 11
-        ___Voici les nouveaux noeuds accessibles [15, 16, 20, 2, 21, 5, 18, 10, 9, 8, 3, 11]
+    RED vient de comparer 6/7 avec comme couleur RED/BRWON
+    Allignement de 3 pions en __2__ couches de la même couleur! [6, 11, 15]
+    Le joueur RED va perdre le noeud 6 et gagner 7
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {15: 15, 8: 8, 11: 11, 6: 6, 0: 0, 10: 10}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {15: 15, 8: 8, 11: 11, 0: 0, 10: 10, 7: 7}
+        ___Voici les noeuds accessibles [2, 21, 22, 23, 16, 7, 9, 14, 3, 12, 1]
+        Remove ID 7 at the index 5. Then add the ID 6
+        ___Voici les nouveaux noeuds accessibles [2, 21, 22, 23, 16, 9, 14, 3, 12, 1, 6]
 l'IA RED a échangé deux noeuds
 
 l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 7/4 avec comme couleur BLUE/BLUE
-    BLUE vient de comparer 7/6 avec comme couleur BLUE/RED
-    BLUE vient de comparer 7/8 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 7 et gagner 8
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 1: 1, 22: 22, 19: 19, 4: 4, 7: 7}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 1: 1, 22: 22, 19: 19, 4: 4, 8: 8}
-        ___Voici les noeuds accessibles [15, 16, 20, 2, 21, 5, 18, 10, 9, 8, 3, 11]
-        Remove ID 8 at the index 9. Then add the ID 7
-        ___Voici les nouveaux noeuds accessibles [15, 16, 20, 2, 21, 5, 18, 10, 9, 3, 11, 7]
+    BLUE vient de comparer 20/13 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 20/19 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 17/12 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 17 et gagner 12
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {17: 17, 5: 5, 19: 19, 4: 4, 18: 18, 20: 20, 13: 13}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 19: 19, 4: 4, 18: 18, 20: 20, 13: 13, 12: 12}
+        ___Voici les noeuds accessibles [2, 21, 22, 23, 16, 9, 14, 3, 12, 1, 6]
+        Remove ID 12 at the index 8. Then add the ID 17
+        ___Voici les nouveaux noeuds accessibles [2, 21, 22, 23, 16, 9, 14, 3, 1, 6, 17]
 l'IA BLUE a échangé deux noeuds
 
 l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 0/1 avec comme couleur RED/BLUE
-    RED vient de comparer 0/9 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 0 et gagner 9
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {23: 23, 17: 17, 13: 13, 14: 14, 0: 0, 6: 6}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {23: 23, 17: 17, 13: 13, 14: 14, 6: 6, 9: 9}
-        ___Voici les noeuds accessibles [15, 16, 20, 2, 21, 5, 18, 10, 9, 3, 11, 7]
-        Remove ID 9 at the index 8. Then add the ID 0
-        ___Voici les nouveaux noeuds accessibles [15, 16, 20, 2, 21, 5, 18, 10, 3, 11, 7, 0]
+    RED vient de comparer 15/11 avec comme couleur RED/RED
+    RED vient de comparer 15/16 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 15 et gagner 16
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {15: 15, 8: 8, 11: 11, 0: 0, 10: 10, 7: 7}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {8: 8, 11: 11, 0: 0, 10: 10, 7: 7, 16: 16}
+        ___Voici les noeuds accessibles [2, 21, 22, 23, 16, 9, 14, 3, 1, 6, 17]
+        Remove ID 16 at the index 4. Then add the ID 15
+        ___Voici les nouveaux noeuds accessibles [2, 21, 22, 23, 9, 14, 3, 1, 6, 17, 15]
 l'IA RED a échangé deux noeuds
 
 l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 12/8 avec comme couleur BLUE/BLUE
-    BLUE vient de comparer 12/13 avec comme couleur BLUE/RED
-    BLUE vient de comparer 12/17 avec comme couleur BLUE/RED
-    BLUE vient de comparer 1/0 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 1 et gagner 0
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 1: 1, 22: 22, 19: 19, 4: 4, 8: 8}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 22: 22, 19: 19, 4: 4, 8: 8, 0: 0}
-        ___Voici les noeuds accessibles [15, 16, 20, 2, 21, 5, 18, 10, 3, 11, 7, 0]
-        Remove ID 0 at the index 11. Then add the ID 1
-        ___Voici les nouveaux noeuds accessibles [15, 16, 20, 2, 21, 5, 18, 10, 3, 11, 7, 1]
+    BLUE vient de comparer 20/13 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 20/19 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 18/10 avec comme couleur BLUE/RED
+    BLUE vient de comparer 18/19 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 19/16 avec comme couleur BLUE/RED
+    BLUE vient de comparer 19/18 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 19/20 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 19/22 avec comme couleur BLUE/BRWON
+    Allignement de 3 pions en __1__ couches de la même couleur! [18, 19, 20]
+    Le joueur BLUE va perdre le noeud 19 et gagner 22
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 19: 19, 4: 4, 18: 18, 20: 20, 13: 13, 12: 12}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 4: 4, 18: 18, 20: 20, 13: 13, 12: 12, 22: 22}
+        ___Voici les noeuds accessibles [2, 21, 22, 23, 9, 14, 3, 1, 6, 17, 15]
+        Remove ID 22 at the index 2. Then add the ID 19
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 3, 1, 6, 17, 15, 19]
 l'IA BLUE a échangé deux noeuds
 
 l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 23/14 avec comme couleur RED/RED
-    RED vient de comparer 23/22 avec comme couleur RED/BLUE
-    RED vient de comparer 14/2 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 14 et gagner 2
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {23: 23, 17: 17, 13: 13, 14: 14, 6: 6, 9: 9}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {23: 23, 17: 17, 13: 13, 6: 6, 9: 9, 2: 2}
-        ___Voici les noeuds accessibles [15, 16, 20, 2, 21, 5, 18, 10, 3, 11, 7, 1]
-        Remove ID 2 at the index 3. Then add the ID 14
-        ___Voici les nouveaux noeuds accessibles [15, 16, 20, 21, 5, 18, 10, 3, 11, 7, 1, 14]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 0/1 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 0 et gagner 1
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 22: 22, 19: 19, 4: 4, 8: 8, 0: 0}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 22: 22, 19: 19, 4: 4, 8: 8, 1: 1}
-        ___Voici les noeuds accessibles [15, 16, 20, 21, 5, 18, 10, 3, 11, 7, 1, 14]
-        Remove ID 1 at the index 10. Then add the ID 0
-        ___Voici les nouveaux noeuds accessibles [15, 16, 20, 21, 5, 18, 10, 3, 11, 7, 14, 0]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 23/14 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 23 et gagner 14
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {23: 23, 17: 17, 13: 13, 6: 6, 9: 9, 2: 2}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {17: 17, 13: 13, 6: 6, 9: 9, 2: 2, 14: 14}
-        ___Voici les noeuds accessibles [15, 16, 20, 21, 5, 18, 10, 3, 11, 7, 14, 0]
-        Remove ID 14 at the index 10. Then add the ID 23
-        ___Voici les nouveaux noeuds accessibles [15, 16, 20, 21, 5, 18, 10, 3, 11, 7, 0, 23]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 8/7 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 8 et gagner 7
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 22: 22, 19: 19, 4: 4, 8: 8, 1: 1}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 22: 22, 19: 19, 4: 4, 1: 1, 7: 7}
-        ___Voici les noeuds accessibles [15, 16, 20, 21, 5, 18, 10, 3, 11, 7, 0, 23]
-        Remove ID 7 at the index 9. Then add the ID 8
-        ___Voici les nouveaux noeuds accessibles [15, 16, 20, 21, 5, 18, 10, 3, 11, 0, 23, 8]
-    Allignement de 3 pions en __2__ couches de la même couleur! [7, 4, 1]
-    ___Here's the RED dict: {17: 17, 13: 13, 6: 6, 9: 9, 2: 2, 14: 14}
-    ___Le joueur BLUE vient de supprimer le pion 2 de couleur RED
-    ___Here's the RED dict: {17: 17, 13: 13, 6: 6, 9: 9, 14: 14}
-___________________________________________________________________________
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 14/2 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 14 et gagner 2
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {17: 17, 13: 13, 6: 6, 9: 9, 14: 14}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {17: 17, 13: 13, 6: 6, 9: 9, 2: 2}
-        ___Voici les noeuds accessibles [15, 16, 20, 21, 5, 18, 10, 3, 11, 0, 23, 8, 2]
-        Remove ID 2 at the index 12. Then add the ID 14
-        ___Voici les nouveaux noeuds accessibles [15, 16, 20, 21, 5, 18, 10, 3, 11, 0, 23, 8, 14]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 22/19 avec comme couleur BLUE/BLUE
-    BLUE vient de comparer 22/21 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 22 et gagner 21
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 22: 22, 19: 19, 4: 4, 1: 1, 7: 7}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 19: 19, 4: 4, 1: 1, 7: 7, 21: 21}
-        ___Voici les noeuds accessibles [15, 16, 20, 21, 5, 18, 10, 3, 11, 0, 23, 8, 14]
-        Remove ID 21 at the index 3. Then add the ID 22
-        ___Voici les nouveaux noeuds accessibles [15, 16, 20, 5, 18, 10, 3, 11, 0, 23, 8, 14, 22]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 13/5 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 13 et gagner 5
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {17: 17, 13: 13, 6: 6, 9: 9, 2: 2}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {17: 17, 6: 6, 9: 9, 2: 2, 5: 5}
-        ___Voici les noeuds accessibles [15, 16, 20, 5, 18, 10, 3, 11, 0, 23, 8, 14, 22]
-        Remove ID 5 at the index 3. Then add the ID 13
-        ___Voici les nouveaux noeuds accessibles [15, 16, 20, 18, 10, 3, 11, 0, 23, 8, 14, 22, 13]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 19/16 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 19 et gagner 16
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 19: 19, 4: 4, 1: 1, 7: 7, 21: 21}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 4: 4, 1: 1, 7: 7, 21: 21, 16: 16}
-        ___Voici les noeuds accessibles [15, 16, 20, 18, 10, 3, 11, 0, 23, 8, 14, 22, 13]
-        Remove ID 16 at the index 1. Then add the ID 19
-        ___Voici les nouveaux noeuds accessibles [15, 20, 18, 10, 3, 11, 0, 23, 8, 14, 22, 13, 19]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 2/1 avec comme couleur RED/BLUE
-    RED vient de comparer 2/14 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 2 et gagner 14
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {17: 17, 6: 6, 9: 9, 2: 2, 5: 5}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {17: 17, 6: 6, 9: 9, 5: 5, 14: 14}
-        ___Voici les noeuds accessibles [15, 20, 18, 10, 3, 11, 0, 23, 8, 14, 22, 13, 19]
-        Remove ID 14 at the index 9. Then add the ID 2
-        ___Voici les nouveaux noeuds accessibles [15, 20, 18, 10, 3, 11, 0, 23, 8, 22, 13, 19, 2]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 16/15 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 16 et gagner 15
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 4: 4, 1: 1, 7: 7, 21: 21, 16: 16}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 4: 4, 1: 1, 7: 7, 21: 21, 15: 15}
-        ___Voici les noeuds accessibles [15, 20, 18, 10, 3, 11, 0, 23, 8, 22, 13, 19, 2]
-        Remove ID 15 at the index 0. Then add the ID 16
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 3, 11, 0, 23, 8, 22, 13, 19, 2, 16]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 6/7 avec comme couleur RED/BLUE
-    RED vient de comparer 6/11 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 6 et gagner 11
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {17: 17, 6: 6, 9: 9, 5: 5, 14: 14}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {17: 17, 9: 9, 5: 5, 14: 14, 11: 11}
-        ___Voici les noeuds accessibles [20, 18, 10, 3, 11, 0, 23, 8, 22, 13, 19, 2, 16]
-        Remove ID 11 at the index 4. Then add the ID 6
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 3, 0, 23, 8, 22, 13, 19, 2, 16, 6]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 21/9 avec comme couleur BLUE/RED
-    BLUE vient de comparer 21/22 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 21 et gagner 22
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 4: 4, 1: 1, 7: 7, 21: 21, 15: 15}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 4: 4, 1: 1, 7: 7, 15: 15, 22: 22}
-        ___Voici les noeuds accessibles [20, 18, 10, 3, 0, 23, 8, 22, 13, 19, 2, 16, 6]
-        Remove ID 22 at the index 7. Then add the ID 21
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 3, 0, 23, 8, 13, 19, 2, 16, 6, 21]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 11/6 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 11 et gagner 6
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {17: 17, 9: 9, 5: 5, 14: 14, 11: 11}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {17: 17, 9: 9, 5: 5, 14: 14, 6: 6}
-        ___Voici les noeuds accessibles [20, 18, 10, 3, 0, 23, 8, 13, 19, 2, 16, 6, 21]
-        Remove ID 6 at the index 11. Then add the ID 11
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 3, 0, 23, 8, 13, 19, 2, 16, 21, 11]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 15/11 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 15 et gagner 11
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 4: 4, 1: 1, 7: 7, 15: 15, 22: 22}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 4: 4, 1: 1, 7: 7, 22: 22, 11: 11}
-        ___Voici les noeuds accessibles [20, 18, 10, 3, 0, 23, 8, 13, 19, 2, 16, 21, 11]
-        Remove ID 11 at the index 12. Then add the ID 15
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 3, 0, 23, 8, 13, 19, 2, 16, 21, 15]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 5/4 avec comme couleur RED/BLUE
-    RED vient de comparer 5/13 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 5 et gagner 13
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {17: 17, 9: 9, 5: 5, 14: 14, 6: 6}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {17: 17, 9: 9, 14: 14, 6: 6, 13: 13}
-        ___Voici les noeuds accessibles [20, 18, 10, 3, 0, 23, 8, 13, 19, 2, 16, 21, 15]
-        Remove ID 13 at the index 7. Then add the ID 5
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 3, 0, 23, 8, 19, 2, 16, 21, 15, 5]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 4/1 avec comme couleur BLUE/BLUE
-    BLUE vient de comparer 4/3 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 4 et gagner 3
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 4: 4, 1: 1, 7: 7, 22: 22, 11: 11}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 1: 1, 7: 7, 22: 22, 11: 11, 3: 3}
-        ___Voici les noeuds accessibles [20, 18, 10, 3, 0, 23, 8, 19, 2, 16, 21, 15, 5]
-        Remove ID 3 at the index 3. Then add the ID 4
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 0, 23, 8, 19, 2, 16, 21, 15, 5, 4]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 13/5 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 13 et gagner 5
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {17: 17, 9: 9, 14: 14, 6: 6, 13: 13}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {17: 17, 9: 9, 14: 14, 6: 6, 5: 5}
-        ___Voici les noeuds accessibles [20, 18, 10, 0, 23, 8, 19, 2, 16, 21, 15, 5, 4]
-        Remove ID 5 at the index 11. Then add the ID 13
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 0, 23, 8, 19, 2, 16, 21, 15, 4, 13]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 1/0 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 1 et gagner 0
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 1: 1, 7: 7, 22: 22, 11: 11, 3: 3}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 7: 7, 22: 22, 11: 11, 3: 3, 0: 0}
-        ___Voici les noeuds accessibles [20, 18, 10, 0, 23, 8, 19, 2, 16, 21, 15, 4, 13]
-        Remove ID 0 at the index 3. Then add the ID 1
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 23, 8, 19, 2, 16, 21, 15, 4, 13, 1]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 17/12 avec comme couleur RED/BLUE
-    RED vient de comparer 17/16 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 17 et gagner 16
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {17: 17, 9: 9, 14: 14, 6: 6, 5: 5}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {9: 9, 14: 14, 6: 6, 5: 5, 16: 16}
-        ___Voici les noeuds accessibles [20, 18, 10, 23, 8, 19, 2, 16, 21, 15, 4, 13, 1]
-        Remove ID 16 at the index 7. Then add the ID 17
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 23, 8, 19, 2, 21, 15, 4, 13, 1, 17]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 7/4 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 7 et gagner 4
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 7: 7, 22: 22, 11: 11, 3: 3, 0: 0}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 22: 22, 11: 11, 3: 3, 0: 0, 4: 4}
-        ___Voici les noeuds accessibles [20, 18, 10, 23, 8, 19, 2, 21, 15, 4, 13, 1, 17]
-        Remove ID 4 at the index 9. Then add the ID 7
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 23, 8, 19, 2, 21, 15, 13, 1, 17, 7]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 16/15 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 16 et gagner 15
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {9: 9, 14: 14, 6: 6, 5: 5, 16: 16}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {9: 9, 14: 14, 6: 6, 5: 5, 15: 15}
-        ___Voici les noeuds accessibles [20, 18, 10, 23, 8, 19, 2, 21, 15, 13, 1, 17, 7]
-        Remove ID 15 at the index 8. Then add the ID 16
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 23, 8, 19, 2, 21, 13, 1, 17, 7, 16]
+    RED vient de comparer 8/7 avec comme couleur RED/RED
+    RED vient de comparer 8/12 avec comme couleur RED/BLUE
+    RED vient de comparer 7/4 avec comme couleur RED/BLUE
+    RED vient de comparer 7/6 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 7 et gagner 6
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {8: 8, 11: 11, 0: 0, 10: 10, 7: 7, 16: 16}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {8: 8, 11: 11, 0: 0, 10: 10, 16: 16, 6: 6}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 3, 1, 6, 17, 15, 19]
+        Remove ID 6 at the index 7. Then add the ID 7
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 3, 1, 17, 15, 19, 7]
 l'IA RED a échangé deux noeuds
 
 l'IA BLUE va chercher deux noeuds à échanger
     BLUE vient de comparer 22/19 avec comme couleur BLUE/BRWON
     Le joueur BLUE va perdre le noeud 22 et gagner 19
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 22: 22, 11: 11, 3: 3, 0: 0, 4: 4}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 11: 11, 3: 3, 0: 0, 4: 4, 19: 19}
-        ___Voici les noeuds accessibles [20, 18, 10, 23, 8, 19, 2, 21, 13, 1, 17, 7, 16]
-        Remove ID 19 at the index 5. Then add the ID 22
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 23, 8, 2, 21, 13, 1, 17, 7, 16, 22]
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 4: 4, 18: 18, 20: 20, 13: 13, 12: 12, 22: 22}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 4: 4, 18: 18, 20: 20, 13: 13, 12: 12, 19: 19}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 3, 1, 17, 15, 19, 7]
+        Remove ID 19 at the index 9. Then add the ID 22
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 3, 1, 17, 15, 7, 22]
+    Allignement de 3 pions en __1__ couches de la même couleur! [18, 19, 20]
+    ___Here's the ennemy dict: {8: 8, 11: 11, 0: 0, 10: 10, 16: 16, 6: 6}
+    ___Le joueur BLUE vient de supprimer le pion 10 de couleur RED
+    ___Here's the ennemy dict: {8: 8, 11: 11, 0: 0, 16: 16, 6: 6}
+___________________________________________________________________________
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 16/15 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 16 et gagner 15
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {8: 8, 11: 11, 0: 0, 16: 16, 6: 6}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {8: 8, 11: 11, 0: 0, 6: 6, 15: 15}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 3, 1, 17, 15, 7, 22, 10]
+        Remove ID 15 at the index 8. Then add the ID 16
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 3, 1, 17, 7, 22, 10, 16]
+    Allignement de 3 pions en __2__ couches de la même couleur! [15, 11, 6]
+    Allignement de 3 pions en __1__ couches de la même couleur! [18, 19, 20]
+19 appartient à un alignement de 3 pions de la même couleur. On ne peut pas le supprimer
+    Allignement de 3 pions en __2__ couches de la même couleur! [20, 13, 5]
+20 appartient à un alignement de 3 pions de la même couleur. On ne peut pas le supprimer
+    Allignement de 3 pions en __1__ couches de la même couleur! [5, 13, 20]
+13 appartient à un alignement de 3 pions de la même couleur. On ne peut pas le supprimer
+    Allignement de 3 pions en __2__ couches de la même couleur! [18, 19, 20]
+18 appartient à un alignement de 3 pions de la même couleur. On ne peut pas le supprimer
+    Allignement de 3 pions en __2__ couches de la même couleur! [5, 13, 20]
+5 appartient à un alignement de 3 pions de la même couleur. On ne peut pas le supprimer
+    ___Here's the ennemy dict: {5: 5, 4: 4, 18: 18, 20: 20, 13: 13, 12: 12, 19: 19}
+    ___Le joueur RED vient de supprimer le pion 4 de couleur BLUE
+    ___Here's the ennemy dict: {5: 5, 18: 18, 20: 20, 13: 13, 12: 12, 19: 19}
+___________________________________________________________________________
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 20/13 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 20/19 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 18/10 avec comme couleur BLUE/BRWON
+    Allignement de 3 pions en __2__ couches de la même couleur! [18, 19, 20]
+    Le joueur BLUE va perdre le noeud 18 et gagner 10
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 18: 18, 20: 20, 13: 13, 12: 12, 19: 19}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 13: 13, 12: 12, 19: 19, 10: 10}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 3, 1, 17, 7, 22, 10, 16, 4]
+        Remove ID 10 at the index 10. Then add the ID 18
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 3, 1, 17, 7, 22, 16, 4, 18]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 0/1 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 0 et gagner 1
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {8: 8, 11: 11, 0: 0, 6: 6, 15: 15}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {8: 8, 11: 11, 6: 6, 15: 15, 1: 1}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 3, 1, 17, 7, 22, 16, 4, 18]
+        Remove ID 1 at the index 6. Then add the ID 0
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 3, 17, 7, 22, 16, 4, 18, 0]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 12/8 avec comme couleur BLUE/RED
+    BLUE vient de comparer 12/13 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 12/17 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 12 et gagner 17
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 13: 13, 12: 12, 19: 19, 10: 10}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 13: 13, 19: 19, 10: 10, 17: 17}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 3, 17, 7, 22, 16, 4, 18, 0]
+        Remove ID 17 at the index 6. Then add the ID 12
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 3, 7, 22, 16, 4, 18, 0, 12]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 15/11 avec comme couleur RED/RED
+    RED vient de comparer 15/16 avec comme couleur RED/BRWON
+    Allignement de 3 pions en __2__ couches de la même couleur! [15, 11, 6]
+    Le joueur RED va perdre le noeud 15 et gagner 16
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {8: 8, 11: 11, 6: 6, 15: 15, 1: 1}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {8: 8, 11: 11, 6: 6, 1: 1, 16: 16}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 3, 7, 22, 16, 4, 18, 0, 12]
+        Remove ID 16 at the index 8. Then add the ID 15
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 3, 7, 22, 4, 18, 0, 12, 15]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 20/13 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 20/19 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 10/3 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 10 et gagner 3
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 13: 13, 19: 19, 10: 10, 17: 17}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 13: 13, 19: 19, 17: 17, 3: 3}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 3, 7, 22, 4, 18, 0, 12, 15]
+        Remove ID 3 at the index 5. Then add the ID 10
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 7, 22, 4, 18, 0, 12, 15, 10]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 11/6 avec comme couleur RED/RED
+    RED vient de comparer 11/10 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 11 et gagner 10
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {8: 8, 11: 11, 6: 6, 1: 1, 16: 16}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {8: 8, 6: 6, 1: 1, 16: 16, 10: 10}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 7, 22, 4, 18, 0, 12, 15, 10]
+        Remove ID 10 at the index 12. Then add the ID 11
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 7, 22, 4, 18, 0, 12, 15, 11]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 17/12 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 17 et gagner 12
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 13: 13, 19: 19, 17: 17, 3: 3}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 13: 13, 19: 19, 3: 3, 12: 12}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 7, 22, 4, 18, 0, 12, 15, 11]
+        Remove ID 12 at the index 10. Then add the ID 17
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 7, 22, 4, 18, 0, 15, 11, 17]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 16/15 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 16 et gagner 15
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {8: 8, 6: 6, 1: 1, 16: 16, 10: 10}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {8: 8, 6: 6, 1: 1, 10: 10, 15: 15}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 7, 22, 4, 18, 0, 15, 11, 17]
+        Remove ID 15 at the index 10. Then add the ID 16
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 7, 22, 4, 18, 0, 11, 17, 16]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 12/8 avec comme couleur BLUE/RED
+    BLUE vient de comparer 12/13 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 12/17 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 12 et gagner 17
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 13: 13, 19: 19, 3: 3, 12: 12}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 13: 13, 19: 19, 3: 3, 17: 17}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 7, 22, 4, 18, 0, 11, 17, 16]
+        Remove ID 17 at the index 11. Then add the ID 12
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 7, 22, 4, 18, 0, 11, 16, 12]
 l'IA BLUE a échangé deux noeuds
 
 l'IA RED va chercher deux noeuds à échanger
     RED vient de comparer 6/7 avec comme couleur RED/BRWON
     Le joueur RED va perdre le noeud 6 et gagner 7
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {9: 9, 14: 14, 6: 6, 5: 5, 15: 15}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {9: 9, 14: 14, 5: 5, 15: 15, 7: 7}
-        ___Voici les noeuds accessibles [20, 18, 10, 23, 8, 2, 21, 13, 1, 17, 7, 16, 22]
-        Remove ID 7 at the index 10. Then add the ID 6
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 23, 8, 2, 21, 13, 1, 17, 16, 22, 6]
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {8: 8, 6: 6, 1: 1, 10: 10, 15: 15}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {8: 8, 1: 1, 10: 10, 15: 15, 7: 7}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 7, 22, 4, 18, 0, 11, 16, 12]
+        Remove ID 7 at the index 5. Then add the ID 6
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 22, 4, 18, 0, 11, 16, 12, 6]
 l'IA RED a échangé deux noeuds
 
 l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 11/6 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 11 et gagner 6
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 11: 11, 3: 3, 0: 0, 4: 4, 19: 19}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 3: 3, 0: 0, 4: 4, 19: 19, 6: 6}
-        ___Voici les noeuds accessibles [20, 18, 10, 23, 8, 2, 21, 13, 1, 17, 16, 22, 6]
-        Remove ID 6 at the index 12. Then add the ID 11
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 23, 8, 2, 21, 13, 1, 17, 16, 22, 11]
+    BLUE vient de comparer 3/4 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 3 et gagner 4
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 13: 13, 19: 19, 3: 3, 17: 17}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 13: 13, 19: 19, 17: 17, 4: 4}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 22, 4, 18, 0, 11, 16, 12, 6]
+        Remove ID 4 at the index 6. Then add the ID 3
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 0, 11, 16, 12, 6, 3]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 1/0 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 1 et gagner 0
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {8: 8, 1: 1, 10: 10, 15: 15, 7: 7}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {8: 8, 10: 10, 15: 15, 7: 7, 0: 0}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 0, 11, 16, 12, 6, 3]
+        Remove ID 0 at the index 7. Then add the ID 1
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 11, 16, 12, 6, 3, 1]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 5/4 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 5/13 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 13/5 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 13/12 avec comme couleur BLUE/BRWON
+    Allignement de 3 pions en __1__ couches de la même couleur! [5, 13, 20]
+    Le joueur BLUE va perdre le noeud 13 et gagner 12
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 13: 13, 19: 19, 17: 17, 4: 4}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 19: 19, 17: 17, 4: 4, 12: 12}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 11, 16, 12, 6, 3, 1]
+        Remove ID 12 at the index 9. Then add the ID 13
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 11, 16, 6, 3, 1, 13]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 7/4 avec comme couleur RED/BLUE
+    RED vient de comparer 7/6 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 7 et gagner 6
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {8: 8, 10: 10, 15: 15, 7: 7, 0: 0}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {8: 8, 10: 10, 15: 15, 0: 0, 6: 6}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 11, 16, 6, 3, 1, 13]
+        Remove ID 6 at the index 9. Then add the ID 7
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 11, 16, 3, 1, 13, 7]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 12/8 avec comme couleur BLUE/RED
+    BLUE vient de comparer 12/13 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 12 et gagner 13
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 19: 19, 17: 17, 4: 4, 12: 12}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 19: 19, 17: 17, 4: 4, 13: 13}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 11, 16, 3, 1, 13, 7]
+        Remove ID 13 at the index 11. Then add the ID 12
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 11, 16, 3, 1, 7, 12]
+    Allignement de 3 pions en __1__ couches de la même couleur! [5, 13, 20]
+    ___Here's the ennemy dict: {8: 8, 10: 10, 15: 15, 0: 0, 6: 6}
+    ___Le joueur BLUE vient de supprimer le pion 6 de couleur RED
+    ___Here's the ennemy dict: {8: 8, 10: 10, 15: 15, 0: 0}
+___________________________________________________________________________
 l'IA BLUE a échangé deux noeuds
 
 l'IA RED va chercher deux noeuds à échanger
     RED vient de comparer 15/11 avec comme couleur RED/BRWON
     Le joueur RED va perdre le noeud 15 et gagner 11
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {9: 9, 14: 14, 5: 5, 15: 15, 7: 7}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {9: 9, 14: 14, 5: 5, 7: 7, 11: 11}
-        ___Voici les noeuds accessibles [20, 18, 10, 23, 8, 2, 21, 13, 1, 17, 16, 22, 11]
-        Remove ID 11 at the index 12. Then add the ID 15
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 23, 8, 2, 21, 13, 1, 17, 16, 22, 15]
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {8: 8, 10: 10, 15: 15, 0: 0}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {8: 8, 10: 10, 0: 0, 11: 11}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 11, 16, 3, 1, 7, 12, 6]
+        Remove ID 11 at the index 7. Then add the ID 15
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 16, 3, 1, 7, 12, 6, 15]
 l'IA RED a échangé deux noeuds
 
 l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 0/1 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 0 et gagner 1
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 3: 3, 0: 0, 4: 4, 19: 19, 6: 6}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 3: 3, 4: 4, 19: 19, 6: 6, 1: 1}
-        ___Voici les noeuds accessibles [20, 18, 10, 23, 8, 2, 21, 13, 1, 17, 16, 22, 15]
-        Remove ID 1 at the index 8. Then add the ID 0
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 23, 8, 2, 21, 13, 17, 16, 22, 15, 0]
+    BLUE vient de comparer 13/5 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 13/12 avec comme couleur BLUE/BRWON
+    Allignement de 3 pions en __1__ couches de la même couleur! [5, 13, 20]
+    Le joueur BLUE va perdre le noeud 13 et gagner 12
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 19: 19, 17: 17, 4: 4, 13: 13}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 19: 19, 17: 17, 4: 4, 12: 12}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 16, 3, 1, 7, 12, 6, 15]
+        Remove ID 12 at the index 11. Then add the ID 13
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 16, 3, 1, 7, 6, 15, 13]
 l'IA BLUE a échangé deux noeuds
 
 l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 5/4 avec comme couleur RED/BLUE
-    RED vient de comparer 5/13 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 5 et gagner 13
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {9: 9, 14: 14, 5: 5, 7: 7, 11: 11}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {9: 9, 14: 14, 7: 7, 11: 11, 13: 13}
-        ___Voici les noeuds accessibles [20, 18, 10, 23, 8, 2, 21, 13, 17, 16, 22, 15, 0]
-        Remove ID 13 at the index 7. Then add the ID 5
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 23, 8, 2, 21, 17, 16, 22, 15, 0, 5]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 12/8 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 12 et gagner 8
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {12: 12, 3: 3, 4: 4, 19: 19, 6: 6, 1: 1}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {3: 3, 4: 4, 19: 19, 6: 6, 1: 1, 8: 8}
-        ___Voici les noeuds accessibles [20, 18, 10, 23, 8, 2, 21, 17, 16, 22, 15, 0, 5]
-        Remove ID 8 at the index 4. Then add the ID 12
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 23, 2, 21, 17, 16, 22, 15, 0, 5, 12]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 7/4 avec comme couleur RED/BLUE
-    RED vient de comparer 7/6 avec comme couleur RED/BLUE
-    RED vient de comparer 7/8 avec comme couleur RED/BLUE
-    RED vient de comparer 14/2 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 14 et gagner 2
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {9: 9, 14: 14, 7: 7, 11: 11, 13: 13}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {9: 9, 7: 7, 11: 11, 13: 13, 2: 2}
-        ___Voici les noeuds accessibles [20, 18, 10, 23, 2, 21, 17, 16, 22, 15, 0, 5, 12]
-        Remove ID 2 at the index 4. Then add the ID 14
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 23, 21, 17, 16, 22, 15, 0, 5, 12, 14]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 4/1 avec comme couleur BLUE/BLUE
-    BLUE vient de comparer 4/3 avec comme couleur BLUE/BLUE
-    BLUE vient de comparer 4/5 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 4 et gagner 5
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {3: 3, 4: 4, 19: 19, 6: 6, 1: 1, 8: 8}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {3: 3, 19: 19, 6: 6, 1: 1, 8: 8, 5: 5}
-        ___Voici les noeuds accessibles [20, 18, 10, 23, 21, 17, 16, 22, 15, 0, 5, 12, 14]
-        Remove ID 5 at the index 10. Then add the ID 4
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 23, 21, 17, 16, 22, 15, 0, 12, 14, 4]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 2/1 avec comme couleur RED/BLUE
-    RED vient de comparer 2/14 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 2 et gagner 14
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {9: 9, 7: 7, 11: 11, 13: 13, 2: 2}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {9: 9, 7: 7, 11: 11, 13: 13, 14: 14}
-        ___Voici les noeuds accessibles [20, 18, 10, 23, 21, 17, 16, 22, 15, 0, 12, 14, 4]
-        Remove ID 14 at the index 11. Then add the ID 2
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 23, 21, 17, 16, 22, 15, 0, 12, 4, 2]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 6/7 avec comme couleur BLUE/RED
-    BLUE vient de comparer 6/11 avec comme couleur BLUE/RED
-    BLUE vient de comparer 8/7 avec comme couleur BLUE/RED
-    BLUE vient de comparer 8/12 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 8 et gagner 12
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {3: 3, 19: 19, 6: 6, 1: 1, 8: 8, 5: 5}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {3: 3, 19: 19, 6: 6, 1: 1, 5: 5, 12: 12}
-        ___Voici les noeuds accessibles [20, 18, 10, 23, 21, 17, 16, 22, 15, 0, 12, 4, 2]
-        Remove ID 12 at the index 10. Then add the ID 8
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 23, 21, 17, 16, 22, 15, 0, 4, 2, 8]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 7/4 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 7 et gagner 4
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {9: 9, 7: 7, 11: 11, 13: 13, 14: 14}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {9: 9, 11: 11, 13: 13, 14: 14, 4: 4}
-        ___Voici les noeuds accessibles [20, 18, 10, 23, 21, 17, 16, 22, 15, 0, 4, 2, 8]
-        Remove ID 4 at the index 10. Then add the ID 7
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 23, 21, 17, 16, 22, 15, 0, 2, 8, 7]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 1/0 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 1 et gagner 0
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {3: 3, 19: 19, 6: 6, 1: 1, 5: 5, 12: 12}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {3: 3, 19: 19, 6: 6, 5: 5, 12: 12, 0: 0}
-        ___Voici les noeuds accessibles [20, 18, 10, 23, 21, 17, 16, 22, 15, 0, 2, 8, 7]
-        Remove ID 0 at the index 9. Then add the ID 1
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 23, 21, 17, 16, 22, 15, 2, 8, 7, 1]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 14/2 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 14 et gagner 2
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {9: 9, 11: 11, 13: 13, 14: 14, 4: 4}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {9: 9, 11: 11, 13: 13, 4: 4, 2: 2}
-        ___Voici les noeuds accessibles [20, 18, 10, 23, 21, 17, 16, 22, 15, 2, 8, 7, 1]
-        Remove ID 2 at the index 9. Then add the ID 14
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 23, 21, 17, 16, 22, 15, 8, 7, 1, 14]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 6/7 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 6 et gagner 7
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {3: 3, 19: 19, 6: 6, 5: 5, 12: 12, 0: 0}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {3: 3, 19: 19, 5: 5, 12: 12, 0: 0, 7: 7}
-        ___Voici les noeuds accessibles [20, 18, 10, 23, 21, 17, 16, 22, 15, 8, 7, 1, 14]
-        Remove ID 7 at the index 10. Then add the ID 6
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 23, 21, 17, 16, 22, 15, 8, 1, 14, 6]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 4/1 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 4 et gagner 1
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {9: 9, 11: 11, 13: 13, 4: 4, 2: 2}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {9: 9, 11: 11, 13: 13, 2: 2, 1: 1}
-        ___Voici les noeuds accessibles [20, 18, 10, 23, 21, 17, 16, 22, 15, 8, 1, 14, 6]
-        Remove ID 1 at the index 10. Then add the ID 4
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 23, 21, 17, 16, 22, 15, 8, 14, 6, 4]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 0/1 avec comme couleur BLUE/RED
-    BLUE vient de comparer 0/9 avec comme couleur BLUE/RED
-    BLUE vient de comparer 12/8 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 12 et gagner 8
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {3: 3, 19: 19, 5: 5, 12: 12, 0: 0, 7: 7}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {3: 3, 19: 19, 5: 5, 0: 0, 7: 7, 8: 8}
-        ___Voici les noeuds accessibles [20, 18, 10, 23, 21, 17, 16, 22, 15, 8, 14, 6, 4]
-        Remove ID 8 at the index 9. Then add the ID 12
-        ___Voici les nouveaux noeuds accessibles [20, 18, 10, 23, 21, 17, 16, 22, 15, 14, 6, 4, 12]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 9/0 avec comme couleur RED/BLUE
-    RED vient de comparer 9/10 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 9 et gagner 10
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {9: 9, 11: 11, 13: 13, 2: 2, 1: 1}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {11: 11, 13: 13, 2: 2, 1: 1, 10: 10}
-        ___Voici les noeuds accessibles [20, 18, 10, 23, 21, 17, 16, 22, 15, 14, 6, 4, 12]
-        Remove ID 10 at the index 2. Then add the ID 9
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 16, 22, 15, 14, 6, 4, 12, 9]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 5/4 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 5 et gagner 4
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {3: 3, 19: 19, 5: 5, 0: 0, 7: 7, 8: 8}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {3: 3, 19: 19, 0: 0, 7: 7, 8: 8, 4: 4}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 16, 22, 15, 14, 6, 4, 12, 9]
-        Remove ID 4 at the index 10. Then add the ID 5
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 16, 22, 15, 14, 6, 12, 9, 5]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 10/3 avec comme couleur RED/BLUE
-    RED vient de comparer 10/9 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 10 et gagner 9
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {11: 11, 13: 13, 2: 2, 1: 1, 10: 10}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {11: 11, 13: 13, 2: 2, 1: 1, 9: 9}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 16, 22, 15, 14, 6, 12, 9, 5]
-        Remove ID 9 at the index 11. Then add the ID 10
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 16, 22, 15, 14, 6, 12, 5, 10]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 19/16 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 19 et gagner 16
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {3: 3, 19: 19, 0: 0, 7: 7, 8: 8, 4: 4}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {3: 3, 0: 0, 7: 7, 8: 8, 4: 4, 16: 16}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 16, 22, 15, 14, 6, 12, 5, 10]
-        Remove ID 16 at the index 5. Then add the ID 19
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 15, 14, 6, 12, 5, 10, 19]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 13/5 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 13 et gagner 5
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {11: 11, 13: 13, 2: 2, 1: 1, 9: 9}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {11: 11, 2: 2, 1: 1, 9: 9, 5: 5}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 15, 14, 6, 12, 5, 10, 19]
-        Remove ID 5 at the index 10. Then add the ID 13
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 15, 14, 6, 12, 10, 19, 13]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 3/4 avec comme couleur BLUE/BLUE
-    BLUE vient de comparer 3/10 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 3 et gagner 10
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {3: 3, 0: 0, 7: 7, 8: 8, 4: 4, 16: 16}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 7: 7, 8: 8, 4: 4, 16: 16, 10: 10}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 15, 14, 6, 12, 10, 19, 13]
-        Remove ID 10 at the index 10. Then add the ID 3
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 15, 14, 6, 12, 19, 13, 3]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 1/0 avec comme couleur RED/BLUE
-    RED vient de comparer 1/2 avec comme couleur RED/RED
-    RED vient de comparer 1/4 avec comme couleur RED/BLUE
-    RED vient de comparer 5/4 avec comme couleur RED/BLUE
-    RED vient de comparer 5/13 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 5 et gagner 13
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {11: 11, 2: 2, 1: 1, 9: 9, 5: 5}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {11: 11, 2: 2, 1: 1, 9: 9, 13: 13}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 15, 14, 6, 12, 19, 13, 3]
-        Remove ID 13 at the index 11. Then add the ID 5
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 15, 14, 6, 12, 19, 3, 5]
+    RED vient de comparer 0/1 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 0 et gagner 1
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {8: 8, 10: 10, 0: 0, 11: 11}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {8: 8, 10: 10, 11: 11, 1: 1}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 16, 3, 1, 7, 6, 15, 13]
+        Remove ID 1 at the index 9. Then add the ID 0
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 16, 3, 7, 6, 15, 13, 0]
 l'IA RED a échangé deux noeuds
 
 l'IA BLUE va chercher deux noeuds à échanger
     BLUE vient de comparer 4/1 avec comme couleur BLUE/RED
     BLUE vient de comparer 4/3 avec comme couleur BLUE/BRWON
     Le joueur BLUE va perdre le noeud 4 et gagner 3
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 7: 7, 8: 8, 4: 4, 16: 16, 10: 10}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 7: 7, 8: 8, 16: 16, 10: 10, 3: 3}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 15, 14, 6, 12, 19, 3, 5]
-        Remove ID 3 at the index 11. Then add the ID 4
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 15, 14, 6, 12, 19, 5, 4]
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 19: 19, 17: 17, 4: 4, 12: 12}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 19: 19, 17: 17, 12: 12, 3: 3}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 16, 3, 7, 6, 15, 13, 0]
+        Remove ID 3 at the index 8. Then add the ID 4
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 16, 7, 6, 15, 13, 0, 4]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 1/0 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 1 et gagner 0
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {8: 8, 10: 10, 11: 11, 1: 1}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {8: 8, 10: 10, 11: 11, 0: 0}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 16, 7, 6, 15, 13, 0, 4]
+        Remove ID 0 at the index 12. Then add the ID 1
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 16, 7, 6, 15, 13, 4, 1]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 17/12 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 17/16 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 17 et gagner 16
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 19: 19, 17: 17, 12: 12, 3: 3}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 19: 19, 12: 12, 3: 3, 16: 16}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 16, 7, 6, 15, 13, 4, 1]
+        Remove ID 16 at the index 7. Then add the ID 17
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 7, 6, 15, 13, 4, 1, 17]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 0/1 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 0 et gagner 1
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {8: 8, 10: 10, 11: 11, 0: 0}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {8: 8, 10: 10, 11: 11, 1: 1}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 7, 6, 15, 13, 4, 1, 17]
+        Remove ID 1 at the index 12. Then add the ID 0
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 7, 6, 15, 13, 4, 17, 0]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 12/8 avec comme couleur BLUE/RED
+    BLUE vient de comparer 12/13 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 12 et gagner 13
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 19: 19, 12: 12, 3: 3, 16: 16}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 19: 19, 3: 3, 16: 16, 13: 13}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 7, 6, 15, 13, 4, 17, 0]
+        Remove ID 13 at the index 10. Then add the ID 12
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 7, 6, 15, 4, 17, 0, 12]
+    Allignement de 3 pions en __1__ couches de la même couleur! [5, 13, 20]
+    ___Here's the ennemy dict: {8: 8, 10: 10, 11: 11, 1: 1}
+    ___Le joueur BLUE vient de supprimer le pion 8 de couleur RED
+    ___Here's the ennemy dict: {10: 10, 11: 11, 1: 1}
+___________________________________________________________________________
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 1/0 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 1 et gagner 0
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {10: 10, 11: 11, 1: 1}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {10: 10, 11: 11, 0: 0}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 7, 6, 15, 4, 17, 0, 12, 8]
+        Remove ID 0 at the index 12. Then add the ID 1
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 7, 6, 15, 4, 17, 12, 8, 1]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 3/4 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 3 et gagner 4
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 19: 19, 3: 3, 16: 16, 13: 13}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 19: 19, 16: 16, 13: 13, 4: 4}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 7, 6, 15, 4, 17, 12, 8, 1]
+        Remove ID 4 at the index 10. Then add the ID 3
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 7, 6, 15, 17, 12, 8, 1, 3]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 0/1 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 0 et gagner 1
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {10: 10, 11: 11, 0: 0}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {10: 10, 11: 11, 1: 1}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 7, 6, 15, 17, 12, 8, 1, 3]
+        Remove ID 1 at the index 13. Then add the ID 0
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 7, 6, 15, 17, 12, 8, 3, 0]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 19/16 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 19/18 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 19 et gagner 18
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 19: 19, 16: 16, 13: 13, 4: 4}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 16: 16, 13: 13, 4: 4, 18: 18}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 22, 18, 7, 6, 15, 17, 12, 8, 3, 0]
+        Remove ID 18 at the index 6. Then add the ID 19
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 22, 7, 6, 15, 17, 12, 8, 3, 0, 19]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 1/0 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 1 et gagner 0
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {10: 10, 11: 11, 1: 1}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {10: 10, 11: 11, 0: 0}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 22, 7, 6, 15, 17, 12, 8, 3, 0, 19]
+        Remove ID 0 at the index 13. Then add the ID 1
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 22, 7, 6, 15, 17, 12, 8, 3, 19, 1]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 5/4 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 5/13 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 4/1 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 4 et gagner 1
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 16: 16, 13: 13, 4: 4, 18: 18}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 16: 16, 13: 13, 18: 18, 1: 1}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 22, 7, 6, 15, 17, 12, 8, 3, 19, 1]
+        Remove ID 1 at the index 14. Then add the ID 4
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 22, 7, 6, 15, 17, 12, 8, 3, 19, 4]
 l'IA BLUE a échangé deux noeuds
 
 l'IA RED va chercher deux noeuds à échanger
     RED vient de comparer 11/6 avec comme couleur RED/BRWON
     Le joueur RED va perdre le noeud 11 et gagner 6
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {11: 11, 2: 2, 1: 1, 9: 9, 13: 13}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {2: 2, 1: 1, 9: 9, 13: 13, 6: 6}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 15, 14, 6, 12, 19, 5, 4]
-        Remove ID 6 at the index 8. Then add the ID 11
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 15, 14, 12, 19, 5, 4, 11]
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {10: 10, 11: 11, 0: 0}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {10: 10, 0: 0, 6: 6}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 22, 7, 6, 15, 17, 12, 8, 3, 19, 4]
+        Remove ID 6 at the index 7. Then add the ID 11
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 22, 7, 15, 17, 12, 8, 3, 19, 4, 11]
 l'IA RED a échangé deux noeuds
 
 l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 16/15 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 16 et gagner 15
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 7: 7, 8: 8, 16: 16, 10: 10, 3: 3}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 7: 7, 8: 8, 10: 10, 3: 3, 15: 15}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 15, 14, 12, 19, 5, 4, 11]
-        Remove ID 15 at the index 6. Then add the ID 16
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 12, 19, 5, 4, 11, 16]
+    BLUE vient de comparer 20/13 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 20/19 avec comme couleur BLUE/BRWON
+    Allignement de 3 pions en __2__ couches de la même couleur! [20, 13, 5]
+    Le joueur BLUE va perdre le noeud 20 et gagner 19
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 20: 20, 16: 16, 13: 13, 18: 18, 1: 1}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 16: 16, 13: 13, 18: 18, 1: 1, 19: 19}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 22, 7, 15, 17, 12, 8, 3, 19, 4, 11]
+        Remove ID 19 at the index 12. Then add the ID 20
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 9, 14, 22, 7, 15, 17, 12, 8, 3, 4, 11, 20]
 l'IA BLUE a échangé deux noeuds
 
 l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 1/0 avec comme couleur RED/BLUE
-    RED vient de comparer 1/2 avec comme couleur RED/RED
-    RED vient de comparer 1/4 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 1 et gagner 4
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {2: 2, 1: 1, 9: 9, 13: 13, 6: 6}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {2: 2, 9: 9, 13: 13, 6: 6, 4: 4}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 12, 19, 5, 4, 11, 16]
-        Remove ID 4 at the index 10. Then add the ID 1
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 12, 19, 5, 11, 16, 1]
+    RED vient de comparer 0/1 avec comme couleur RED/BLUE
+    RED vient de comparer 0/9 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 0 et gagner 9
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {10: 10, 0: 0, 6: 6}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {10: 10, 6: 6, 9: 9}
+        ___Voici les noeuds accessibles [2, 21, 23, 9, 14, 22, 7, 15, 17, 12, 8, 3, 4, 11, 20]
+        Remove ID 9 at the index 3. Then add the ID 0
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 7, 15, 17, 12, 8, 3, 4, 11, 20, 0]
 l'IA RED a échangé deux noeuds
 
 l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 7/4 avec comme couleur BLUE/RED
-    BLUE vient de comparer 7/6 avec comme couleur BLUE/RED
-    BLUE vient de comparer 7/8 avec comme couleur BLUE/BLUE
-    BLUE vient de comparer 10/3 avec comme couleur BLUE/BLUE
-    BLUE vient de comparer 10/9 avec comme couleur BLUE/RED
-    BLUE vient de comparer 10/11 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 10 et gagner 11
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 7: 7, 8: 8, 10: 10, 3: 3, 15: 15}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 7: 7, 8: 8, 3: 3, 15: 15, 11: 11}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 12, 19, 5, 11, 16, 1]
-        Remove ID 11 at the index 10. Then add the ID 10
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 12, 19, 5, 16, 1, 10]
+    BLUE vient de comparer 18/10 avec comme couleur BLUE/RED
+    BLUE vient de comparer 18/19 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 5/4 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 5 et gagner 4
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 16: 16, 13: 13, 18: 18, 1: 1, 19: 19}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {16: 16, 13: 13, 18: 18, 1: 1, 19: 19, 4: 4}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 7, 15, 17, 12, 8, 3, 4, 11, 20, 0]
+        Remove ID 4 at the index 11. Then add the ID 5
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 7, 15, 17, 12, 8, 3, 11, 20, 0, 5]
 l'IA BLUE a échangé deux noeuds
 
 l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 6/7 avec comme couleur RED/BLUE
-    RED vient de comparer 6/11 avec comme couleur RED/BLUE
-    RED vient de comparer 2/1 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 2 et gagner 1
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {2: 2, 9: 9, 13: 13, 6: 6, 4: 4}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {9: 9, 13: 13, 6: 6, 4: 4, 1: 1}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 12, 19, 5, 16, 1, 10]
-        Remove ID 1 at the index 11. Then add the ID 2
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 12, 19, 5, 16, 10, 2]
+    RED vient de comparer 9/0 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 9 et gagner 0
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {10: 10, 6: 6, 9: 9}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {10: 10, 6: 6, 0: 0}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 7, 15, 17, 12, 8, 3, 11, 20, 0, 5]
+        Remove ID 0 at the index 13. Then add the ID 9
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 7, 15, 17, 12, 8, 3, 11, 20, 5, 9]
 l'IA RED a échangé deux noeuds
 
 l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 0/1 avec comme couleur BLUE/RED
-    BLUE vient de comparer 0/9 avec comme couleur BLUE/RED
-    BLUE vient de comparer 8/7 avec comme couleur BLUE/BLUE
-    BLUE vient de comparer 8/12 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 8 et gagner 12
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 7: 7, 8: 8, 3: 3, 15: 15, 11: 11}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 7: 7, 3: 3, 15: 15, 11: 11, 12: 12}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 12, 19, 5, 16, 10, 2]
-        Remove ID 12 at the index 7. Then add the ID 8
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 5, 16, 10, 2, 8]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 9/0 avec comme couleur RED/BLUE
-    RED vient de comparer 9/10 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 9 et gagner 10
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {9: 9, 13: 13, 6: 6, 4: 4, 1: 1}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {13: 13, 6: 6, 4: 4, 1: 1, 10: 10}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 5, 16, 10, 2, 8]
-        Remove ID 10 at the index 10. Then add the ID 9
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 5, 16, 2, 8, 9]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 11/6 avec comme couleur BLUE/RED
-    BLUE vient de comparer 11/10 avec comme couleur BLUE/RED
-    BLUE vient de comparer 11/15 avec comme couleur BLUE/BLUE
-    BLUE vient de comparer 7/4 avec comme couleur BLUE/RED
-    BLUE vient de comparer 7/6 avec comme couleur BLUE/RED
-    BLUE vient de comparer 7/8 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 7 et gagner 8
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 7: 7, 3: 3, 15: 15, 11: 11, 12: 12}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 3: 3, 15: 15, 11: 11, 12: 12, 8: 8}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 5, 16, 2, 8, 9]
-        Remove ID 8 at the index 11. Then add the ID 7
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 5, 16, 2, 9, 7]
+    BLUE vient de comparer 19/16 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 19/18 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 19/20 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 19 et gagner 20
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {16: 16, 13: 13, 18: 18, 1: 1, 19: 19, 4: 4}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {16: 16, 13: 13, 18: 18, 1: 1, 4: 4, 20: 20}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 7, 15, 17, 12, 8, 3, 11, 20, 5, 9]
+        Remove ID 20 at the index 12. Then add the ID 19
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 7, 15, 17, 12, 8, 3, 11, 5, 9, 19]
 l'IA BLUE a échangé deux noeuds
 
 l'IA RED va chercher deux noeuds à échanger
     RED vient de comparer 6/7 avec comme couleur RED/BRWON
     Le joueur RED va perdre le noeud 6 et gagner 7
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {13: 13, 6: 6, 4: 4, 1: 1, 10: 10}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {13: 13, 4: 4, 1: 1, 10: 10, 7: 7}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 5, 16, 2, 9, 7]
-        Remove ID 7 at the index 12. Then add the ID 6
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 5, 16, 2, 9, 6]
-    Allignement de 3 pions en __2__ couches de la même couleur! [7, 4, 1]
-    ___Here's the BLUE dict: {0: 0, 3: 3, 15: 15, 11: 11, 12: 12, 8: 8}
-    ___Le joueur RED vient de supprimer le pion 8 de couleur BLUE
-    ___Here's the BLUE dict: {0: 0, 3: 3, 15: 15, 11: 11, 12: 12}
-___________________________________________________________________________
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {10: 10, 6: 6, 0: 0}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {10: 10, 0: 0, 7: 7}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 7, 15, 17, 12, 8, 3, 11, 5, 9, 19]
+        Remove ID 7 at the index 5. Then add the ID 6
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 3, 11, 5, 9, 19, 6]
 l'IA RED a échangé deux noeuds
 
 l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 15/11 avec comme couleur BLUE/BLUE
-    BLUE vient de comparer 15/16 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 15 et gagner 16
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 3: 3, 15: 15, 11: 11, 12: 12}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 3: 3, 11: 11, 12: 12, 16: 16}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 5, 16, 2, 9, 6, 8]
-        Remove ID 16 at the index 9. Then add the ID 15
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 5, 2, 9, 6, 8, 15]
+    BLUE vient de comparer 4/1 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 4/3 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 4 et gagner 3
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {16: 16, 13: 13, 18: 18, 1: 1, 4: 4, 20: 20}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {16: 16, 13: 13, 18: 18, 1: 1, 20: 20, 3: 3}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 3, 11, 5, 9, 19, 6]
+        Remove ID 3 at the index 9. Then add the ID 4
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 5, 9, 19, 6, 4]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 0/1 avec comme couleur RED/BLUE
+    RED vient de comparer 0/9 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 0 et gagner 9
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {10: 10, 0: 0, 7: 7}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {10: 10, 7: 7, 9: 9}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 5, 9, 19, 6, 4]
+        Remove ID 9 at the index 11. Then add the ID 0
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 5, 19, 6, 4, 0]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 13/5 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 13 et gagner 5
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {16: 16, 13: 13, 18: 18, 1: 1, 20: 20, 3: 3}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {16: 16, 18: 18, 1: 1, 20: 20, 3: 3, 5: 5}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 5, 19, 6, 4, 0]
+        Remove ID 5 at the index 10. Then add the ID 13
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 19, 6, 4, 0, 13]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 7/4 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 7 et gagner 4
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {10: 10, 7: 7, 9: 9}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {10: 10, 9: 9, 4: 4}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 19, 6, 4, 0, 13]
+        Remove ID 4 at the index 12. Then add the ID 7
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 19, 6, 0, 13, 7]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 5/4 avec comme couleur BLUE/RED
+    BLUE vient de comparer 5/13 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 5 et gagner 13
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {16: 16, 18: 18, 1: 1, 20: 20, 3: 3, 5: 5}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {16: 16, 18: 18, 1: 1, 20: 20, 3: 3, 13: 13}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 19, 6, 0, 13, 7]
+        Remove ID 13 at the index 13. Then add the ID 5
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 19, 6, 0, 7, 5]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 9/0 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 9 et gagner 0
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {10: 10, 9: 9, 4: 4}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {10: 10, 4: 4, 0: 0}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 19, 6, 0, 7, 5]
+        Remove ID 0 at the index 12. Then add the ID 9
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 19, 6, 7, 5, 9]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 13/5 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 13 et gagner 5
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {16: 16, 18: 18, 1: 1, 20: 20, 3: 3, 13: 13}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {16: 16, 18: 18, 1: 1, 20: 20, 3: 3, 5: 5}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 19, 6, 7, 5, 9]
+        Remove ID 5 at the index 13. Then add the ID 13
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 19, 6, 7, 9, 13]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 4/1 avec comme couleur RED/BLUE
+    RED vient de comparer 4/3 avec comme couleur RED/BLUE
+    RED vient de comparer 4/5 avec comme couleur RED/BLUE
+    RED vient de comparer 4/7 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 4 et gagner 7
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {10: 10, 4: 4, 0: 0}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {10: 10, 0: 0, 7: 7}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 19, 6, 7, 9, 13]
+        Remove ID 7 at the index 12. Then add the ID 4
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 19, 6, 9, 13, 4]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 3/4 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 3 et gagner 4
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {16: 16, 18: 18, 1: 1, 20: 20, 3: 3, 5: 5}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {16: 16, 18: 18, 1: 1, 20: 20, 5: 5, 4: 4}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 19, 6, 9, 13, 4]
+        Remove ID 4 at the index 14. Then add the ID 3
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 19, 6, 9, 13, 3]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 0/1 avec comme couleur RED/BLUE
+    RED vient de comparer 0/9 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 0 et gagner 9
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {10: 10, 0: 0, 7: 7}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {10: 10, 7: 7, 9: 9}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 19, 6, 9, 13, 3]
+        Remove ID 9 at the index 12. Then add the ID 0
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 19, 6, 13, 3, 0]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 5/4 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 5/13 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 5 et gagner 13
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {16: 16, 18: 18, 1: 1, 20: 20, 5: 5, 4: 4}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {16: 16, 18: 18, 1: 1, 20: 20, 4: 4, 13: 13}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 19, 6, 13, 3, 0]
+        Remove ID 13 at the index 12. Then add the ID 5
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 19, 6, 3, 0, 5]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 9/0 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 9 et gagner 0
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {10: 10, 7: 7, 9: 9}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {10: 10, 7: 7, 0: 0}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 19, 6, 3, 0, 5]
+        Remove ID 0 at the index 13. Then add the ID 9
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 19, 6, 3, 5, 9]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 16/15 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 16 et gagner 15
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {16: 16, 18: 18, 1: 1, 20: 20, 4: 4, 13: 13}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {18: 18, 1: 1, 20: 20, 4: 4, 13: 13, 15: 15}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 15, 17, 12, 8, 11, 19, 6, 3, 5, 9]
+        Remove ID 15 at the index 5. Then add the ID 16
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 11, 19, 6, 3, 5, 9, 16]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 10/3 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 10 et gagner 3
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {10: 10, 7: 7, 0: 0}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {7: 7, 0: 0, 3: 3}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 11, 19, 6, 3, 5, 9, 16]
+        Remove ID 3 at the index 11. Then add the ID 10
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 11, 19, 6, 5, 9, 16, 10]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 15/11 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 15 et gagner 11
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {18: 18, 1: 1, 20: 20, 4: 4, 13: 13, 15: 15}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {18: 18, 1: 1, 20: 20, 4: 4, 13: 13, 11: 11}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 11, 19, 6, 5, 9, 16, 10]
+        Remove ID 11 at the index 8. Then add the ID 15
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 19, 6, 5, 9, 16, 10, 15]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 3/4 avec comme couleur RED/BLUE
+    RED vient de comparer 3/10 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 3 et gagner 10
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {7: 7, 0: 0, 3: 3}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {7: 7, 0: 0, 10: 10}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 19, 6, 5, 9, 16, 10, 15]
+        Remove ID 10 at the index 13. Then add the ID 3
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 19, 6, 5, 9, 16, 15, 3]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 18/10 avec comme couleur BLUE/RED
+    BLUE vient de comparer 18/19 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 18 et gagner 19
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {18: 18, 1: 1, 20: 20, 4: 4, 13: 13, 11: 11}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {1: 1, 20: 20, 4: 4, 13: 13, 11: 11, 19: 19}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 19, 6, 5, 9, 16, 15, 3]
+        Remove ID 19 at the index 8. Then add the ID 18
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 6, 5, 9, 16, 15, 3, 18]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 7/4 avec comme couleur RED/BLUE
+    RED vient de comparer 7/6 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 7 et gagner 6
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {7: 7, 0: 0, 10: 10}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {0: 0, 10: 10, 6: 6}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 6, 5, 9, 16, 15, 3, 18]
+        Remove ID 6 at the index 8. Then add the ID 7
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 5, 9, 16, 15, 3, 18, 7]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 4/1 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 4/3 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 4 et gagner 3
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {1: 1, 20: 20, 4: 4, 13: 13, 11: 11, 19: 19}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {1: 1, 20: 20, 13: 13, 11: 11, 19: 19, 3: 3}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 5, 9, 16, 15, 3, 18, 7]
+        Remove ID 3 at the index 12. Then add the ID 4
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 5, 9, 16, 15, 18, 7, 4]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 0/1 avec comme couleur RED/BLUE
+    RED vient de comparer 0/9 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 0 et gagner 9
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {0: 0, 10: 10, 6: 6}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {10: 10, 6: 6, 9: 9}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 5, 9, 16, 15, 18, 7, 4]
+        Remove ID 9 at the index 9. Then add the ID 0
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 5, 16, 15, 18, 7, 4, 0]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 3/4 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 3 et gagner 4
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {1: 1, 20: 20, 13: 13, 11: 11, 19: 19, 3: 3}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {1: 1, 20: 20, 13: 13, 11: 11, 19: 19, 4: 4}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 5, 16, 15, 18, 7, 4, 0]
+        Remove ID 4 at the index 13. Then add the ID 3
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 5, 16, 15, 18, 7, 0, 3]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 9/0 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 9 et gagner 0
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {10: 10, 6: 6, 9: 9}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {10: 10, 6: 6, 0: 0}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 5, 16, 15, 18, 7, 0, 3]
+        Remove ID 0 at the index 13. Then add the ID 9
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 5, 16, 15, 18, 7, 3, 9]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 4/1 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 4/3 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 4 et gagner 3
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {1: 1, 20: 20, 13: 13, 11: 11, 19: 19, 4: 4}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {1: 1, 20: 20, 13: 13, 11: 11, 19: 19, 3: 3}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 5, 16, 15, 18, 7, 3, 9]
+        Remove ID 3 at the index 13. Then add the ID 4
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 5, 16, 15, 18, 7, 9, 4]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 0/1 avec comme couleur RED/BLUE
+    RED vient de comparer 0/9 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 0 et gagner 9
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {10: 10, 6: 6, 0: 0}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {10: 10, 6: 6, 9: 9}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 5, 16, 15, 18, 7, 9, 4]
+        Remove ID 9 at the index 13. Then add the ID 0
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 5, 16, 15, 18, 7, 4, 0]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 13/5 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 13 et gagner 5
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {1: 1, 20: 20, 13: 13, 11: 11, 19: 19, 3: 3}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {1: 1, 20: 20, 11: 11, 19: 19, 3: 3, 5: 5}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 5, 16, 15, 18, 7, 4, 0]
+        Remove ID 5 at the index 8. Then add the ID 13
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 16, 15, 18, 7, 4, 0, 13]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 9/0 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 9 et gagner 0
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {10: 10, 6: 6, 9: 9}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {10: 10, 6: 6, 0: 0}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 16, 15, 18, 7, 4, 0, 13]
+        Remove ID 0 at the index 13. Then add the ID 9
+        ___Voici les nouveaux noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 16, 15, 18, 7, 4, 13, 9]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 1/0 avec comme couleur BLUE/RED
+    BLUE vient de comparer 1/2 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 1 et gagner 2
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {1: 1, 20: 20, 11: 11, 19: 19, 3: 3, 5: 5}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {20: 20, 11: 11, 19: 19, 3: 3, 5: 5, 2: 2}
+        ___Voici les noeuds accessibles [2, 21, 23, 14, 22, 17, 12, 8, 16, 15, 18, 7, 4, 13, 9]
+        Remove ID 2 at the index 0. Then add the ID 1
+        ___Voici les nouveaux noeuds accessibles [21, 23, 14, 22, 17, 12, 8, 16, 15, 18, 7, 4, 13, 9, 1]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 6/7 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 6 et gagner 7
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {10: 10, 6: 6, 0: 0}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {10: 10, 0: 0, 7: 7}
+        ___Voici les noeuds accessibles [21, 23, 14, 22, 17, 12, 8, 16, 15, 18, 7, 4, 13, 9, 1]
+        Remove ID 7 at the index 10. Then add the ID 6
+        ___Voici les nouveaux noeuds accessibles [21, 23, 14, 22, 17, 12, 8, 16, 15, 18, 4, 13, 9, 1, 6]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 11/6 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 11 et gagner 6
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {20: 20, 11: 11, 19: 19, 3: 3, 5: 5, 2: 2}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {20: 20, 19: 19, 3: 3, 5: 5, 2: 2, 6: 6}
+        ___Voici les noeuds accessibles [21, 23, 14, 22, 17, 12, 8, 16, 15, 18, 4, 13, 9, 1, 6]
+        Remove ID 6 at the index 14. Then add the ID 11
+        ___Voici les nouveaux noeuds accessibles [21, 23, 14, 22, 17, 12, 8, 16, 15, 18, 4, 13, 9, 1, 11]
 l'IA BLUE a échangé deux noeuds
 
 l'IA RED va chercher deux noeuds à échanger
     RED vient de comparer 10/3 avec comme couleur RED/BLUE
     RED vient de comparer 10/9 avec comme couleur RED/BRWON
     Le joueur RED va perdre le noeud 10 et gagner 9
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {13: 13, 4: 4, 1: 1, 10: 10, 7: 7}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {13: 13, 4: 4, 1: 1, 7: 7, 9: 9}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 5, 2, 9, 6, 8, 15]
-        Remove ID 9 at the index 10. Then add the ID 10
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 5, 2, 6, 8, 15, 10]
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {10: 10, 0: 0, 7: 7}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {0: 0, 7: 7, 9: 9}
+        ___Voici les noeuds accessibles [21, 23, 14, 22, 17, 12, 8, 16, 15, 18, 4, 13, 9, 1, 11]
+        Remove ID 9 at the index 12. Then add the ID 10
+        ___Voici les nouveaux noeuds accessibles [21, 23, 14, 22, 17, 12, 8, 16, 15, 18, 4, 13, 1, 11, 10]
 l'IA RED a échangé deux noeuds
 
 l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 3/4 avec comme couleur BLUE/RED
-    BLUE vient de comparer 3/10 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 3 et gagner 10
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 3: 3, 11: 11, 12: 12, 16: 16}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 11: 11, 12: 12, 16: 16, 10: 10}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 5, 2, 6, 8, 15, 10]
-        Remove ID 10 at the index 13. Then add the ID 3
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 5, 2, 6, 8, 15, 3]
+    BLUE vient de comparer 2/1 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 2 et gagner 1
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {20: 20, 19: 19, 3: 3, 5: 5, 2: 2, 6: 6}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {20: 20, 19: 19, 3: 3, 5: 5, 6: 6, 1: 1}
+        ___Voici les noeuds accessibles [21, 23, 14, 22, 17, 12, 8, 16, 15, 18, 4, 13, 1, 11, 10]
+        Remove ID 1 at the index 12. Then add the ID 2
+        ___Voici les nouveaux noeuds accessibles [21, 23, 14, 22, 17, 12, 8, 16, 15, 18, 4, 13, 11, 10, 2]
 l'IA BLUE a échangé deux noeuds
 
 l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 13/5 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 13 et gagner 5
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {13: 13, 4: 4, 1: 1, 7: 7, 9: 9}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {4: 4, 1: 1, 7: 7, 9: 9, 5: 5}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 5, 2, 6, 8, 15, 3]
-        Remove ID 5 at the index 8. Then add the ID 13
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 2, 6, 8, 15, 3, 13]
+    RED vient de comparer 7/4 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 7 et gagner 4
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {0: 0, 7: 7, 9: 9}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {0: 0, 9: 9, 4: 4}
+        ___Voici les noeuds accessibles [21, 23, 14, 22, 17, 12, 8, 16, 15, 18, 4, 13, 11, 10, 2]
+        Remove ID 4 at the index 10. Then add the ID 7
+        ___Voici les nouveaux noeuds accessibles [21, 23, 14, 22, 17, 12, 8, 16, 15, 18, 13, 11, 10, 2, 7]
 l'IA RED a échangé deux noeuds
 
 l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 16/15 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 16 et gagner 15
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 11: 11, 12: 12, 16: 16, 10: 10}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 11: 11, 12: 12, 10: 10, 15: 15}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 2, 6, 8, 15, 3, 13]
-        Remove ID 15 at the index 11. Then add the ID 16
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 2, 6, 8, 3, 13, 16]
+    BLUE vient de comparer 20/13 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 20 et gagner 13
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {20: 20, 19: 19, 3: 3, 5: 5, 6: 6, 1: 1}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {19: 19, 3: 3, 5: 5, 6: 6, 1: 1, 13: 13}
+        ___Voici les noeuds accessibles [21, 23, 14, 22, 17, 12, 8, 16, 15, 18, 13, 11, 10, 2, 7]
+        Remove ID 13 at the index 10. Then add the ID 20
+        ___Voici les nouveaux noeuds accessibles [21, 23, 14, 22, 17, 12, 8, 16, 15, 18, 11, 10, 2, 7, 20]
 l'IA BLUE a échangé deux noeuds
 
 l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 1/0 avec comme couleur RED/BLUE
-    RED vient de comparer 1/2 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 1 et gagner 2
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {4: 4, 1: 1, 7: 7, 9: 9, 5: 5}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {4: 4, 7: 7, 9: 9, 5: 5, 2: 2}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 2, 6, 8, 3, 13, 16]
-        Remove ID 2 at the index 8. Then add the ID 1
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 6, 8, 3, 13, 16, 1]
+    RED vient de comparer 0/1 avec comme couleur RED/BLUE
+    RED vient de comparer 0/9 avec comme couleur RED/RED
+    RED vient de comparer 9/0 avec comme couleur RED/RED
+    RED vient de comparer 9/10 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 9 et gagner 10
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {0: 0, 9: 9, 4: 4}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {0: 0, 4: 4, 10: 10}
+        ___Voici les noeuds accessibles [21, 23, 14, 22, 17, 12, 8, 16, 15, 18, 11, 10, 2, 7, 20]
+        Remove ID 10 at the index 11. Then add the ID 9
+        ___Voici les nouveaux noeuds accessibles [21, 23, 14, 22, 17, 12, 8, 16, 15, 18, 11, 2, 7, 20, 9]
 l'IA RED a échangé deux noeuds
 
 l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 15/11 avec comme couleur BLUE/BLUE
-    BLUE vient de comparer 15/16 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 15 et gagner 16
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 11: 11, 12: 12, 10: 10, 15: 15}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 11: 11, 12: 12, 10: 10, 16: 16}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 6, 8, 3, 13, 16, 1]
-        Remove ID 16 at the index 12. Then add the ID 15
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 6, 8, 3, 13, 1, 15]
+    BLUE vient de comparer 13/5 avec comme couleur BLUE/BLUE
+    BLUE vient de comparer 13/12 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 13 et gagner 12
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {19: 19, 3: 3, 5: 5, 6: 6, 1: 1, 13: 13}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {19: 19, 3: 3, 5: 5, 6: 6, 1: 1, 12: 12}
+        ___Voici les noeuds accessibles [21, 23, 14, 22, 17, 12, 8, 16, 15, 18, 11, 2, 7, 20, 9]
+        Remove ID 12 at the index 5. Then add the ID 13
+        ___Voici les nouveaux noeuds accessibles [21, 23, 14, 22, 17, 8, 16, 15, 18, 11, 2, 7, 20, 9, 13]
 l'IA BLUE a échangé deux noeuds
 
 l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 5/4 avec comme couleur RED/RED
-    RED vient de comparer 5/13 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 5 et gagner 13
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {4: 4, 7: 7, 9: 9, 5: 5, 2: 2}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {4: 4, 7: 7, 9: 9, 2: 2, 13: 13}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 6, 8, 3, 13, 1, 15]
-        Remove ID 13 at the index 11. Then add the ID 5
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 6, 8, 3, 1, 15, 5]
+    RED vient de comparer 10/3 avec comme couleur RED/BLUE
+    RED vient de comparer 10/9 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 10 et gagner 9
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {0: 0, 4: 4, 10: 10}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {0: 0, 4: 4, 9: 9}
+        ___Voici les noeuds accessibles [21, 23, 14, 22, 17, 8, 16, 15, 18, 11, 2, 7, 20, 9, 13]
+        Remove ID 9 at the index 13. Then add the ID 10
+        ___Voici les nouveaux noeuds accessibles [21, 23, 14, 22, 17, 8, 16, 15, 18, 11, 2, 7, 20, 13, 10]
 l'IA RED a échangé deux noeuds
 
 l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 16/15 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 16 et gagner 15
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 11: 11, 12: 12, 10: 10, 16: 16}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 11: 11, 12: 12, 10: 10, 15: 15}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 6, 8, 3, 1, 15, 5]
-        Remove ID 15 at the index 12. Then add the ID 16
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 6, 8, 3, 1, 5, 16]
+    BLUE vient de comparer 19/16 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 19 et gagner 16
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {19: 19, 3: 3, 5: 5, 6: 6, 1: 1, 12: 12}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {3: 3, 5: 5, 6: 6, 1: 1, 12: 12, 16: 16}
+        ___Voici les noeuds accessibles [21, 23, 14, 22, 17, 8, 16, 15, 18, 11, 2, 7, 20, 13, 10]
+        Remove ID 16 at the index 6. Then add the ID 19
+        ___Voici les nouveaux noeuds accessibles [21, 23, 14, 22, 17, 8, 15, 18, 11, 2, 7, 20, 13, 10, 19]
 l'IA BLUE a échangé deux noeuds
 
 l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 2/1 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 2 et gagner 1
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {4: 4, 7: 7, 9: 9, 2: 2, 13: 13}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {4: 4, 7: 7, 9: 9, 13: 13, 1: 1}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 6, 8, 3, 1, 5, 16]
-        Remove ID 1 at the index 11. Then add the ID 2
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 6, 8, 3, 5, 16, 2]
-    Allignement de 3 pions en __2__ couches de la même couleur! [1, 4, 7]
-    ___Here's the BLUE dict: {0: 0, 11: 11, 12: 12, 10: 10, 15: 15}
-    ___Le joueur RED vient de supprimer le pion 10 de couleur BLUE
-    ___Here's the BLUE dict: {0: 0, 11: 11, 12: 12, 15: 15}
-___________________________________________________________________________
+    RED vient de comparer 0/1 avec comme couleur RED/BLUE
+    RED vient de comparer 0/9 avec comme couleur RED/RED
+    RED vient de comparer 4/1 avec comme couleur RED/BLUE
+    RED vient de comparer 4/3 avec comme couleur RED/BLUE
+    RED vient de comparer 4/5 avec comme couleur RED/BLUE
+    RED vient de comparer 4/7 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 4 et gagner 7
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {0: 0, 4: 4, 9: 9}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {0: 0, 9: 9, 7: 7}
+        ___Voici les noeuds accessibles [21, 23, 14, 22, 17, 8, 15, 18, 11, 2, 7, 20, 13, 10, 19]
+        Remove ID 7 at the index 10. Then add the ID 4
+        ___Voici les nouveaux noeuds accessibles [21, 23, 14, 22, 17, 8, 15, 18, 11, 2, 20, 13, 10, 19, 4]
 l'IA RED a échangé deux noeuds
 
 l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 12/8 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 12 et gagner 8
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 11: 11, 12: 12, 15: 15}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 11: 11, 15: 15, 8: 8}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 6, 8, 3, 5, 16, 2, 10]
-        Remove ID 8 at the index 9. Then add the ID 12
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 6, 3, 5, 16, 2, 10, 12]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 1/0 avec comme couleur RED/BLUE
-    RED vient de comparer 1/2 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 1 et gagner 2
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {4: 4, 7: 7, 9: 9, 13: 13, 1: 1}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {4: 4, 7: 7, 9: 9, 13: 13, 2: 2}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 6, 3, 5, 16, 2, 10, 12]
-        Remove ID 2 at the index 12. Then add the ID 1
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 6, 3, 5, 16, 10, 12, 1]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 15/11 avec comme couleur BLUE/BLUE
-    BLUE vient de comparer 15/16 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 15 et gagner 16
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 11: 11, 15: 15, 8: 8}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 11: 11, 8: 8, 16: 16}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 6, 3, 5, 16, 10, 12, 1]
-        Remove ID 16 at the index 11. Then add the ID 15
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 6, 3, 5, 10, 12, 1, 15]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 4/1 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 4 et gagner 1
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {4: 4, 7: 7, 9: 9, 13: 13, 2: 2}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {7: 7, 9: 9, 13: 13, 2: 2, 1: 1}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 6, 3, 5, 10, 12, 1, 15]
-        Remove ID 1 at the index 13. Then add the ID 4
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 6, 3, 5, 10, 12, 15, 4]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 11/6 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 11 et gagner 6
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 11: 11, 8: 8, 16: 16}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 8: 8, 16: 16, 6: 6}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 6, 3, 5, 10, 12, 15, 4]
-        Remove ID 6 at the index 8. Then add the ID 11
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 3, 5, 10, 12, 15, 4, 11]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 13/5 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 13 et gagner 5
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {7: 7, 9: 9, 13: 13, 2: 2, 1: 1}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {7: 7, 9: 9, 2: 2, 1: 1, 5: 5}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 3, 5, 10, 12, 15, 4, 11]
-        Remove ID 5 at the index 9. Then add the ID 13
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 3, 10, 12, 15, 4, 11, 13]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 6/7 avec comme couleur BLUE/RED
-    BLUE vient de comparer 6/11 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 6 et gagner 11
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 8: 8, 16: 16, 6: 6}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 8: 8, 16: 16, 11: 11}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 3, 10, 12, 15, 4, 11, 13]
-        Remove ID 11 at the index 13. Then add the ID 6
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 3, 10, 12, 15, 4, 13, 6]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 5/4 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 5 et gagner 4
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {7: 7, 9: 9, 2: 2, 1: 1, 5: 5}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {7: 7, 9: 9, 2: 2, 1: 1, 4: 4}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 3, 10, 12, 15, 4, 13, 6]
-        Remove ID 4 at the index 12. Then add the ID 5
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 3, 10, 12, 15, 13, 6, 5]
-    Allignement de 3 pions en __1__ couches de la même couleur! [1, 4, 7]
-    ___Here's the BLUE dict: {0: 0, 8: 8, 16: 16, 11: 11}
-    ___Le joueur RED vient de supprimer le pion 8 de couleur BLUE
-    ___Here's the BLUE dict: {0: 0, 16: 16, 11: 11}
-___________________________________________________________________________
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 0/1 avec comme couleur BLUE/RED
-    BLUE vient de comparer 0/9 avec comme couleur BLUE/RED
-    BLUE vient de comparer 16/15 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 16 et gagner 15
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 16: 16, 11: 11}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 11: 11, 15: 15}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 3, 10, 12, 15, 13, 6, 5, 8]
-        Remove ID 15 at the index 11. Then add the ID 16
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 3, 10, 12, 13, 6, 5, 8, 16]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 4/1 avec comme couleur RED/RED
-    RED vient de comparer 4/3 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 4 et gagner 3
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {7: 7, 9: 9, 2: 2, 1: 1, 4: 4}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {7: 7, 9: 9, 2: 2, 1: 1, 3: 3}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 3, 10, 12, 13, 6, 5, 8, 16]
-        Remove ID 3 at the index 8. Then add the ID 4
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 10, 12, 13, 6, 5, 8, 16, 4]
-l'IA RED a échangé deux noeuds
-
-l'IA BLUE va chercher deux noeuds à échanger
-    BLUE vient de comparer 15/11 avec comme couleur BLUE/BLUE
-    BLUE vient de comparer 15/16 avec comme couleur BLUE/BRWON
-    Le joueur BLUE va perdre le noeud 15 et gagner 16
-    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 11: 11, 15: 15}
-    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {0: 0, 11: 11, 16: 16}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 10, 12, 13, 6, 5, 8, 16, 4]
-        Remove ID 16 at the index 14. Then add the ID 15
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 10, 12, 13, 6, 5, 8, 4, 15]
-l'IA BLUE a échangé deux noeuds
-
-l'IA RED va chercher deux noeuds à échanger
-    RED vient de comparer 3/4 avec comme couleur RED/BRWON
-    Le joueur RED va perdre le noeud 3 et gagner 4
-    ___AVANT : Voici les noeuds utilisés par le joueur RED : {7: 7, 9: 9, 2: 2, 1: 1, 3: 3}
-    ___APRES : Voici les noeuds utilisés par le joueur RED : {7: 7, 9: 9, 2: 2, 1: 1, 4: 4}
-        ___Voici les noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 10, 12, 13, 6, 5, 8, 4, 15]
+    BLUE vient de comparer 3/4 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 3 et gagner 4
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {3: 3, 5: 5, 6: 6, 1: 1, 12: 12, 16: 16}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 6: 6, 1: 1, 12: 12, 16: 16, 4: 4}
+        ___Voici les noeuds accessibles [21, 23, 14, 22, 17, 8, 15, 18, 11, 2, 20, 13, 10, 19, 4]
         Remove ID 4 at the index 14. Then add the ID 3
-        ___Voici les nouveaux noeuds accessibles [20, 18, 23, 21, 17, 22, 14, 19, 10, 12, 13, 6, 5, 8, 15, 3]
-    Allignement de 3 pions en __1__ couches de la même couleur! [1, 4, 7]
-    ___Here's the BLUE dict: {0: 0, 11: 11, 16: 16}
-    ___Le joueur RED vient de supprimer le pion 16 de couleur BLUE
-    ___Here's the BLUE dict: {0: 0, 11: 11}
+        ___Voici les nouveaux noeuds accessibles [21, 23, 14, 22, 17, 8, 15, 18, 11, 2, 20, 13, 10, 19, 3]
+l'IA BLUE a échangé deux noeuds
+
+l'IA RED va chercher deux noeuds à échanger
+    RED vient de comparer 7/4 avec comme couleur RED/BLUE
+    RED vient de comparer 7/6 avec comme couleur RED/BLUE
+    RED vient de comparer 7/8 avec comme couleur RED/BRWON
+    Le joueur RED va perdre le noeud 7 et gagner 8
+    ___AVANT : Voici les noeuds utilisés par le joueur RED : {0: 0, 9: 9, 7: 7}
+    ___APRES : Voici les noeuds utilisés par le joueur RED : {0: 0, 9: 9, 8: 8}
+        ___Voici les noeuds accessibles [21, 23, 14, 22, 17, 8, 15, 18, 11, 2, 20, 13, 10, 19, 3]
+        Remove ID 8 at the index 5. Then add the ID 7
+        ___Voici les nouveaux noeuds accessibles [21, 23, 14, 22, 17, 15, 18, 11, 2, 20, 13, 10, 19, 3, 7]
+l'IA RED a échangé deux noeuds
+
+l'IA BLUE va chercher deux noeuds à échanger
+    BLUE vient de comparer 6/7 avec comme couleur BLUE/BRWON
+    Le joueur BLUE va perdre le noeud 6 et gagner 7
+    ___AVANT : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 6: 6, 1: 1, 12: 12, 16: 16, 4: 4}
+    ___APRES : Voici les noeuds utilisés par le joueur BLUE : {5: 5, 1: 1, 12: 12, 16: 16, 4: 4, 7: 7}
+        ___Voici les noeuds accessibles [21, 23, 14, 22, 17, 15, 18, 11, 2, 20, 13, 10, 19, 3, 7]
+        Remove ID 7 at the index 14. Then add the ID 6
+        ___Voici les nouveaux noeuds accessibles [21, 23, 14, 22, 17, 15, 18, 11, 2, 20, 13, 10, 19, 3, 6]
+    Allignement de 3 pions en __2__ couches de la même couleur! [7, 4, 1]
+    ___Here's the ennemy dict: {0: 0, 9: 9, 8: 8}
+    ___Le joueur BLUE vient de supprimer le pion 9 de couleur RED
+    ___Here's the ennemy dict: {0: 0, 8: 8}
 
 
 ___________________________________________________________________________
-Le joueur RED a gagné!
-___Here's the RED dict: {7: 7, 9: 9, 2: 2, 1: 1, 4: 4}
-___Here's the BLUE dict: {0: 0, 11: 11}
+Le joueur BLUE a gagné!
+___Here's the ennemy dict: {5: 5, 1: 1, 12: 12, 16: 16, 4: 4, 7: 7}
+___Here's the ennemy dict: {0: 0, 8: 8}
 __________________________________THE END__________________________________
 ___________________________________________________________________________
-l'IA RED a échangé deux noeuds
+l'IA BLUE a échangé deux noeuds
 
