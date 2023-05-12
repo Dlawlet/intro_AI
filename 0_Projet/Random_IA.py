@@ -98,7 +98,6 @@ class Random_IA(Player_IA):
                 
         print(f"l'IA {self.name} a échangé deux noeuds")
         print("")
-        sleep(2)
         self.game.switch_player()
     def play(self,game):
         """

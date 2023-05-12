@@ -47,11 +47,30 @@ class Setup_manager():
         if event.type == pygame.QUIT:
             self.running = False
             print("We hope you had fun!")
+            pygame.quit() #not clean quit
+            
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 self.running = False
                 print("We hope you had fun!")
+                pygame.quit() #not clean quit
     
+    def playing_event_handler(self):
+        # Handle events
+        # C'est le tour de l'humain
+        for event in pygame.event.get():
+            self.have_to_quit(event)
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    #Juste confort pour afficher les modif dans le terminal
+                    self.print_nodes(self.nodes)
+
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                # Check if a node was clicked
+                pos = pygame.mouse.get_pos()
+                for node_id, node_data in self.nodes.items():
+                    if node_data["rect"].collidepoint(pos):
+                        return(node_data)
 class Player_manager(Setup_manager):
     def __init__(self):
         super().__init__()
@@ -154,6 +173,32 @@ class Board(Player_manager):
     def __init__(self):
         super().__init__()
         ### Fonction Phase delta: Appelé dans toutes les phases
+    def update_visual(self):
+        if self.running:    
+            # Fill the screen with black
+                self.screen.fill(BLACK)
+
+                # Draw the nodes with their id in the middle
+                for node_id, node_data in self.nodes.items():
+                    node_rect = node_data["rect"]
+                    node_color = node_data["color"]
+                    pygame.draw.rect(self.screen, node_color, node_rect)
+                    font = pygame.font.Font(None, 24)
+                    text_surface = font.render(str(node_id), True, WHITE)
+                    text_rect = text_surface.get_rect(center=node_rect.center)
+                    self.screen.blit(text_surface, text_rect)
+
+                # Draw lines between neighboring nodes
+                for node_data in self.nodes.values():
+                    node_rect = node_data["rect"]
+                    for neighbor_id in node_data["neighbours"]:
+                        neighbor_rect = self.nodes[neighbor_id]["rect"]
+                        pygame.draw.line(self.screen, GREY, node_rect.center, neighbor_rect.center, 2)
+
+                # Update the display
+                pygame.display.update()
+        else:
+            pygame.quit()
     def change_piece_color(self,node_data):
         """
             C'est ici que l'on change la couleur du pion AINSI que celle du node.
@@ -165,6 +210,7 @@ class Board(Player_manager):
             node_data["color"] = self.current_player_color()
             #print(f"Vous venez de déposer un pion de couleur{new_piece_color}")
             print(f"Voici la liste des noeuds utilisés par le joueur {self.current_player_name()} : {self.current_player_dict()}")
+            self.update_visual()
 
     def nodes_share_same_position(self,node_data_positon,neighbor_1_position,neighbor_2_position):
         """
@@ -264,7 +310,7 @@ class Board(Player_manager):
         """
         if self.is_in_allignement(node_data=node_data):
             ### On ne vérifie la couleur du noeud que si il y a eu un alignement
-            self.delete_ennemy_piece_IA()
+            self.delete_ennemy_piece()
             print("___________________________________________________________________________")
     
     def game_over(self, winner_name):
@@ -278,7 +324,7 @@ class Board(Player_manager):
             self.winner_name = winner_name
 
     
-    def delete_ennemy_piece_IA(self):
+    def delete_ennemy_piece(self):
         """
             Fonction qui permet de supprimer un pion ennemi
         """
@@ -287,8 +333,8 @@ class Board(Player_manager):
         
         didnt_delete = True
         while(didnt_delete):
-            random_key = self.current_player().choose_node_to_delete(ennemy_list)
-            node_data = self.nodes[random_key]
+            returned_key = self.current_player().choose_node_to_delete(ennemy_list)
+            node_data = self.nodes[returned_key]
             if not self.is_in_allignement(node_data):
                 #On peut supprimer le pion car en allignement
                 if isinstance(node_data["piece"],pion_classe.Pion):
@@ -296,16 +342,16 @@ class Board(Player_manager):
                     node_data["piece"].setColor(BRWON)
                     node_data["color"] = BRWON
                     print(f"    ___Here's the ennemy dict: {self.ennemy_player_dict()}")
-                    print(f"    ___Le joueur {self.current_player_name()} vient de supprimer le pion {random_key} de couleur {self.translate_to_color(old_color)}")
-                    self.ennemy_player_dict().pop(random_key)
+                    print(f"    ___Le joueur {self.current_player_name()} vient de supprimer le pion {returned_key} de couleur {self.translate_to_color(old_color)}")
+                    self.ennemy_player_dict().pop(returned_key)
                     print(f"    ___Here's the ennemy dict: {self.ennemy_player_dict()}")
-                    self.accessible_nodes.append(random_key)
+                    self.accessible_nodes.append(returned_key)
                     didnt_delete = False
                     if len(self.ennemy_player_dict()) <= 2:
                         self.game_over(self.current_player_name())
             else:
-                print(f"{random_key} appartient à un alignement de 3 pions de la même couleur. On ne peut pas le supprimer")
-            ennemy_list.remove(random_key)
+                print(f"{returned_key} appartient à un alignement de 3 pions de la même couleur. On ne peut pas le supprimer")
+            ennemy_list.remove(returned_key)
             
             
     
@@ -386,73 +432,10 @@ class Board(Player_manager):
                 
                 
                 self.temp_list = []
+                self.update_visual()
 
 class Game(Board):
-    def human(self):
-        def play_phase_0_human(self,node_data):
-            """
-                Rien de compliqué. Cette fonction permet de placer les pions sur le plateau.
-                    Pour ce faire, on change la couleur du noeud et du pion.
-                On return le node_data pour pouvoir le utiliser dans la fonction play_the_turn().
-                    Ce n'est pas grâve si on return None car on ne l'utilise pas dans la fonction play_the_turn()
-                    et qu'on traite le cas où on return None dans la fonction play_the_turn().
-            """
-            #print("Phase 0, on place les pions")
-            if isinstance(node_data["piece"],pion_classe.Pion) and node_data["piece"].getColor() == BRWON:
-                print(f'Voici le noeud sélectionné: {node_data["id"]}')
-                self.current_player_dict()[node_data["id"]] = node_data["id"]
-                self.change_piece_color(node_data=node_data)
-                self.decrement_player_pions()
-                self.accessible_nodes.remove(node_data["id"])
-                self.is_there_winner(node_data)
-                self.switch_player()
-                print("")
-
-                
-            else:
-                print("Vous ne pouvez pas placer de pion ici")
-        def play_phase_1_human(self,node_data):
-            """
-                Un peu plus compliqué. Cette fonction permet de déplacer les pions sur le plateau.
-                    Pour ce faire, on échange les pions de deux noeuds si et seulement si les deux noeuds
-                    sont adjacents et que l'un des deux noeuds est vide.
-            """
-            
-            #print("Phase 1, on déplace les pions")
-            if len(self.temp_list)==0:
-                if isinstance(node_data["piece"],pion_classe.Pion) and node_data["piece"].getColor() == BRWON:
-                    print("Veulliez sélectionner un PREMIER pion aillant déja une couleur")
-                else:
-                    self.temp_list.append(node_data)
-                    print("Vous avez sélectionné le pion", node_data["id"])
-                return None
-            else:
-                if len(self.temp_list)==1 and self.temp_list[0]["id"] != node_data["id"]:
-                    self.temp_list.append(node_data)
-                    if self.check_if_nodes_are_adjacent(self.temp_list[0],self.temp_list[1]):
-                        self.switch_pieces_nodes()
-                        self.is_there_winner(node_data)
-                        self.switch_player()
-                        
-                    else:
-                        print("Vous ne pouvez pas échanger ces pions car ils ne sont pas adjacents")
-                else:
-                    print("Vous ne pouvez pas échanger ces pions car ils sont identiques")
-                
-                self.temp_list = [] #Dès qu'une erreur est faite, on vide la liste temporaire
-        def play_the_turn_human(self,node_data):
-            """
-                Cette fonction permet de jouer un tour, elle recoit en input le noeud sur lequel on a cliqué.
-                Elle est appelée dans la fonction run().
-                Elle permet de gérer les deux phases du jeu:
-                    - Phase 0: Placement des pions
-                    - Phase 1: Echange des pions
-            """
-            if(self.phase == 0):
-                self.play_phase_0_human(node_data=node_data)
-            elif (self.phase==1):
-                self.play_phase_1_human(node_data=node_data)
-
+    
     def run(self, first="Random_IA", second="Random_IA"):
         # Game loop
         node_color = BLUE #n'importe quelle couleur fonctionne, c'est juste pour initialiser
@@ -485,54 +468,16 @@ class Game(Board):
                         return
             
         while self.running:
-
+            self.update_visual()
             if self.who_play == 0:
                 # C'est le tour du joueur1
                 self.first_player.play(self)
             else:
-                """
-                # Handle events
-                # C'est le tour de l'humain
-                for event in pygame.event.get():
-                    self.have_to_quit(event)
-                    if event.type == pygame.KEYDOWN:
-                        if event.key == pygame.K_SPACE:
-                            #Juste confort pour afficher les modif dans le terminal
-                            self.print_nodes(self.nodes)
-
-                    elif event.type == pygame.MOUSEBUTTONDOWN:
-                        # Check if a node was clicked
-                        pos = pygame.mouse.get_pos()
-                        for node_id, node_data in self.nodes.items():
-                            if node_data["rect"].collidepoint(pos):
-                                self.play_the_turn_human(node_data)
-                """
                 # C'est le tour du joueur2
                 self.second_player.play(self)
 
-            # Fill the screen with black
-            self.screen.fill(BLACK)
-
-            # Draw the nodes with their id in the middle
-            for node_id, node_data in self.nodes.items():
-                node_rect = node_data["rect"]
-                node_color = node_data["color"]
-                pygame.draw.rect(self.screen, node_color, node_rect)
-                font = pygame.font.Font(None, 24)
-                text_surface = font.render(str(node_id), True, WHITE)
-                text_rect = text_surface.get_rect(center=node_rect.center)
-                self.screen.blit(text_surface, text_rect)
-
-            # Draw lines between neighboring nodes
-            for node_data in self.nodes.values():
-                node_rect = node_data["rect"]
-                for neighbor_id in node_data["neighbours"]:
-                    neighbor_rect = self.nodes[neighbor_id]["rect"]
-                    pygame.draw.line(self.screen, GREY, node_rect.center, neighbor_rect.center, 2)
-
             # Update the display
-            pygame.display.update()
-
+            
             #sleep(1)
 
         # Quit Pygame
