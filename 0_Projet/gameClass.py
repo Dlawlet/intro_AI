@@ -389,75 +389,76 @@ class Board(Player_manager):
 
 class Game(Board):
     ### Fonction qui permet de faire des plays en tant qu'IA
-    def choose_random_node_IA(self):
-        """
-            Cette fonction permet de choisir un noeud aléatoire sur le plateau. Pour ce faire, on génère 
-                un nombre aléatoire entre 0 et le nombre de noeuds sur le plateau. On retourne ensuite 
-                le noeud correspondant à ce nombre.
-        """
+    def Random_IA(self):
+        def choose_random_node_IA(self):
+            """
+                Cette fonction permet de choisir un noeud aléatoire sur le plateau. Pour ce faire, on génère 
+                    un nombre aléatoire entre 0 et le nombre de noeuds sur le plateau. On retourne ensuite 
+                    le noeud correspondant à ce nombre.
+            """
 
-        list_of_keys = list(self.nodes.keys())
-        random_key = self.current_player().choose_random_node(list_of_keys)
-        ###random_key = self.current_player().choose_node_to_move(self.give_current_game_state())
-        
-        my_node = self.nodes[random_key]
-        return my_node
-    
-    def play_phase_0_IA(self):
-        """
-            Cette fonction fait en sorte que l'IA place un pion sur le plateau. Pour ce faire, on change 
-                la couleur du noeud et du pion.
-        """
-
-        node_data = self.choose_random_node_IA()
-        
-        while (isinstance(node_data["piece"],pion_classe.Pion) and node_data["piece"].getColor() != BRWON):
-            print(f". /{node_data['id']}")
-            node_data = self.choose_random_node_IA()
-
-        self.current_player_dict()[node_data["id"]] = node_data["id"]
-        print(f'Le joueur {self.current_player_name()} a sélectionné le noeud: {node_data["id"]} de couleur {self.translate_to_color(node_data["piece"].getColor())}')
-        if node_data["piece"].getColor() == BRWON:
-            self.change_piece_color(node_data)
+            list_of_keys = list(self.nodes.keys())
+            random_key = self.current_player().choose_random_node(list_of_keys)
+            ###random_key = self.current_player().choose_node_to_move(self.give_current_game_state())
             
-            self.decrement_player_pions()
-            self.accessible_nodes.remove(node_data["id"])
-            self.is_there_winner(node_data)
-            self.switch_player()
-            
-        else:
-            print("Vous ne pouvez pas placer de pion ici")
-        print("")
-    def play_phase_1_IA(self):
-        didnt_play = True
-        print(f"l'IA {self.current_player_name()} va chercher deux noeuds à échanger")
-        current_player_list_ID = list(self.current_player_dict().keys())
-        while(didnt_play):
-            random_key = self.current_player().choose_random_node(current_player_list_ID)
             my_node = self.nodes[random_key]
-            for neigbour_id in my_node["neighbours"]:
-                if self.piece_can_switch(my_node,self.nodes[neigbour_id]):
+            return my_node
+        
+        def play_phase_0_IA(self):
+            """
+                Cette fonction fait en sorte que l'IA place un pion sur le plateau. Pour ce faire, on change 
+                    la couleur du noeud et du pion.
+            """
 
-                    self.temp_list.append(my_node)
-                    self.temp_list.append(self.nodes[neigbour_id])
-                    self.switch_pieces_nodes()
+            node_data = self.choose_random_node_IA()
+            
+            while (isinstance(node_data["piece"],pion_classe.Pion) and node_data["piece"].getColor() != BRWON):
+                print(f". /{node_data['id']}")
+                node_data = self.choose_random_node_IA()
 
-                    self.is_there_winner(self.nodes[neigbour_id])
+            self.current_player_dict()[node_data["id"]] = node_data["id"]
+            print(f'Le joueur {self.current_player_name()} a sélectionné le noeud: {node_data["id"]} de couleur {self.translate_to_color(node_data["piece"].getColor())}')
+            if node_data["piece"].getColor() == BRWON:
+                self.change_piece_color(node_data)
+                
+                self.decrement_player_pions()
+                self.accessible_nodes.remove(node_data["id"])
+                self.is_there_winner(node_data)
+                self.switch_player()
+                
+            else:
+                print("Vous ne pouvez pas placer de pion ici")
+            print("")
+        def play_phase_1_IA(self):
+            didnt_play = True
+            print(f"l'IA {self.current_player_name()} va chercher deux noeuds à échanger")
+            current_player_list_ID = list(self.current_player_dict().keys())
+            while(didnt_play):
+                random_key = self.current_player().choose_random_node(current_player_list_ID)
+                my_node = self.nodes[random_key]
+                for neigbour_id in my_node["neighbours"]:
+                    if self.piece_can_switch(my_node,self.nodes[neigbour_id]):
+
+                        self.temp_list.append(my_node)
+                        self.temp_list.append(self.nodes[neigbour_id])
+                        self.switch_pieces_nodes()
+
+                        self.is_there_winner(self.nodes[neigbour_id])
+
+                        
+                        didnt_play = False
+                        break #Otherwise we would continue to check on all neighbours!!!
+                current_player_list_ID.pop(current_player_list_ID.index(random_key))
+                if(len(current_player_list_ID) == 0):
+                    print(f"l'IA {self.current_player_name()} n'a pas pu échanger deux noeuds")
+                    didnt_play = False
+                    self.game_over(self.ennemy_player_name())
 
                     
-                    didnt_play = False
-                    break #Otherwise we would continue to check on all neighbours!!!
-            current_player_list_ID.pop(current_player_list_ID.index(random_key))
-            if(len(current_player_list_ID) == 0):
-                print(f"l'IA {self.current_player_name()} n'a pas pu échanger deux noeuds")
-                didnt_play = False
-                self.game_over(self.ennemy_player_name())
-
-                
-        print(f"l'IA {self.current_player_name()} a échangé deux noeuds")
-        print("")
-        self.switch_player()
-    def play_the_turn_IA(self):
+            print(f"l'IA {self.current_player_name()} a échangé deux noeuds")
+            print("")
+            self.switch_player()
+        def play_the_turn_IA(self):
         """
             Cette fonction permet de jouer un tour, elle recoit en input le noeud sur lequel on a cliqué.
             Elle est appelée dans la fonction run().
@@ -472,61 +473,66 @@ class Game(Board):
             #self.game_over(winner_name=self.current_player_name())
             self.play_phase_1_IA()
             
-            
+    def minimax_IA(self):
+        pass
+
+    def montecarlo_IA(self):
+        pass 
               
     ### Fonction qui permet de faire des plays en tant que joueur
-    def play_phase_0_human(self,node_data):
-        """
-            Rien de compliqué. Cette fonction permet de placer les pions sur le plateau.
-                Pour ce faire, on change la couleur du noeud et du pion.
-            On return le node_data pour pouvoir le utiliser dans la fonction play_the_turn().
-                Ce n'est pas grâve si on return None car on ne l'utilise pas dans la fonction play_the_turn()
-                et qu'on traite le cas où on return None dans la fonction play_the_turn().
-        """
-        #print("Phase 0, on place les pions")
-        if isinstance(node_data["piece"],pion_classe.Pion) and node_data["piece"].getColor() == BRWON:
-            print(f'Voici le noeud sélectionné: {node_data["id"]}')
-            self.current_player_dict()[node_data["id"]] = node_data["id"]
-            self.change_piece_color(node_data=node_data)
-            self.decrement_player_pions()
-            self.accessible_nodes.remove(node_data["id"])
-            self.is_there_winner(node_data)
-            self.switch_player()
-            print("")
-
-            
-        else:
-            print("Vous ne pouvez pas placer de pion ici")
-    def play_phase_1_human(self,node_data):
-        """
-            Un peu plus compliqué. Cette fonction permet de déplacer les pions sur le plateau.
-                Pour ce faire, on échange les pions de deux noeuds si et seulement si les deux noeuds
-                sont adjacents et que l'un des deux noeuds est vide.
-        """
-        
-        #print("Phase 1, on déplace les pions")
-        if len(self.temp_list)==0:
+    def human(self):
+        def play_phase_0_human(self,node_data):
+            """
+                Rien de compliqué. Cette fonction permet de placer les pions sur le plateau.
+                    Pour ce faire, on change la couleur du noeud et du pion.
+                On return le node_data pour pouvoir le utiliser dans la fonction play_the_turn().
+                    Ce n'est pas grâve si on return None car on ne l'utilise pas dans la fonction play_the_turn()
+                    et qu'on traite le cas où on return None dans la fonction play_the_turn().
+            """
+            #print("Phase 0, on place les pions")
             if isinstance(node_data["piece"],pion_classe.Pion) and node_data["piece"].getColor() == BRWON:
-                print("Veulliez sélectionner un PREMIER pion aillant déja une couleur")
+                print(f'Voici le noeud sélectionné: {node_data["id"]}')
+                self.current_player_dict()[node_data["id"]] = node_data["id"]
+                self.change_piece_color(node_data=node_data)
+                self.decrement_player_pions()
+                self.accessible_nodes.remove(node_data["id"])
+                self.is_there_winner(node_data)
+                self.switch_player()
+                print("")
+
+                
             else:
-                self.temp_list.append(node_data)
-                print("Vous avez sélectionné le pion", node_data["id"])
-            return None
-        else:
-            if len(self.temp_list)==1 and self.temp_list[0]["id"] != node_data["id"]:
-                self.temp_list.append(node_data)
-                if self.check_if_nodes_are_adjacent(self.temp_list[0],self.temp_list[1]):
-                    self.switch_pieces_nodes()
-                    self.is_there_winner(node_data)
-                    self.switch_player()
-                    
-                else:
-                    print("Vous ne pouvez pas échanger ces pions car ils ne sont pas adjacents")
-            else:
-                print("Vous ne pouvez pas échanger ces pions car ils sont identiques")
+                print("Vous ne pouvez pas placer de pion ici")
+        def play_phase_1_human(self,node_data):
+            """
+                Un peu plus compliqué. Cette fonction permet de déplacer les pions sur le plateau.
+                    Pour ce faire, on échange les pions de deux noeuds si et seulement si les deux noeuds
+                    sont adjacents et que l'un des deux noeuds est vide.
+            """
             
-            self.temp_list = [] #Dès qu'une erreur est faite, on vide la liste temporaire
-    def play_the_turn_human(self,node_data):
+            #print("Phase 1, on déplace les pions")
+            if len(self.temp_list)==0:
+                if isinstance(node_data["piece"],pion_classe.Pion) and node_data["piece"].getColor() == BRWON:
+                    print("Veulliez sélectionner un PREMIER pion aillant déja une couleur")
+                else:
+                    self.temp_list.append(node_data)
+                    print("Vous avez sélectionné le pion", node_data["id"])
+                return None
+            else:
+                if len(self.temp_list)==1 and self.temp_list[0]["id"] != node_data["id"]:
+                    self.temp_list.append(node_data)
+                    if self.check_if_nodes_are_adjacent(self.temp_list[0],self.temp_list[1]):
+                        self.switch_pieces_nodes()
+                        self.is_there_winner(node_data)
+                        self.switch_player()
+                        
+                    else:
+                        print("Vous ne pouvez pas échanger ces pions car ils ne sont pas adjacents")
+                else:
+                    print("Vous ne pouvez pas échanger ces pions car ils sont identiques")
+                
+                self.temp_list = [] #Dès qu'une erreur est faite, on vide la liste temporaire
+        def play_the_turn_human(self,node_data):
         """
             Cette fonction permet de jouer un tour, elle recoit en input le noeud sur lequel on a cliqué.
             Elle est appelée dans la fonction run().
@@ -539,14 +545,30 @@ class Game(Board):
         elif (self.phase==1):
             self.play_phase_1_human(node_data=node_data)
 
-    def run(self):
+    def run(self, first_player="Random_IA", second_player="Random_IA"):
         # Game loop
         node_color = RED #n'importe quelle couleur fonctionne, c'est juste pour initialiser
+        self.first_player = first_player
+        self.second_player = second_player
         while self.running:
 
             if self.who_play == 1:
-                # C'est le tour de l'IA
-                self.play_the_turn_IA()
+                # C'est le tour du joueur1
+                match self.first_player:
+                    case "Random_IA":
+                        self.Random_IA()
+                    case "minimax":
+                        self.minimax_IA()
+                    case "montecarlo":
+                        self.montecarlo_IA()
+                    case "human":
+                        self.human()
+                    case _:
+                        print("Error: first_player is not a valid player")
+                        print("Use one of the following: Random_IA, minimax, montecarlo, human")
+
+                
+
             else:
                 """
                 # Handle events
@@ -565,7 +587,20 @@ class Game(Board):
                             if node_data["rect"].collidepoint(pos):
                                 self.play_the_turn_human(node_data)
                 """
-                self.play_the_turn_IA()
+                # C'est le tour du joueur2
+                match self.second_player:
+                    case "random_IA":
+                        self.Random_IA()
+                    case "minimax":
+                        self.minimax_IA()
+                    case "montecarlo":
+                        self.montecarlo_IA()
+                    case "human":
+                        self.human()
+                    case _:
+                        print("Error: second_player is not a valid player")
+                        print("Use one of the following: Random_IA, minimax, montecarlo, human")
+
             # Fill the screen with black
             self.screen.fill(BLACK)
 

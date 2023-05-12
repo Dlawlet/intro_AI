@@ -1,10 +1,9 @@
-from bot import Bot
 import copy
 import random
 import math
 import setup
 
-class MiniMax(Bot):
+class MiniMax():
     """
     """
 
