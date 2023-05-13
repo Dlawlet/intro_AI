@@ -3,5 +3,5 @@
 from gameClass import Game
 if __name__ == "__main__":
     game = Game()
-    winner = game.run(first="Human", second="Human")
+    winner = game.run(first="Random_IA", second="Random_IA")
     print("The winner is : ", winner)
