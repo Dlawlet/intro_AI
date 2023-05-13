@@ -43,7 +43,7 @@ class Player_IA(Player):
     def __init__(self, id, color, name, pion_nbr):
         super().__init__(id, color, name, pion_nbr)
     
-class human(Player):
+class Human(Player):
     def choose_node_to_delete(self, ennemy_nodes_id_list):
         key = None
         while key not in ennemy_nodes_id_list:
@@ -52,7 +52,7 @@ class human(Player):
                     node_data = self.game.playing_event_handler()
                 key = node_data["id"]
         return key
-    def play_phase_0_human(self,node_data):
+    def play_phase_0_Human(self,node_data):
             """
                 Rien de compliqué. Cette fonction permet de placer les pions sur le plateau.
                     Pour ce faire, on change la couleur du noeud et du pion.
@@ -74,7 +74,7 @@ class human(Player):
                 
             else:
                 print("Vous ne pouvez pas placer de pion ici")
-    def play_phase_1_human(self,node_data):
+    def play_phase_1_Human(self,node_data):
         """
             Un peu plus compliqué. Cette fonction permet de déplacer les pions sur le plateau.
                 Pour ce faire, on échange les pions de deux noeuds si et seulement si les deux noeuds
@@ -117,6 +117,6 @@ class human(Player):
             node_data = self.game.playing_event_handler()
 
         if(self.game.phase == 0):
-            self.play_phase_0_human(node_data=node_data)
+            self.play_phase_0_Human(node_data=node_data)
         elif (self.game.phase==1):
-            self.play_phase_1_human(node_data=node_data)
+            self.play_phase_1_Human(node_data=node_data)

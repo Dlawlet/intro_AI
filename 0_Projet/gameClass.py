@@ -442,29 +442,29 @@ class Game(Board):
         match first:
                     case "Random_IA":
                         self.first_player = Random_IA(0,RED,"RED",self.pion_nbr)
-                    case "minimax":
-                        self.first_player = minimax_IA(0,RED,"RED",self.pion_nbr)
-                    case "montecarlo":
-                        self.first_player = montecarlo_IA(0,RED,"RED",self.pion_nbr)
-                    case "human":
-                        self.first_player = human(0,RED,"RED",self.pion_nbr)
+                    case "Minimax":
+                        self.first_player = Minimax_IA(0,RED,"RED",self.pion_nbr)
+                    case "Montecarlo":
+                        self.first_player = Montecarlo_IA(0,RED,"RED",self.pion_nbr)
+                    case "Human":
+                        self.first_player = Human(0,RED,"RED",self.pion_nbr)
                     case _:
                         print("Error: first_player is not a valid player")
-                        print("Use one of the following: Random_IA, minimax, montecarlo, human")
+                        print("Use one of the following: Random_IA, Minimax, Montecarlo, Human")
                         return
 
         match second:
                     case "Random_IA":
                         self.second_player = Random_IA(1,BLUE,"BLUE",self.pion_nbr)
-                    case "minimax":
-                        self.second_player = minimax_IA(1,BLUE,"BLUE",self.pion_nbr)
-                    case "montecarlo":
-                        self.second_player = montecarlo_IA(1,BLUE,"BLUE",self.pion_nbr)
-                    case "human":
-                        self.second_player = human(1,BLUE,"BLUE",self.pion_nbr)
+                    case "Minimax":
+                        self.second_player = Minimax_IA(1,BLUE,"BLUE",self.pion_nbr)
+                    case "Montecarlo":
+                        self.second_player = Montecarlo_IA(1,BLUE,"BLUE",self.pion_nbr)
+                    case "Human":
+                        self.second_player = Human(1,BLUE,"BLUE",self.pion_nbr)
                     case _:
                         print("Error: second_player is not a valid player")
-                        print("Use one of the following: Random_IA, minimax, montecarlo, human")
+                        print("Use one of the following: Random_IA, Minimax, Montecarlo, Human")
                         return
             
         while self.running:
