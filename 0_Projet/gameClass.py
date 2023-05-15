@@ -330,6 +330,16 @@ class Board(Player_manager):
         """
         ennemy_dict = self.ennemy_player_dict()
         ennemy_list = list(ennemy_dict.keys())
+
+        #change all ennemy piece color to Green
+        for ennemy_key in ennemy_list:
+            ennemy_data = self.nodes[ennemy_key]
+            if isinstance(ennemy_data["piece"],pion_classe.Pion):
+                if not self.is_in_allignement(ennemy_data):
+                    ennemy_data["piece"].setColor(GREEN)
+                    color = ennemy_data["color"]
+                    ennemy_data["color"] = GREEN
+        self.update_visual()
         
         didnt_delete = True
         while(didnt_delete):
@@ -351,7 +361,16 @@ class Board(Player_manager):
                         self.game_over(self.current_player_name())
             else:
                 print(f"{returned_key} appartient à un alignement de 3 pions de la même couleur. On ne peut pas le supprimer")
+
             ennemy_list.remove(returned_key)
+
+        #switch back all ennemy piece color to their original color
+        for ennemy_key in ennemy_list:
+            ennemy_data = self.nodes[ennemy_key]
+            if isinstance(ennemy_data["piece"],pion_classe.Pion):
+                ennemy_data["piece"].setColor(color)
+                ennemy_data["color"] = color
+        self.update_visual()
             
             
     
@@ -430,10 +449,38 @@ class Board(Player_manager):
                 self.accessible_nodes.append(id_1)
                 print(f"        ___Voici les nouveaux noeuds accessibles {self.accessible_nodes}")
                 
-                
+                self.animation_on_switch()
                 self.temp_list = []
                 self.update_visual()
 
+    def animation_on_switch(self):
+        """
+            Cette fonction permet de faire une animation lorsqu'on échange deux pions
+            animation: un carré de la couleur de la pièce qui bouge se déplace jusqu'au noeud brun
+        """
+        rect = pygame.draw.rect(self.screen, self.current_player_color(), self.temp_list[0]["rect"])
+        pygame.display.update()
+       
+        while rect.center != self.temp_list[1]["rect"].center:
+        #for i in range(10):
+            if self.temp_list[0]["rect"].center[0] == self.temp_list[1]["rect"].center[0]:
+                if self.temp_list[0]["rect"].center[1] < self.temp_list[1]["rect"].center[1]:
+                    rect.center = (rect.center[0],rect.center[1]+10)
+                else:
+                    rect.center = (rect.center[0],rect.center[1]-10)
+            elif self.temp_list[0]["rect"].center[1] == self.temp_list[1]["rect"].center[1]:
+                if self.temp_list[0]["rect"].center[0] < self.temp_list[1]["rect"].center[0]:
+                    rect.center = (rect.center[0]+10,rect.center[1])
+                else:
+                    rect.center = (rect.center[0]-10,rect.center[1])
+            self.update_visual()
+            rect = pygame.draw.rect(self.screen, self.current_player_color(), rect)
+            pygame.display.update()
+            sleep(0.05)
+            
+
+            
+        
 class Game(Board):
     
     def run(self, first="Random_IA", second="Random_IA"):
