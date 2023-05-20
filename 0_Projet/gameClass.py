@@ -2,6 +2,7 @@ from setup import *
 import random
 from time import sleep
 from Random_IA import *
+from minimax import *
 """
 A modifer:
     -REFACTOR LE CODE: 
@@ -478,9 +479,7 @@ class Board(Player_manager):
             pygame.display.update()
             sleep(0.05)
             
-
-            
-        
+     
 class Game(Board):
     
     def run(self, first="Random_IA", second="Random_IA"):

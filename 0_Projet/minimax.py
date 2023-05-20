@@ -1,39 +1,3 @@
-""" import copy
-import random
-import math
-import setup
-
-class MiniMax():
-    ""
-    ""
-
-    def __init__(self, game, depth, pruning=True):
-        super().__init__(game, bot_type=MINIMAX, depth=depth, pruning=pruning)
-
-    def drop_piece(self, position, row, col, piece):
-        ""
-        Drop a piece  at the specified position
-        :param position: position with all the pieces that have been placed
-        :param col: one of the row of the position
-        :param col: one of the column of the position
-        :param piece: 1 or -1 depending on whose turn it is
-        ""
-        position[col][row] = piece
-
-    def winning_move(self, position, piece):
-        ""
-        ""
-
-    def is_terminal_node(self, position):
-        ""
-        ""
-        
-
-    
-
-    
- """
-
 from player import *
 import pion_classe 
 from setup import *
@@ -42,6 +6,7 @@ from time import sleep
 class Minimax_IA(Player_IA):  
     def choose_node_to_delete(self, ennemy_nodes_id_list):
         # this function use the minimax algorithm to choose the best node to delete
+        
         returned_key = None
         return returned_key
     def choose_node_to_fill(self, free_nodes_id_list):
@@ -57,7 +22,7 @@ class Minimax_IA(Player_IA):
         random_key = random.choice(accessible_nodes)
         return random_key
    
-    def score_board(self, game_state, mode=1):
+    def score_board(self, game,  mode=1):
         """
         This function is used to compute the score of the board.
         There is 3 modes of computation different by the weigth given to selected board features:
@@ -67,13 +32,14 @@ class Minimax_IA(Player_IA):
         # mode 1
         if mode == 1:
             score = 0
-            for line in game_state.alligned_nodes:
-                if len(line) == 1:
-                    score += 1
-                elif len(line) == 2:
-                    score += 10
-                elif len(line) == 3:
-                    score += 100
+            player = game.current_player
+                for line in game_state.alligned_nodes:
+                    if len(line) == 1:
+                        score += 1
+                    elif len(line) == 2:
+                        score += 10
+                    elif len(line) == 3:
+                        score += 100
             score += len(game_state.get_nodes_id())
             score += len(game_state.accessible_nodes)
             return score  
@@ -90,57 +56,66 @@ class Minimax_IA(Player_IA):
             score += len(game_state.get_nodes_id())
             score += len(game_state.accessible_nodes)
             return score
-    def minimax(self, position, depth, alpha, beta, maximizingPlayer, pruning):
+    def minimax(self, depth, alpha, beta, maximizingPlayer, pruning, phase, possibles_moves, mode, game):
         """
         This function is used to compute the best move for the AI.
         It uses the minimax algorithm with alpha-beta pruning.
         """
-        valid_moves = 
-        is_terminal = self.is_terminal_node(position)
-
-        if depth == 0:
-            return (None, self.score_position(position, self._game._turn))
-        elif is_terminal:
-            if self.winning_move(position, self._game._turn):
-                return (None, math.inf)
-            elif self.winning_move(position, self._game._turn * -1):
-                return (None, -math.inf)
-            else:  # Game is over, no more valid moves
-                return (None, 0)
-
-
+        if depth == 0 or len(self.game.ennemy_player_dict()) <= 2:
+            return None, self.score_board(mode)
         if maximizingPlayer:
             value = -math.inf
             turn = 1
         else:
             value = math.inf
             turn = -1
+        
+        for drop in possibles_moves:
+            cp_board = game 
+            # we have to make sure that both player one and two of the cpboard act as minimax_IA
+            if not isinstance(cp_board.first_player, Minimax_IA):
+                cp_board.first_player = Minimax_IA(0,RED,"RED",cp_board.first_player.get_pion_nbr())
+            if not isinstance(cp_board.second_player, Minimax_IA):
+                cp_board.second_player = Minimax_IA(1,BLUE,"BLUE",cp_board.second_player.get_pion_nbr())
+            if phase == 0:
+                cp_board.current_player.get_nodes_id()[drop["id"]] = drop["id"]
+                cp_board.change_piece_color(drop)
+                cp_board.decrement_player_pions()
+                cp_board.accessible_nodes.remove(drop["id"])
+                cp_board.is_there_winner(drop)
+                cp_board.switch_player()
+            elif phase == 1:
+                pass #TODO
+            elif phase == 2:
+                pass #TODO
+            # actualisations pour le prochain move 
+            phase = cp_board.phase
+            if phase == 0:
+                possibles_moves = cp_board.accessible_nodes
+                new_value = self.minimax(cp_board, depth-1, alpha, beta, not maximizingPlayer, pruning, phase, possibles_moves, mode, game)[1]
+            elif phase == 1:
+                list_piece = cp_board.current_player_dict()
+                for piece in list_piece:
+                    for noeud_libre in piece["neighbour"]:
+                        possibles_move = []
+                        if (noeud_libre["color"] == BRWON):
+                            possibles_move.append(noeud_libre)
+                    new_value = self.minimax(depth-1, alpha, beta, not maximizingPlayer, pruning, phase, possibles_move, mode, cp_board)[1]
 
-        for noeud_libre in position["neighbour"]:
-            if (noeud_libre["color"] == BRWON):
-                b_copy = copy.deepcopy(noeud_libre)
-
-                self.drop_piece(b_copy, noeud, self._game._turn * turn)
-                new_score = self.minimax(
-                    b_copy, depth - 1, alpha, beta, not maximizingPlayer, pruning
-                )[1]
-
-                if maximizingPlayer:
-                    if new_score > value:
-                        value = new_score
-                    noeud = noeud_libre
+            if maximizingPlayer:
+                if new_value > value:
+                    value = new_value
+                    noeud = drop
                     alpha = max(alpha, value)
                 else:
-                    if new_score < value:
-                        value = new_score
-                        noeud = noeud_libre
+                    if new_value < value:
+                        value = new_value
+                        noeud = drop
                     beta = min(beta, value)
 
                 if pruning:
                     if alpha >= beta:
                         break
-            else: 
-                break
         return noeud, value
     
     def play_phase_0_IA(self):
@@ -148,12 +123,9 @@ class Minimax_IA(Player_IA):
             Cette fonction fait en sorte que l'IA place un pion sur le plateau. Pour ce faire, on change 
                 la couleur du noeud et du pion.
         """
-
-        node_data = self.choose_random_node_IA()
-        
-        while (isinstance(node_data["piece"],pion_classe.Pion) and node_data["piece"].getColor() != BRWON):
-            print(f". /{node_data['id']}")
-            node_data = self.choose_random_node_IA()
+        print("dans le play_phase_0_IA")
+        possibles_moves = self.game.accessible_nodes
+        node_data = self.minimax(1, -math.inf, math.inf, True, True,0, possibles_moves, 1, self.game)[0]
 
         self.get_nodes_id()[node_data["id"]] = node_data["id"]
         print(f'Le joueur {self.name} a sélectionné le noeud: {node_data["id"]} de couleur {self.game.translate_to_color(node_data["piece"].getColor())}')
@@ -168,6 +140,7 @@ class Minimax_IA(Player_IA):
         else:
             print("Vous ne pouvez pas placer de pion ici")
         print("")
+        print("hors du play_phase_0_IA")
     def play_phase_1_IA(self):
         didnt_play = True
         print(f"l'IA {self.name} va chercher deux noeuds à échanger")
@@ -205,8 +178,11 @@ class Minimax_IA(Player_IA):
                 - Phase 0: Placement des pions
                 - Phase 1: Echange des pions
         """
+        print(f"l'IA va jouer")
         self.game = game
+        
         if(self.game.phase == 0):
+            print(f"l'IA est dans la phase 0")
             self.play_phase_0_IA()
             
         elif(self.game.phase == 1):
