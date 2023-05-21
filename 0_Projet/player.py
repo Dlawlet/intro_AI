@@ -1,5 +1,6 @@
 import pion_classe  # Importing required modules
 from setup import *
+import copy
 class Player():
     def __init__(self, id, color, name, pion_nbr):
         self.id = id
@@ -24,23 +25,31 @@ class Player():
 
     def get_nodes_id(self):
         return self.nodes_id
-
-    def decrement_pion_nbr(self):
-        self.pion_nbr -= 1
-
+    
     def add_line(self, line):
         self.alligned_nodes.append(line)
-
+    
     def delete_line(self, node):
         # We have to find the node in the list. If it's in the list, we delete it.
         for line in self.alligned_nodes:
             if node in line:
                 self.alligned_nodes.remove(line)
-
+    
     def choose_node_to_delete(self, ennemy_nodes_id_list):
         # Implement this method as per requirements
         key = None
         return key
+    
+    def decrement_pion_nbr(self):
+        self.pion_nbr -= 1
+
+    def create_copy(self):
+        copyu = Player(self.id, self.color, self.name, self.pion_nbr)
+        copyu.nodes_id = copy.deepcopy(self.nodes_id)
+        copyu.possible_moves = copy.deepcopy(self.possible_moves)
+        copyu.alligned_nodes = copy.deepcopy(self.alligned_nodes)
+        return copyu
+    
 class Player_IA(Player):
     def __init__(self, id, color, name, pion_nbr):
         super().__init__(id, color, name, pion_nbr)
@@ -113,3 +122,7 @@ class Human(Player):
             self.play_phase_0_Human(node_data=node_data)
         elif self.game.phase == 1:
             self.play_phase_1_Human(node_data=node_data)
+        
+        # Implement this method as per requirements
+        key = None
+        return key
