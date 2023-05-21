@@ -34,7 +34,7 @@ class Setup_manager():
         
         self.phase = 0 #0: placement, 1: déplacement
         self.winner_name = None #Id du gagnant
-        self.pion_nbr = 8 #Nombre de pions par joueur
+        self.pion_nbr = 18 #Nombre de pions par joueur
         self.first_player = None
         self.second_player = None
 
@@ -140,7 +140,15 @@ class Player_manager(Setup_manager):
             return self.second_player.get_name()
         else:
             return self.first_player.get_name()
-        
+
+    def ennemy_player_alligned_nodes(self):
+        """
+            Rien de compliqué. Cette fonction permet de connaitre les lignes du joueur adverse
+        """
+        if self.who_play == 0:
+            return self.second_player.alligned_nodes
+        else:
+            return self.first_player.alligned_nodes  
     def switch_player(self):
         """
             Rien de compliqué, cette fonction permet de changer de joueur en cours
@@ -240,6 +248,15 @@ class Board(Player_manager):
             print(f"Voici la liste des noeuds utilisés par le joueur {self.current_player_name()} : {self.current_player_dict()}")
             self.update_visual()
 
+    def reset_piece_color( self, node_data):
+        """
+            Cette fonction permet de remettre la couleur du pion à marron
+        """
+        if isinstance(node_data["piece"],pion_classe.Pion):
+            node_data["piece"].setColor(BRWON)
+            node_data["color"] = BRWON
+            self.update_visual()
+        
     def nodes_share_same_position(self,node_data_positon,neighbor_1_position,neighbor_2_position):
         """
             Cette fonction vérifie si le noeud sélectionné est au centre d'un alignement de 3 noeuds voisins
@@ -926,5 +943,45 @@ class Game_copy():
                 self.animation_on_switch()
                 self.temp_list = []
                 self.update_visual()
+    def copy_nodes(self):
 
+        """
+            Cette fonction permet de faire une copie des noeuds pour pouvoir les modifier sans modifier les 
+                noeuds de la partie en cours, pour cela deep copy ne fonctionne pas, il faut faire une fonction 
+                qui copie les noeuds un par un en recreant les objets internes.
+                pour rappel nodes est cree dans setup.py avec principalment le bloc de code suivant :
+                nodes = {}
+                for position in positions:
+                    node_rect = pygame.Rect(position[0], position[1], node_size, node_size)
+                    node_piece = pion_classe.Pion(BRWON,position[0],position[1])
+                    nodes[node_id_start] = {"id":node_id_start,"rect": node_rect, "color": BRWON,"neighbours": [],"possible_move_nbr":0,"piece": node_piece}
+                    node_id_start += 1
+                find_neighbours(nodes)# Find neighboring nodes
+
+                return nodes
+                sur base de ca nous allons effectuer une copy du dico nodes de gma dans un autre dico  en prenant soin de recréer les objets internes
+        """
+        nodes_copy = {}
+        for node_id, node_data in self.nodes.items():
+            node_rect = pygame.Rect(node_data["piece"].getPosX(),node_data["piece"].getPosY(), 15,15)
+            node_piece = pion_classe.Pion(node_data["piece"].getColor(),node_data["piece"].getPosX(),node_data["piece"].getPosY())
+            nodes_copy[node_id] = {"id":copy.deepcopy(node_id),"rect": node_rect, "color":node_data["piece"].getColor() ,"neighbours": copy.deepcopy(node_data["neighbours"]),"possible_move_nbr":copy.deepcopy(node_data["possible_move_nbr"]),"piece": node_piece}
+            #print data neighbours
+        return nodes_copy
     
+    def ennemy_player_alligned_nodes(self):
+        """
+            Rien de compliqué. Cette fonction permet de connaitre les lignes du joueur adverse
+        """
+        if self.who_play == 0:
+            return self.second_player.alligned_nodes
+        else:
+            return self.first_player.alligned_nodes
+
+    def reset_piece_color( self, node_data):
+        """
+            Cette fonction permet de remettre la couleur du pion à marron
+        """
+        if isinstance(node_data["piece"],pion_classe.Pion):
+            node_data["piece"].setColor(BRWON)
+            node_data["color"] = BRWON

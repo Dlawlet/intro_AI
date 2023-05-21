@@ -2,7 +2,8 @@ from player import *
 import pion_classe 
 from setup import *
 from time import sleep
-import copy
+import random
+import math
 
 class Minimax_IA(Player_IA):  
     def choose_node_to_delete(self, ennemy_nodes_id_list):
@@ -23,7 +24,7 @@ class Minimax_IA(Player_IA):
         random_key = random.choice(accessible_nodes)
         return random_key
    
-    def score_board(self,  mode=1):
+    def score_board(self, game, mode=1):
         """
         This function is used to compute the score of the board.
         There is 3 modes of computation different by the weigth given to selected board features:
@@ -33,22 +34,17 @@ class Minimax_IA(Player_IA):
         # mode 1
         if mode == 1:
             score = 0
-            for line in self.alligned_nodes:
-                score += 100
-            score += len(self.get_nodes_id()) 
+            score += len(game.current_player().alligned_nodes)*100
+            score += len(list(game.current_player().get_nodes_id().keys()))*10
+            score -= len(game.ennemy_player_alligned_nodes())*100
+            if len(game.ennemy_player_alligned_nodes()) != 0:
+                print("yoooooooooooooooooooooo")
+            score -= len(list(game.ennemy_player_dict().keys()))
+        
             return score  
         # mode 2
         elif mode == 2:
-            score = 0
-            for line in game_state.alligned_nodes:
-                if len(line) == 1:
-                    score += 1
-                elif len(line) == 2:
-                    score += 10
-                elif len(line) == 3:
-                    score += 100
-            score += len(game_state.get_nodes_id())
-            score += len(game_state.accessible_nodes)
+            score = random.randint(0,100)
             return score
     def minimax(self, depth, alpha, beta, maximizingPlayer, pruning, phase, possibles_moves, mode, game):
         """
@@ -57,76 +53,62 @@ class Minimax_IA(Player_IA):
         """
         if depth == 0 :
             print("#"*20)
-            print("le score de min max est: ", self.score_board(mode))
-            return None, self.score_board(mode)
+            print("le score de min max est: ", self.score_board(game,mode))
+            
+            return None, self.score_board(game,mode)
         if maximizingPlayer:
             value = -math.inf
         else:
             value = math.inf
-        
-        for drop in possibles_moves:
-            print("game address: ", id(game))
-            print("dans le for de minimax")
+        for node_data in possibles_moves:
             from gameClass import Game_copy
             cp_board = Game_copy(game)
-            print("cp_board address: ", id(cp_board))
-            #print couleur de tous les noeuds
-            for node in cp_board.nodes.values():
-                print(node["color"])
-            for node in game.nodes.values():
-                print(node["color"])
+            cp_board.is_in_allignement(node_data)
+            """ if depth == 0 :
+                print("#"*20)
+                print("le score de min max est: ", self.score_board(game,mode))
+                
+                return None, self.score_board(game,mode) """
             # we have to make sure that both player one and two of the cpboard act as minimax_IA
             """ if not isinstance(cp_board.first_player, Minimax_IA):
                 cp_board.first_player = Minimax_IA(0,RED,"RED",cp_board.first_player.get_pion_nbr())
             if not isinstance(cp_board.second_player, Minimax_IA):
                 cp_board.second_player = Minimax_IA(1,BLUE,"BLUE",cp_board.second_player.get_pion_nbr()) """
             if phase == 0:
-                cp_board.current_player().get_nodes_id()[drop["id"]] = drop["id"]
-                cp_board.change_piece_color(drop)
+                cp_board.current_player().add_node(node_data["id"])
+                cp_board.change_piece_color(node_data)
                 cp_board.decrement_player_pions()
-                cp_board.accessible_nodes.remove(drop["id"])
-                cp_board.is_there_winner(drop)
+                cp_board.accessible_nodes.remove(node_data["id"])
+                cp_board.is_in_allignement(node_data)
+                if depth == 0 :
+                    print("#"*20)
+                    print("le score de min max est: ", self.score_board(game,mode))
+                    return None, self.score_board(game,mode)
                 cp_board.switch_player()
-            elif phase == 1:
-                pass #TODO
-            elif phase == 2:
-                pass #TODO
-            # actualisations pour le prochain move 
-            phase = cp_board.phase
-            #print current player color
-            print("current player color: ", cp_board.current_player().get_color())
+                cp_board.is_in_allignement(node_data)
             if phase == 0:
-                print("dans le phase 0 apres drop")
+                print("dans le phase 0 apres node_data")
                 possibles_moves = cp_board.get_accessible_nodes_data()
+                cp_board.is_in_allignement(node_data)
                 new_value = self.minimax(depth-1, alpha, beta, not maximizingPlayer, pruning, phase, possibles_moves, mode, cp_board)[1]
-                print("out of recurive minmax")
-                
-            elif phase == 1:
-                list_piece = cp_board.current_player_dict()
-                for piece in list_piece:
-                    for noeud_libre in piece["neighbour"]:
-                        possibles_move = []
-                        if (noeud_libre["color"] == BRWON):
-                            possibles_move.append(noeud_libre)
-                    new_value = self.minimax(depth-1, alpha, beta, not maximizingPlayer, pruning, phase, possibles_move, mode, cp_board)[1]
-
+                cp_board.is_in_allignement(node_data)
+                cp_board.reset_piece_color(node_data)
+                cp_board.current_player().delete_node(node_data["id"])
             if maximizingPlayer:
                 if new_value > value:
                     value = new_value
-                noeud = drop
+                    noeud = node_data
                 alpha = max(alpha, value)
             else:
                 if new_value < value:
                     value = new_value
-                noeud = drop
+                    noeud = node_data
                 beta = min(beta, value)
 
             if pruning:
                     if alpha >= beta:
                         break
-            # print the cp_board address in memory
-            print("end of for loop")
-        print("out of for loop")
+        cp_board.is_in_allignement(node_data)
         return noeud, value
     
     def play_phase_0_IA(self):
@@ -136,9 +118,10 @@ class Minimax_IA(Player_IA):
         """
         print("dans le play_phase_0_IA")
         possibles_moves = self.game.get_accessible_nodes_data()
-        node_data = self.minimax(1, -math.inf, math.inf, True, True,0, possibles_moves, 1, self.game)[0]
+        node_data = self.minimax(5, -math.inf, math.inf, True, True,0, possibles_moves, 1, self.game)[0]
 
         self.get_nodes_id()[node_data["id"]] = node_data["id"]
+        self.game.is_in_allignement(node_data)
         print(f'Le joueur {self.name} a sélectionné le noeud: {node_data["id"]} de couleur {self.game.translate_to_color(node_data["piece"].getColor())}')
         if node_data["piece"].getColor() == BRWON:
             self.game.change_piece_color(node_data)

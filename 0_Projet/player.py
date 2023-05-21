@@ -26,6 +26,9 @@ class Player():
     def get_nodes_id(self):
         return self.nodes_id
     
+    def add_node(self, node_id):
+        self.nodes_id[node_id] = node_id
+
     def add_line(self, line):
         self.alligned_nodes.append(line)
     
@@ -35,6 +38,11 @@ class Player():
             if node in line:
                 self.alligned_nodes.remove(line)
     
+    def delete_node(self, node_id):
+       if node_id in self.nodes_id.keys():
+        self.nodes_id.pop(node_id)
+           
+
     def choose_node_to_delete(self, ennemy_nodes_id_list):
         # Implement this method as per requirements
         key = None
@@ -49,6 +57,7 @@ class Player():
         copyu.possible_moves = copy.deepcopy(self.possible_moves)
         copyu.alligned_nodes = copy.deepcopy(self.alligned_nodes)
         return copyu
+
     
 class Player_IA(Player):
     def __init__(self, id, color, name, pion_nbr):
