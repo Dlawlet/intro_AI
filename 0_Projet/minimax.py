@@ -39,6 +39,7 @@ class Minimax_IA(Player_IA):
             score -= len(game.ennemy_player_alligned_nodes())*100
             if len(game.ennemy_player_alligned_nodes()) != 0:
                 print("yoooooooooooooooooooooo")
+                print("On test des trucs")
             score -= len(list(game.ennemy_player_dict().keys()))
         
             return score  
