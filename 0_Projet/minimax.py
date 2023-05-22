@@ -24,7 +24,7 @@ class Minimax_IA(Player_IA):
         random_key = random.choice(accessible_nodes)
         return random_key
    
-    def score_board(self, game, mode=1):
+    def score_board(self, game,maximizingPlayer,mode=1):
         """
         This function is used to compute the score of the board.
         There is 3 modes of computation different by the weigth given to selected board features:
@@ -33,13 +33,22 @@ class Minimax_IA(Player_IA):
         """
         # mode 1
         if mode == 1:
-            score = 0
-            score += len(game.current_player().alligned_nodes)*100
-            score += len(list(game.current_player().get_nodes_id().keys()))*10
-            score -= len(game.ennemy_player_alligned_nodes())*100
-            if len(game.ennemy_player_alligned_nodes()) != 0:
-                print("yoooooooooooooooooooooo")
-            score -= len(list(game.ennemy_player_dict().keys()))
+            if not maximizingPlayer:
+                score = 0
+                score += len(game.current_player().alligned_nodes)*200
+                score += len(list(game.current_player().get_nodes_id().keys()))*10
+                score -= len(game.ennemy_player_alligned_nodes())*200
+                if len(game.ennemy_player_alligned_nodes()) != 0:
+                    print("yoooooooooooooooooooooo")
+                score -= len(list(game.ennemy_player_dict().keys()))
+            else:
+                score = 0
+                score -= len(game.current_player().alligned_nodes)*100
+                score -= len(list(game.current_player().get_nodes_id().keys()))*10
+                score += len(game.ennemy_player_alligned_nodes())*200
+                if len(game.ennemy_player_alligned_nodes()) != 0:
+                    print("yoooooooooooooooooooooo")
+                score += len(list(game.ennemy_player_dict().keys()))
         
             return score  
         # mode 2
@@ -53,9 +62,9 @@ class Minimax_IA(Player_IA):
         """
         if depth == 0 :
             print("#"*20)
-            print("le score de min max est: ", self.score_board(game,mode))
+            print("le score de min max est: ", self.score_board(game,maximizingPlayer,mode))
+            return None, self.score_board(game,maximizingPlayer,mode)
             
-            return None, self.score_board(game,mode)
         if maximizingPlayer:
             value = -math.inf
         else:
@@ -63,35 +72,25 @@ class Minimax_IA(Player_IA):
         for node_data in possibles_moves:
             from gameClass import Game_copy
             cp_board = Game_copy(game)
-            cp_board.is_in_allignement(node_data)
-            """ if depth == 0 :
-                print("#"*20)
-                print("le score de min max est: ", self.score_board(game,mode))
-                
-                return None, self.score_board(game,mode) """
-            # we have to make sure that both player one and two of the cpboard act as minimax_IA
-            """ if not isinstance(cp_board.first_player, Minimax_IA):
-                cp_board.first_player = Minimax_IA(0,RED,"RED",cp_board.first_player.get_pion_nbr())
-            if not isinstance(cp_board.second_player, Minimax_IA):
-                cp_board.second_player = Minimax_IA(1,BLUE,"BLUE",cp_board.second_player.get_pion_nbr()) """
             if phase == 0:
                 cp_board.current_player().add_node(node_data["id"])
                 cp_board.change_piece_color(node_data)
                 cp_board.decrement_player_pions()
                 cp_board.accessible_nodes.remove(node_data["id"])
-                cp_board.is_in_allignement(node_data)
-                if depth == 0 :
-                    print("#"*20)
-                    print("le score de min max est: ", self.score_board(game,mode))
-                    return None, self.score_board(game,mode)
+                print(f"id du noeud: {node_data['id']}, prof : {depth}")
+                if cp_board.is_in_allignement(node_data):
+                    print("le noeud est dans un alignement")
+                    print(f"la longueur de la liste des noeuds allignés de l'ennemi est: {len(cp_board.ennemy_player_alligned_nodes())}")
+                    print(f"la longueur de la liste des noeuds allignés de l'ennemi est: {len(cp_board.current_player().alligned_nodes)}")
+                    return node_data, self.score_board(game,maximizingPlayer,mode)
                 cp_board.switch_player()
-                cp_board.is_in_allignement(node_data)
+                
+                
+
             if phase == 0:
                 print("dans le phase 0 apres node_data")
                 possibles_moves = cp_board.get_accessible_nodes_data()
-                cp_board.is_in_allignement(node_data)
                 new_value = self.minimax(depth-1, alpha, beta, not maximizingPlayer, pruning, phase, possibles_moves, mode, cp_board)[1]
-                cp_board.is_in_allignement(node_data)
                 cp_board.reset_piece_color(node_data)
                 cp_board.current_player().delete_node(node_data["id"])
             if maximizingPlayer:
@@ -108,7 +107,7 @@ class Minimax_IA(Player_IA):
             if pruning:
                     if alpha >= beta:
                         break
-        cp_board.is_in_allignement(node_data)
+            
         return noeud, value
     
     def play_phase_0_IA(self):
@@ -118,10 +117,10 @@ class Minimax_IA(Player_IA):
         """
         print("dans le play_phase_0_IA")
         possibles_moves = self.game.get_accessible_nodes_data()
-        node_data = self.minimax(5, -math.inf, math.inf, True, True,0, possibles_moves, 1, self.game)[0]
+        self.depth = 3
+        node_data = self.minimax(self.depth, -math.inf, math.inf, True, True,0, possibles_moves, 1, self.game)[0]
 
         self.get_nodes_id()[node_data["id"]] = node_data["id"]
-        self.game.is_in_allignement(node_data)
         print(f'Le joueur {self.name} a sélectionné le noeud: {node_data["id"]} de couleur {self.game.translate_to_color(node_data["piece"].getColor())}')
         if node_data["piece"].getColor() == BRWON:
             self.game.change_piece_color(node_data)

@@ -719,10 +719,20 @@ class Game_copy():
         color = node_data["piece"].getColor()
         for neighbour_1_id in node_data["neighbours"]:
             neighbour_1_data= self.nodes[neighbour_1_id]
+            # si le noeud voisin est dans la liste des noeuds utilisés par le joueur mettre sa couleur à la couleur du joeur
+            if neighbour_1_id in self.current_player_dict():
+                neighbour_1_data["piece"].setColor(self.current_player_color())
+                #neighbour_1_data["color"] = self.current_player_color()
 
             for neighbour_2_id in node_data["neighbours"]:
                 neighbour_2_data = self.nodes[neighbour_2_id]
+                # si le noeud voisin est dans la liste des noeuds utilisés par le joueur mettre sa couleur à la couleur du joeur
+                if neighbour_2_id in self.current_player_dict():
+                    neighbour_2_data["piece"].setColor(self.current_player_color())
+                    #neighbour_2_data["color"] = self.current_player_color()
+
                 if neighbour_1_id != neighbour_2_id:
+                    print(f"Voici les noeuds comparés ({node_data['id']}:{color}),({neighbour_1_data['id']},{neighbour_1_data['piece'].getColor()}),({neighbour_2_data['id']},{neighbour_2_data['piece'].getColor()})")
                     if isinstance(neighbour_1_data["piece"],pion_classe.Pion) and isinstance(neighbour_2_data["piece"],pion_classe.Pion):
                         if neighbour_1_data["piece"].getColor() == color and neighbour_2_data["piece"].getColor() == color:
                             #print(f'Voici les noeuds comparés ({node_data["id"]}:{color}),({neighbour_1_data["id"]},{neighbour_1_data["piece"].getColor()}),({neighbour_2_data["id"]},{neighbour_2_data["piece"].getColor()}) : first_layer_are_aligned')
@@ -752,13 +762,20 @@ class Game_copy():
         color = node_data["piece"].getColor()
         for neighbour_1_id in node_data["neighbours"]:
             neighbour_1_data = self.nodes[neighbour_1_id]
+            if neighbour_1_id in self.current_player_dict():
+                neighbour_1_data["piece"].setColor(self.current_player_color())
+                #neighbour_1_data["color"] = self.current_player_color()
             if isinstance(neighbour_1_data["piece"],pion_classe.Pion) and neighbour_1_data["color"]==color:
                 for neighbour_2_id in neighbour_1_data["neighbours"]:
                     neighbour_2_data = self.nodes[neighbour_2_id]
+                    if neighbour_2_id in self.current_player_dict():
+                        neighbour_2_data["piece"].setColor(self.current_player_color())
+                        #neighbour_2_data["color"] = self.current_player_color()
                     if node_data["id"] != neighbour_2_id:
                         if isinstance(neighbour_2_data["piece"],pion_classe.Pion):
                             if neighbour_2_data["color"]==color:
                                 #print(f'Voici les noeuds comparés ({node_data["id"]}:{color}),({neighbour_1_data["id"]},{neighbour_1_data["piece"].getColor()}),({neighbour_2_data["id"]},{neighbour_2_data["piece"].getColor()}) : second_layer_are_aligned')
+                                print(f"Voici les noeuds comparés ({node_data['id']}:{color}),({neighbour_1_data['id']},{neighbour_1_data['piece'].getColor()}),({neighbour_2_data['id']},{neighbour_2_data['piece'].getColor()})")
                                 node_data_position = node_data["rect"].center; node_data_id = node_data["id"]
                                 neighbour_1_position = neighbour_1_data["rect"].center; neighbour_1_id = neighbour_1_data["id"]
                                 neighbour_2_position = neighbour_2_data["rect"].center; neighbour_2_id = neighbour_2_data["id"]
