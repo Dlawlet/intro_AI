@@ -34,12 +34,13 @@ class Setup_manager():
         
         self.phase = 0 #0: placement, 1: déplacement
         self.winner_name = None #Id du gagnant
-        self.pion_nbr = 18 #Nombre de pions par joueur
+        self.pion_nbr = 4 #Nombre de pions par joueur
         self.first_player = None
         self.second_player = None
 
         self.accessible_nodes = list(self.nodes.keys()) #Liste des noeuds accessibles
         self.temp_list = [] #Permet l'échange de pions pour la deuxieme phase
+    
     
     ### Fonction pour afficher dans le terminal
     def print_nodes(self,nodes_dict):
@@ -540,7 +541,7 @@ class Game(Board):
                     case "Random_IA":
                         self.first_player = Random_IA(0,RED,"RED",self.pion_nbr)
                     case "Minimax":
-                        self.first_player = Minimax_IA(0,RED,"RED",self.pion_nbr)
+                        self.first_player = Minimax_IA(0,RED,"RED",self.pion_nbr,1)
                     case "Montecarlo":
                         self.first_player = Montecarlo_IA(0,RED,"RED",self.pion_nbr)
                     case "Human":
@@ -554,7 +555,7 @@ class Game(Board):
                     case "Random_IA":
                         self.second_player = Random_IA(1,BLUE,"BLUE",self.pion_nbr)
                     case "Minimax":
-                        self.second_player = Minimax_IA(1,BLUE,"BLUE",self.pion_nbr)
+                        self.second_player = Minimax_IA(1,BLUE,"BLUE",self.pion_nbr,1)
                     case "Montecarlo":
                         self.second_player = Montecarlo_IA(1,BLUE,"BLUE",self.pion_nbr)
                     case "Human":
@@ -957,9 +958,7 @@ class Game_copy():
                 self.accessible_nodes.append(id_1)
                 print(f"        ___Voici les nouveaux noeuds accessibles {self.accessible_nodes}")
                 
-                self.animation_on_switch()
                 self.temp_list = []
-                self.update_visual()
     def copy_nodes(self):
 
         """
