@@ -117,7 +117,7 @@ class Minimax_IA(Player_IA):
         """
         print("dans le play_phase_0_IA")
         possibles_moves = self.game.get_accessible_nodes_data()
-        self.depth = 3
+        self.depth = 5
         node_data = self.minimax(self.depth, -math.inf, math.inf, True, True,0, possibles_moves, 1, self.game)[0]
 
         self.get_nodes_id()[node_data["id"]] = node_data["id"]

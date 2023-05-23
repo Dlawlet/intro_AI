@@ -3,5 +3,7 @@
 from gameClass import Game
 if __name__ == "__main__":
     game = Game()
-    winner = game.run(first="Human", second="Minimax")
-    print("The winner is : ", winner)
+    first_player = "Human"
+    second_player = "Minimax"
+    winner = game.run(first=first_player, second=second_player)
+    print(f"#{first_player}# VS #{second_player}#. The winner is : #{winner}#")

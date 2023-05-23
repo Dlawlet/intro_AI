@@ -1,0 +1,9 @@
+The #Human# win rate on #Human# is #0.6190476190476191#
+The #Human# win rate on #Random# is #0.9523809523809523#
+The #Human# win rate on #Minimax_V1# is #0.3910476190476191#
+The #Minimax_V1# win rate on #Human# is #0.6190476190476191#
+The #Minimax_V1# win rate on #Random# is #0.3910476190476191#
+The #Minimax_V1# win rate on #Minimax_V1# is #0.3910476190476191#
+The #Random# win rate on #Human# is #0.6190476190476191#
+The #Random# win rate on #Random# is #0.3910476190476191#
+The #Random# win rate on #Minimax_V1# is #0.3910476190476191#
