@@ -6,4 +6,6 @@ if __name__ == "__main__":
     first_player = "Human"
     second_player = "Minimax"
     winner = game.run(first=first_player, second=second_player)
-    print(f"#{first_player}# VS #{second_player}#. The winner is : #{winner}#")
+
+    with open("files/stat.txt", "a") as f:
+        f.write(f"#{first_player}# VS #{second_player}#. The winner is : #{winner}#\n")

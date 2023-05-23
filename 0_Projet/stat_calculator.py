@@ -1,6 +1,6 @@
 import pandas as pd
 
-#Usefull functions
+#___________________________Usefull functions___________________________
 def print_parsed_data(game_stats, key):
 
     # Print the parsed game data
@@ -10,7 +10,7 @@ def print_parsed_data(game_stats, key):
         print(f"{key}: {stat[key]}")
         print("\n")
 
-#Function that read the stat.txt file to know the win rate of the first player on the second player
+#Function that read FROM the STAT.TXT file to know the win rate of the first player on the second player
 def parse_stats(filename):
     # Initialize an empty list to store the parsed game data
     game_stats = []
@@ -54,8 +54,8 @@ def calculate_win_rate(game_stats):
 def write_win_rate_to_file(win_rate_string,access_mode="a"):
     with open("files/win_rate.txt", access_mode) as f:
         f.write(win_rate_string+"\n")
-def translate_stat_to_win_rate(to_write):
-    filename = "files/stat.txt"
+def translate_stat_to_win_rate(filename,to_write):
+    #"Main" function that translate the stat.txt file to the win_rate.txt file
     game_stats = parse_stats(filename)
     #print_parsed_data(game_stats, "Winner")
     win_rate_string, _ = calculate_win_rate(game_stats)
@@ -63,7 +63,7 @@ def translate_stat_to_win_rate(to_write):
         write_win_rate_to_file(win_rate_string)
 
 
-#Function that read the win_rate.txt file to know all the win rates.
+#Function that read FROM the WIN_RATE.TXT file to know ALL the win rates.
 def parse_win_rate(filename):
     # Initialize an empty list to store the parsed game data
     win_rate_stats = []
@@ -107,13 +107,13 @@ def display_win_rate_matrix(win_rate_stats):
 
     # Print the DataFrame
     print(df)
-def translate_win_rate_to_matrix():
-    filename = "files/win_rate.txt"
+def translate_win_rate_to_matrix(filename):
+    
     win_rate_stats = parse_win_rate(filename)
     display_win_rate_matrix(win_rate_stats)
 
-translate_stat_to_win_rate(to_write=False)
-translate_win_rate_to_matrix()
+translate_stat_to_win_rate("files/stat.txt",to_write=False) #We translate the stat.txt file to the win_rate.txt file
+translate_win_rate_to_matrix(filename = "files/win_rate.txt")
 
 
 
