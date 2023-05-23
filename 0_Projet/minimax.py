@@ -105,12 +105,15 @@ class Minimax_IA(Player_IA):
                     if out :
                         cp_board.temp_list = []
                         break
-                print("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
+                print(f"    _Voici la valeur de cp_board.is_in_allignement(node_data) avec le node_data {node_data['id']} = {cp_board.is_in_allignement(node_data)}")
                 if cp_board.is_in_allignement(node_data):
+                    
+                    print("HEHEHE NO NO NO")
+                    cp_board.is_there_winner(node_data)
                     print("le noeud est dans un alignement")
                     print(f"la longueur de la liste des noeuds allignés de l'ennemi est: {len(cp_board.ennemy_player_alligned_nodes())}")
-                    print(f"la longueur de la liste des noeuds allignés de l'ennemi est: {len(cp_board.current_player().alligned_nodes)}")
-                    return node_data, self.score_board(game,maximizingPlayer,mode)
+                    print(f"la longueur de la liste des noeuds allignés de du player est: {len(cp_board.current_player().alligned_nodes)}")
+                    #return node_data, self.score_board(game,maximizingPlayer,mode)
                 
                 cp_board.switch_player()
 
@@ -173,8 +176,10 @@ class Minimax_IA(Player_IA):
             print("Vous ne pouvez pas placer de pion ici")
         print("")
         print("hors du play_phase_0_IA")
+    
     def play_phase_1_IA(self):
         didnt_play = True
+        print(f"adresse en mémoire de self.game dans play_phase_1_IA: {id(self.game)}")
         print(f"l'IA {self.name} va chercher deux noeuds à échanger")
         current_player_list_ID = list(self.get_nodes_id().keys())
         #get current_player_list-data
@@ -184,8 +189,8 @@ class Minimax_IA(Player_IA):
         while(didnt_play):
             #random_key = self.choose_random_node(current_player_list_ID)
             node_data = self.minimax(self.depth, -math.inf, math.inf, True, True,1, current_player_list_data, self.mode, self.game)[0]
-            random_key = node_data["id"]
-            my_node = self.game.nodes[random_key]
+            minimax_node_data_key = node_data["id"]
+            my_node = self.game.nodes[minimax_node_data_key]
             for neigbour_id in my_node["neighbours"]:
                 if self.game.piece_can_switch(my_node,self.game.nodes[neigbour_id]):
 
@@ -208,6 +213,7 @@ class Minimax_IA(Player_IA):
         print(f"l'IA {self.name} a échangé deux noeuds")
         print("")
         self.game.switch_player()
+
     def play(self,game):
         """
             Cette fonction permet de jouer un tour, elle recoit en input le noeud sur lequel on a cliqué.

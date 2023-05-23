@@ -528,8 +528,6 @@ class Board(Player_manager):
             pygame.display.update()
             sleep(0.05)   
      
-    
-        
         
         
 class Game(Board):
@@ -733,10 +731,10 @@ class Game_copy():
                     #neighbour_2_data["color"] = self.current_player_color()
 
                 if neighbour_1_id != neighbour_2_id:
-                    print(f"Voici les noeuds comparés ({node_data['id']}:{color}),({neighbour_1_data['id']},{neighbour_1_data['piece'].getColor()}),({neighbour_2_data['id']},{neighbour_2_data['piece'].getColor()})")
                     if isinstance(neighbour_1_data["piece"],pion_classe.Pion) and isinstance(neighbour_2_data["piece"],pion_classe.Pion):
                         if neighbour_1_data["piece"].getColor() == color and neighbour_2_data["piece"].getColor() == color:
-                            #print(f'Voici les noeuds comparés ({node_data["id"]}:{color}),({neighbour_1_data["id"]},{neighbour_1_data["piece"].getColor()}),({neighbour_2_data["id"]},{neighbour_2_data["piece"].getColor()}) : first_layer_are_aligned')
+                            print(f"    first_layer_are_aligned() : Voici les noeuds comparés ({node_data['id']}-{neighbour_1_data['id']}-{neighbour_2_data['id']})")
+                            #print(f"first_layer_are_aligned() : Voici les noeuds comparés {node_data['id']}-{neighbour_1_data['id']}-{neighbour_2_data['id']}")
                             node_data_position = node_data["rect"].center; node_data_id = node_data["id"]
                             neighbour_1_position = neighbour_1_data["rect"].center; neighbour_1_id = neighbour_1_data["id"]
                             neighbour_2_position = neighbour_2_data["rect"].center; neighbour_2_id = neighbour_2_data["id"]
@@ -744,7 +742,7 @@ class Game_copy():
                                 current_line = [neighbour_1_id,node_data_id,neighbour_2_id]
                                 self.current_player().add_line(current_line)
                                 print(f"    Allignement de 3 pionsseaux en __1__ couches de la même couleur! {current_line}")
-                                print(" game address : ",id(self))
+                                print("game address : ",id(self))
                                 return True
 
         ### Si aucune pair de voisins (droite-gauche ou haut-bas) n'est alignée et de même couleur, on retourne False 
@@ -776,7 +774,7 @@ class Game_copy():
                         if isinstance(neighbour_2_data["piece"],pion_classe.Pion):
                             if neighbour_2_data["color"]==color:
                                 #print(f'Voici les noeuds comparés ({node_data["id"]}:{color}),({neighbour_1_data["id"]},{neighbour_1_data["piece"].getColor()}),({neighbour_2_data["id"]},{neighbour_2_data["piece"].getColor()}) : second_layer_are_aligned')
-                                print(f"Voici les noeuds comparés ({node_data['id']}:{color}),({neighbour_1_data['id']},{neighbour_1_data['piece'].getColor()}),({neighbour_2_data['id']},{neighbour_2_data['piece'].getColor()})")
+                                print(f"    second_layer_are_aligned() : Voici les noeuds comparés {node_data['id']}-{neighbour_1_data['id']}-{neighbour_2_data['id']}")
                                 node_data_position = node_data["rect"].center; node_data_id = node_data["id"]
                                 neighbour_1_position = neighbour_1_data["rect"].center; neighbour_1_id = neighbour_1_data["id"]
                                 neighbour_2_position = neighbour_2_data["rect"].center; neighbour_2_id = neighbour_2_data["id"]
@@ -784,7 +782,7 @@ class Game_copy():
                                     current_line = [node_data_id,neighbour_1_id,neighbour_2_id]
                                     self.current_player().add_line(current_line)
                                     print(f"    Allignement de 3 pionsseaux en __2__ couches de la même couleur! {current_line}")
-                                    print(" game address : ",id(self))
+                                    print("game address : ",id(self))
                                     return True
     def is_in_allignement(self,node_data):
         """
