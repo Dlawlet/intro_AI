@@ -40,22 +40,50 @@ class Minimax_IA(Player_IA):
                 score += len(game.current_player().alligned_nodes)*200
                 score += len(list(game.current_player().get_nodes_id().keys()))*10
                 score -= len(game.ennemy_player_alligned_nodes())*200
-                if len(game.ennemy_player_alligned_nodes()) != 0:
-                    print("yoooooooooooooooooooooo")
                 score -= len(list(game.ennemy_player_dict().keys()))
             else:
                 score = 0
-                score -= len(game.current_player().alligned_nodes)*100
+                score -= len(game.current_player().alligned_nodes)*200
                 score -= len(list(game.current_player().get_nodes_id().keys()))*10
                 score += len(game.ennemy_player_alligned_nodes())*200
-                if len(game.ennemy_player_alligned_nodes()) != 0:
-                    print("yoooooooooooooooooooooo")
                 score += len(list(game.ennemy_player_dict().keys()))
         
             return score  
         # mode 2
         elif mode == 2:
-            score = random.randint(0,100)
+            if not maximizingPlayer:
+                score = 0
+                score += len(game.current_player().alligned_nodes)*50
+                score += len(list(game.current_player().get_nodes_id().keys()))*10
+                score -= len(game.ennemy_player_alligned_nodes())*200
+                score -= len(list(game.ennemy_player_dict().keys()))
+            else:
+                score = 0
+                score -= len(game.current_player().alligned_nodes)*50
+                score -= len(list(game.current_player().get_nodes_id().keys()))*10
+                score += len(game.ennemy_player_alligned_nodes())*200
+                score += len(list(game.ennemy_player_dict().keys()))
+            return score
+        # mode 3
+        elif mode == 3:
+            if not maximizingPlayer:
+                score = 0
+                for id in game.current_player().get_nodes_id():
+                    if id in [0, 2, 21, 23, 3, 5, 18, 20]:
+                        score += 50
+                score += len(game.current_player().alligned_nodes)*50
+                score += len(list(game.current_player().get_nodes_id().keys()))*10
+                score -= len(game.ennemy_player_alligned_nodes())*200
+                score -= len(list(game.ennemy_player_dict().keys()))
+            else:
+                score = 0
+                for id in game.current_player().get_nodes_id():
+                    if id in [0, 2, 21, 23, 3, 5, 18, 20]:
+                        score -= 50
+                score -= len(game.current_player().alligned_nodes)*50
+                score -= len(list(game.current_player().get_nodes_id().keys()))*10
+                score += len(game.ennemy_player_alligned_nodes())*200
+                score += len(list(game.ennemy_player_dict().keys()))
             return score
     def minimax(self, depth, alpha, beta, maximizingPlayer, pruning, phase, possibles_moves, mode, game):
         """
@@ -79,67 +107,19 @@ class Minimax_IA(Player_IA):
                 cp_board.change_piece_color(node_data)
                 cp_board.decrement_player_pions()
                 cp_board.accessible_nodes.remove(node_data["id"])
-                print(f"id du noeud: {node_data['id']}, prof : {depth}")
                 if cp_board.is_in_allignement(node_data):
                     print("le noeud est dans un alignement")
                     print(f"la longueur de la liste des noeuds allignés de l'ennemi est: {len(cp_board.ennemy_player_alligned_nodes())}")
                     print(f"la longueur de la liste des noeuds allignés de l'ennemi est: {len(cp_board.current_player().alligned_nodes)}")
                     return node_data, self.score_board(game,maximizingPlayer,mode)
-                cp_board.switch_player()    
-            elif phase == 1:
-                print("ssssssssssssssssssssssssssssssssssssssssssssssssssssssssss")
-                print(node_data)
-                out = False
-                print(f"date c'est {node_data['id']} qui est selectionné  et neigbour est {node_data['neighbours']}")
-                for neigbour_id in node_data["neighbours"]:
-                    print(f"neigbour_id est {neigbour_id}")
-                    for line in cp_board.current_player().alligned_nodes:
-                        print(f"line est {line}")
-                        if node_data["id"] not in line:
-                            print("le noeud n'est pas dans la ligne")
-                            print(f'longueur alligned_nodes: {len(cp_board.current_player().alligned_nodes)}')
-                            cp_board.is_in_allignement(node_data)
-                            #check if neighbour is brown 
-                            if cp_board.nodes[neigbour_id]["piece"].getColor() == BRWON and cp_board.piece_can_switch(node_data,self.game.nodes[neigbour_id]) :
-                                print("le noeud peut switch")
-                                cp_board.temp_list.append(node_data)
-                                cp_board.temp_list.append(self.game.nodes[neigbour_id])
-                                cp_board.switch_pieces_nodes()
-                                out = True
-                                cp_board.temp_list = []
-                                cp_board.reset_piece_color(node_data)
-                                cp_board.current_player().delete_node(node_data["id"])
-                                print("aaaaaaaaaa")
-                                break
-                            
-                    if out :
-                        cp_board.temp_list = []
-                        break
-                print("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
-                if cp_board.is_in_allignement(node_data):
-                    print("le noeud est dans un alignement")
-                    print(f"la longueur de la liste des noeuds allignés de l'ennemi est: {len(cp_board.ennemy_player_alligned_nodes())}")
-                    print(f"la longueur de la liste des noeuds allignés de l'ennemi est: {len(cp_board.current_player().alligned_nodes)}")
-                    return node_data, self.score_board(game,maximizingPlayer,mode)
-                
-                cp_board.switch_player()
+                cp_board.switch_player()   
 
-            phase = game.phase
             if phase == 0:
-                print("dans le phase 0 apres node_data")
                 possibles_moves = cp_board.get_accessible_nodes_data()
                 new_value = self.minimax(depth-1, alpha, beta, not maximizingPlayer, pruning, phase, possibles_moves, mode, cp_board)[1]
                 cp_board.reset_piece_color(node_data)
                 cp_board.current_player().delete_node(node_data["id"])
-            
-            elif phase == 1: 
-                current_player_list_ID = list(self.get_nodes_id().keys())
-                #get current_player_list-data
-                current_player_list_data = []
-                for node_id in current_player_list_ID:
-                    current_player_list_data.append(cp_board.nodes[node_id])
-                new_value = self.minimax(depth-1, alpha, beta, not maximizingPlayer, pruning, phase, current_player_list_data, mode, cp_board)[1]
-                
+               
                     
             if maximizingPlayer:
                 if new_value > value:
@@ -163,14 +143,14 @@ class Minimax_IA(Player_IA):
             Cette fonction fait en sorte que l'IA place un pion sur le plateau. Pour ce faire, on change 
                 la couleur du noeud et du pion.
         """
-        print("dans le play_phase_0_IA")
         possibles_moves = self.game.get_accessible_nodes_data()
-        
+        if self.game.accessible_nodes == [] or self.game.current_player().get_pion() == 0:
+            self.game.game_over(self.game.current_player())
+            return
         node_data = self.minimax(self.depth, -math.inf, math.inf, True, True,0, possibles_moves, self.mode, self.game)[0]
         self.game.reset_piece_color(node_data)
         self.game.current_player().delete_node(node_data["id"])
         self.get_nodes_id()[node_data["id"]] = node_data["id"]
-        print(f'Le joueur {self.name} a sélectionné le noeud: {node_data["id"]} de couleur {self.game.translate_to_color(node_data["piece"].getColor())}')
         if node_data["piece"].getColor() == BRWON:
             self.game.change_piece_color(node_data)
             
@@ -181,43 +161,7 @@ class Minimax_IA(Player_IA):
             
         else:
             print("Vous ne pouvez pas placer de pion ici")
-        print("")
-        print("hors du play_phase_0_IA")
-    def play_phase_1_IA(self):
-        didnt_play = True
-        print(f"l'IA {self.name} va chercher deux noeuds à échanger")
-        current_player_list_ID = list(self.get_nodes_id().keys())
-        #get current_player_list-data
-        current_player_list_data = []
-        for node_id in current_player_list_ID:
-            current_player_list_data.append(self.game.nodes[node_id])
-        while(didnt_play):
-            #random_key = self.choose_random_node(current_player_list_ID)
-            node_data = self.minimax(self.depth, -math.inf, math.inf, True, True,1, current_player_list_data, self.mode, self.game)[0]
-            random_key = node_data["id"]
-            my_node = self.game.nodes[random_key]
-            for neigbour_id in my_node["neighbours"]:
-                if self.game.piece_can_switch(my_node,self.game.nodes[neigbour_id]):
-
-                    self.game.temp_list.append(my_node)
-                    self.game.temp_list.append(self.game.nodes[neigbour_id])
-                    self.game.switch_pieces_nodes()
-
-                    self.game.is_there_winner(self.game.nodes[neigbour_id])
-
-                    
-                    didnt_play = False
-                    break #Otherwise we would continue to check on all neighbours!!!
-            current_player_list_data.pop(current_player_list_data.index(node_data))
-            if(len(current_player_list_data) == 0):
-                print(f"l'IA {self.name} n'a pas pu échanger deux noeuds")
-                didnt_play = False
-                self.game.game_over(self.game.ennemy_player_name())
-
-                
-        print(f"l'IA {self.name} a échangé deux noeuds")
-        print("")
-        self.game.switch_player()
+    
     def play(self,game):
         """
             Cette fonction permet de jouer un tour, elle recoit en input le noeud sur lequel on a cliqué.
@@ -226,12 +170,10 @@ class Minimax_IA(Player_IA):
                 - Phase 0: Placement des pions
                 - Phase 1: Echange des pions
         """
-        print(f"l'IA va jouer")
         self.game = game
         self.depth = 2
         
         if(self.game.phase == 0):
-            print(f"l'IA est dans la phase 0")
             self.play_phase_0_IA()
             
         elif(self.game.phase == 1):

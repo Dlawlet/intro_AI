@@ -5,15 +5,6 @@ from Random_IA import *
 from minimax import *
 import copy
 import pion_classe
-"""
-A modifer:
-    -REFACTOR LE CODE: 
-        -Pour optimiser l'arbre de décision : noeuds_accessibles/noeuds_rouge/noeuds_bleus
-            Ex : noeuds_rouge = [0,1,2,13,3,11,12] permet de facilement vérfier si rouge a perdu
-            noeuds_accessibles = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]
-    -A chaque allignement, on peut retirer un pion de l'adversaire 
-        -sauf si il est dans un allignement
-"""
 
 class Setup_manager():
     """
@@ -34,18 +25,18 @@ class Setup_manager():
         
         self.phase = 0 #0: placement, 1: déplacement
         self.winner_name = None #Id du gagnant
-        self.pion_nbr = 9 #Nombre de pions par joueur
+        self.pion_nbr = 3 #Nombre de pions par joueur
         self.first_player = None
         self.second_player = None
 
         self.accessible_nodes = list(self.nodes.keys()) #Liste des noeuds accessibles
         self.temp_list = [] #Permet l'échange de pions pour la deuxieme phase
-    
-    
+
     ### Fonction pour afficher dans le terminal
     def print_nodes(self,nodes_dict):
         for node_id, node_data in nodes_dict.items():
             print(node_id, node_data)
+
     ### Fonction pour gérer les évènements (clavier, souris)
     def have_to_quit(self,event):
         if event.type == pygame.QUIT:
@@ -92,7 +83,7 @@ class Player_manager(Setup_manager):
             return "Error"
     def current_player_name(self):
         """
-            Rien de compliqué. Cette fonction permet de connaitre le nom du joueur en cours
+           Cette fonction permet de connaitre le nom du joueur en cours
         """
         if self.who_play == 0:
             return self.first_player.get_name()
@@ -100,7 +91,7 @@ class Player_manager(Setup_manager):
             return self.second_player.get_name()
     def current_player_color(self):
         """
-            Rien de compliqué. Cette fonction permet de connaitre la couleur du joueur en cours
+            cette fonction permet de connaitre la couleur du joueur en cours
         """
         if self.who_play == 0:
             #print("Player RED just played")
@@ -110,7 +101,7 @@ class Player_manager(Setup_manager):
             return self.second_player.get_color()
     def ennemy_player_color(self):
         """
-            Rien de compliqué. Cette fonction permet de connaitre la couleur du joueur adverse
+            This function allows to know the color of the player who is not playing
         """
         if self.who_play == 0:
             return self.second_player.get_color()
@@ -118,7 +109,7 @@ class Player_manager(Setup_manager):
             return self.first_player.get_color()
     def current_player_dict(self):
         """
-            Rien de compliqué. Cette fonction permet de connaitre le dictionnaire du joueur en cours
+            this function allows to know the dictionary of the current player
         """
         if self.who_play == 0:
             return self.first_player.get_nodes_id()
@@ -126,7 +117,7 @@ class Player_manager(Setup_manager):
             return self.second_player.get_nodes_id()
     def current_player(self):
         """
-            Rien de compliqué. Cette fonction permet de connaitre le joueur en cours
+            this function allows to know the current player
         """
         if self.who_play == 0:
             return self.first_player
@@ -135,7 +126,7 @@ class Player_manager(Setup_manager):
         
     def ennemy_player_dict(self):
         """
-            Rien de compliqué. Cette fonction permet de connaitre le dictionnaire du joueur adverse
+           this function allows to know the dictionary of the ennemy player
         """
         if self.who_play == 0:
             return self.second_player.get_nodes_id()
@@ -143,7 +134,7 @@ class Player_manager(Setup_manager):
             return self.first_player.get_nodes_id()
     def ennemy_player_name(self):
         """
-            Rien de compliqué. Cette fonction permet de connaitre le nom du joueur adverse
+            this function allows to know the name of the ennemy player
         """
         if self.who_play == 0:
             return self.second_player.get_name()
@@ -152,7 +143,7 @@ class Player_manager(Setup_manager):
 
     def ennemy_player_alligned_nodes(self):
         """
-            Rien de compliqué. Cette fonction permet de connaitre les lignes du joueur adverse
+            this function allows to know the alligned nodes of the ennemy player
         """
         if self.who_play == 0:
             return self.second_player.alligned_nodes
@@ -160,7 +151,7 @@ class Player_manager(Setup_manager):
             return self.first_player.alligned_nodes  
     def switch_player(self):
         """
-            Rien de compliqué, cette fonction permet de changer de joueur en cours
+           this function allows to switch the current player
         """
         if self.who_play == 0:
             self.who_play = 1
@@ -169,8 +160,7 @@ class Player_manager(Setup_manager):
     
     def decrement_player_pions(self):
         """
-            Fonction qui permet de décrémenter le nombre de pions restants pour chaque joueur
-            Une fois le nombre de pions à 0, on passe à la phase 1
+           this function allows to decrement the number of pions of the current player
         """
         if self.who_play == 0:
             if self.first_player.get_pion_nbr() > 0:
@@ -195,25 +185,14 @@ class Player_manager(Setup_manager):
             Cette fonction permet de faire une copie des noeuds pour pouvoir les modifier sans modifier les 
                 noeuds de la partie en cours, pour cela deep copy ne fonctionne pas, il faut faire une fonction 
                 qui copie les noeuds un par un en recreant les objets internes.
-                pour rappel nodes est cree dans setup.py avec principalment le bloc de code suivant :
-                nodes = {}
-                for position in positions:
-                    node_rect = pygame.Rect(position[0], position[1], node_size, node_size)
-                    node_piece = pion_classe.Pion(BRWON,position[0],position[1])
-                    nodes[node_id_start] = {"id":node_id_start,"rect": node_rect, "color": BRWON,"neighbours": [],"possible_move_nbr":0,"piece": node_piece}
-                    node_id_start += 1
-                find_neighbours(nodes)# Find neighboring nodes
-
-                return nodes
-                sur base de ca nous allons effectuer une copy du dico nodes de gma dans un autre dico  en prenant soin de recréer les objets internes
         """
         nodes_copy = {}
         for node_id, node_data in self.nodes.items():
             node_rect = pygame.Rect(node_data["piece"].getPosX(),node_data["piece"].getPosY(), 15,15)
             node_piece = pion_classe.Pion(node_data["piece"].getColor(),node_data["piece"].getPosX(),node_data["piece"].getPosY())
             nodes_copy[node_id] = {"id":copy.deepcopy(node_id),"rect": node_rect, "color":node_data["piece"].getColor() ,"neighbours": copy.deepcopy(node_data["neighbours"]),"possible_move_nbr":copy.deepcopy(node_data["possible_move_nbr"]),"piece": node_piece}
-            #print data neighbours
         return nodes_copy
+    
 class Board(Player_manager):
     def __init__(self):
         super().__init__()
@@ -222,7 +201,6 @@ class Board(Player_manager):
         if self.running:    
             # Fill the screen with black
                 self.screen.fill(BLACK)
-
                 # Draw the nodes with their id in the middle
                 for node_id, node_data in self.nodes.items():
                     node_rect = node_data["rect"]
@@ -243,23 +221,20 @@ class Board(Player_manager):
                 # Update the display
                 pygame.display.update()
         else:
-            pygame.quit()
+            pygame.quit()       
     def change_piece_color(self,node_data):
         """
-            C'est ici que l'on change la couleur du pion AINSI que celle du node.
+           this function allows to change the color of the piece and the node
         """
         if isinstance(node_data["piece"],pion_classe.Pion):
             node_data["piece"].setColor(self.current_player_color())
-
-            #new_piece_color = node_data["piece"].getColor()
             node_data["color"] = self.current_player_color()
-            #print(f"Vous venez de déposer un pion de couleur{new_piece_color}")
             print(f"Voici la liste des noeuds utilisés par le joueur {self.current_player_name()} : {self.current_player_dict()}")
             self.update_visual()
 
     def reset_piece_color( self, node_data):
         """
-            Cette fonction permet de remettre la couleur du pion à marron
+           this function allows to reset the color of the piece and the node
         """
         if isinstance(node_data["piece"],pion_classe.Pion):
             node_data["piece"].setColor(BRWON)
@@ -368,11 +343,9 @@ class Board(Player_manager):
             print("___________________________________________________________________________")
     
     def game_over(self, winner_name):
-        if self.phase==1:
+        if self.phase==0:
             print("\n\n___________________________________________________________________________")
             print(f"Youhou! Le joueur {winner_name} a gagné!")
-            print(f"___Here's the current dict: {self.current_player_dict()}")
-            print(f"___Here's the ennemy dict: {self.ennemy_player_dict()}")
             print("__________________________________THE END__________________________________")
             self.running = False
             self.winner_name = winner_name
@@ -433,10 +406,6 @@ class Board(Player_manager):
         return accessible_nodes_data
     
     def check_if_nodes_are_adjacent(self,node_data_1,node_data_2):
-        """
-            Rien de compliqué. Cette fonction permet de savoir si deux noeuds sont adjacents basé sur leur 
-                id et le fait que chaque noeud ait une liste de ses voisins
-        """
         if node_data_1["id"] in node_data_2["neighbours"]:
             return True
         else:
@@ -447,12 +416,8 @@ class Board(Player_manager):
         if is_print:
             node_data_ID_1 = node_data_1["id"]
             node_data_ID_2 = node_data_2["id"]
-            print(f"    {self.current_player_name()} vient de comparer {node_data_ID_1}/{node_data_ID_2} avec comme couleur {self.translate_to_color(color_1)}/{self.translate_to_color(color_2)}")
+            
     def piece_can_switch(self,node_data_1,node_data_2,is_print=True):
-        """
-            Rien de compliqué. Cette fonction permet de savoir si l'un des deux noeuds peut échanger son pion
-                avec l'autre noeud. L'echange a lieu que si et seulement si L'UN des deux noeuds est vide
-        """
         if isinstance(node_data_1["piece"],pion_classe.Pion) and isinstance(node_data_2["piece"],pion_classe.Pion):
             if node_data_1["id"] in self.current_player_dict():
                 node_data_1["piece"].setColor(self.current_player_color())
@@ -485,10 +450,6 @@ class Board(Player_manager):
             print("Error : Vous n'avez pas sélectionné deux pions")
             return False
     def switch_pieces_nodes(self):
-
-        #Rappel: Lors de l'appel de cette fonction, le premier noeud est TOUJOURS celui de couleur (celui qui 
-        # va bouger) et le deuxième est TOUJOURS celui brun!
-
         [node_data_1,node_data_2] = self.temp_list
         [id_1,id_2] = [node_data_1["id"],node_data_2["id"]]
 
@@ -550,10 +511,7 @@ class Board(Player_manager):
             pygame.display.update()
             sleep(0.05)   
      
-    
-        
-        
-        
+     
 class Game(Board):
     
     def run(self, first="Random_IA", second="Random_IA"):
@@ -564,8 +522,6 @@ class Game(Board):
                         self.first_player = Random_IA(0,RED,"RED",self.pion_nbr)
                     case "Minimax":
                         self.first_player = Minimax_IA(0,RED,"RED",self.pion_nbr,1)
-                    case "Montecarlo":
-                        self.first_player = Montecarlo_IA(0,RED,"RED",self.pion_nbr)
                     case "Human":
                         self.first_player = Human(0,RED,"RED",self.pion_nbr)
                     case _:
@@ -578,8 +534,6 @@ class Game(Board):
                         self.second_player = Random_IA(1,BLUE,"BLUE",self.pion_nbr)
                     case "Minimax":
                         self.second_player = Minimax_IA(1,BLUE,"BLUE",self.pion_nbr,1)
-                    case "Montecarlo":
-                        self.second_player = Montecarlo_IA(1,BLUE,"BLUE",self.pion_nbr)
                     case "Human":
                         self.second_player = Human(1,BLUE,"BLUE",self.pion_nbr)
                     case _:
@@ -597,9 +551,6 @@ class Game(Board):
                 self.second_player.play(self)
 
             # Update the display
-            
-            #sleep(1)
-
         # Quit Pygame
         pygame.quit()
         return self.winner_name
@@ -630,17 +581,12 @@ class Game_copy():
         else:
             return "Error"
     def current_player_name(self):
-        """
-            Rien de compliqué. Cette fonction permet de connaitre le nom du joueur en cours
-        """
         if self.who_play == 0:
             return self.first_player.get_name()
         else:
             return self.second_player.get_name()
     def current_player_color(self):
-        """
-            Rien de compliqué. Cette fonction permet de connaitre la couleur du joueur en cours
-        """
+      
         if self.who_play == 0:
             #print("Player RED just played")
             return self.first_player.get_color()
@@ -648,61 +594,42 @@ class Game_copy():
             #print("Player BLUE just played")
             return self.second_player.get_color()
     def ennemy_player_color(self):
-        """
-            Rien de compliqué. Cette fonction permet de connaitre la couleur du joueur adverse
-        """
+      
         if self.who_play == 0:
             return self.second_player.get_color()
         else:
             return self.first_player.get_color()
     def current_player_dict(self):
-        """
-            Rien de compliqué. Cette fonction permet de connaitre le dictionnaire du joueur en cours
-        """
+       
         if self.who_play == 0:
             return self.first_player.get_nodes_id()
         else:
             return self.second_player.get_nodes_id()
-    def current_player(self):
-        """
-            Rien de compliqué. Cette fonction permet de connaitre le joueur en cours
-        """
+    def current_player(self):    
         if self.who_play == 0:
             return self.first_player
         else:
-            return self.second_player
-        
+            return self.second_player      
     def ennemy_player_dict(self):
-        """
-            Rien de compliqué. Cette fonction permet de connaitre le dictionnaire du joueur adverse
-        """
+      
         if self.who_play == 0:
             return self.second_player.get_nodes_id()
         else:
             return self.first_player.get_nodes_id()
     def ennemy_player_name(self):
-        """
-            Rien de compliqué. Cette fonction permet de connaitre le nom du joueur adverse
-        """
         if self.who_play == 0:
             return self.second_player.get_name()
         else:
-            return self.first_player.get_name()
-        
+            return self.first_player.get_name()      
     def switch_player(self):
-        """
-            Rien de compliqué, cette fonction permet de changer de joueur en cours
-        """
+    
         if self.who_play == 0:
             self.who_play = 1
         else:
             self.who_play = 0
     
     def decrement_player_pions(self):
-        """
-            Fonction qui permet de décrémenter le nombre de pions restants pour chaque joueur
-            Une fois le nombre de pions à 0, on passe à la phase 1
-        """
+      
         if self.who_play == 0:
             if self.first_player.get_pion_nbr() > 0:
                 self.first_player.decrement_pion_nbr()
@@ -728,7 +655,7 @@ class Game_copy():
             #new_piece_color = node_data["piece"].getColor()
             node_data["color"] = self.current_player_color()
             #print(f"Vous venez de déposer un pion de couleur{new_piece_color}")
-            print(f"Voici la liste des noeuds utilisés par le joueur {self.current_player_name()} : {self.current_player_dict()}")
+           
 
     def nodes_share_same_position(self,node_data_positon,neighbor_1_position,neighbor_2_position):
         """
@@ -774,8 +701,8 @@ class Game_copy():
                                 current_line = [neighbour_1_id,node_data_id,neighbour_2_id]
                                 if current_line not in self.current_player().alligned_nodes:
                                     self.current_player().add_line(current_line)
-                                    print(f"    Allignement de 3 pionsseaux en __1__ couches de la même couleur! {current_line}")
-                                    print(" game address : ",id(self))
+                                    #print(f"    Allignement de 3 pionsseaux en __1__ couches de la même couleur! {current_line}")
+                                    #print(" game address : ",id(self))
                                 return True
 
         ### Si aucune pair de voisins (droite-gauche ou haut-bas) n'est alignée et de même couleur, on retourne False 
@@ -806,8 +733,7 @@ class Game_copy():
                     if node_data["id"] != neighbour_2_id:
                         if isinstance(neighbour_2_data["piece"],pion_classe.Pion):
                             if neighbour_2_data["color"]==color:
-                                #print(f'Voici les noeuds comparés ({node_data["id"]}:{color}),({neighbour_1_data["id"]},{neighbour_1_data["piece"].getColor()}),({neighbour_2_data["id"]},{neighbour_2_data["piece"].getColor()}) : second_layer_are_aligned')
-                                print(f"Voici les noeuds comparés ({node_data['id']}:{color}),({neighbour_1_data['id']},{neighbour_1_data['piece'].getColor()}),({neighbour_2_data['id']},{neighbour_2_data['piece'].getColor()})")
+                                #print(f"Voici les noeuds comparés ({node_data['id']}:{color}),({neighbour_1_data['id']},{neighbour_1_data['piece'].getColor()}),({neighbour_2_data['id']},{neighbour_2_data['piece'].getColor()})")
                                 node_data_position = node_data["rect"].center; node_data_id = node_data["id"]
                                 neighbour_1_position = neighbour_1_data["rect"].center; neighbour_1_id = neighbour_1_data["id"]
                                 neighbour_2_position = neighbour_2_data["rect"].center; neighbour_2_id = neighbour_2_data["id"]
@@ -815,8 +741,8 @@ class Game_copy():
                                     current_line = [node_data_id,neighbour_1_id,neighbour_2_id]
                                     if current_line not in self.current_player().alligned_nodes:
                                         self.current_player().add_line(current_line)
-                                        print(f"    Allignement de 3 pionsseaux en __2__ couches de la même couleur! {current_line}")
-                                        print(" game address : ",id(self))
+                                        #print(f"    Allignement de 3 pionsseaux en __2__ couches de la même couleur! {current_line}")
+                                        #print(" game address : ",id(self))
                                     return True
     def is_in_allignement(self,node_data):
         """
@@ -853,11 +779,9 @@ class Game_copy():
             print("___________________________________________________________________________")
     
     def game_over(self, winner_name):
-        if self.phase==1:
+        if self.phase==0:
             print("\n\n___________________________________________________________________________")
             print(f"Youhou! Le joueur {winner_name} a gagné!")
-            print(f"___Here's the current dict: {self.current_player_dict()}")
-            print(f"___Here's the ennemy dict: {self.ennemy_player_dict()}")
             print("__________________________________THE END__________________________________")
             self.running = False
             self.winner_name = winner_name
@@ -889,10 +813,7 @@ class Game_copy():
                     old_color = node_data["piece"].getColor()
                     node_data["piece"].setColor(BRWON)
                     node_data["color"] = BRWON
-                    print(f"    ___Here's the ennemy dict: {self.ennemy_player_dict()}")
-                    print(f"    ___Le joueur {self.current_player_name()} vient de supprimer le pion {returned_key} de couleur {self.translate_to_color(old_color)}")
                     self.ennemy_player_dict().pop(returned_key)
-                    print(f"    ___Here's the ennemy dict: {self.ennemy_player_dict()}")
                     self.accessible_nodes.append(returned_key)
                     didnt_delete = False
                     if len(self.ennemy_player_dict()) <= 2:
@@ -916,10 +837,6 @@ class Game_copy():
         return accessible_nodes_data
     
     def check_if_nodes_are_adjacent(self,node_data_1,node_data_2):
-        """
-            Rien de compliqué. Cette fonction permet de savoir si deux noeuds sont adjacents basé sur leur 
-                id et le fait que chaque noeud ait une liste de ses voisins
-        """
         if node_data_1["id"] in node_data_2["neighbours"]:
             return True
         else:
@@ -932,10 +849,6 @@ class Game_copy():
             node_data_ID_2 = node_data_2["id"]
             print(f"    {self.current_player_name()} vient de comparer {node_data_ID_1}/{node_data_ID_2} avec comme couleur {self.translate_to_color(color_1)}/{self.translate_to_color(color_2)}")
     def piece_can_switch(self,node_data_1,node_data_2,is_print=True):
-        """
-            Rien de compliqué. Cette fonction permet de savoir si l'un des deux noeuds peut échanger son pion
-                avec l'autre noeud. L'echange a lieu que si et seulement si L'UN des deux noeuds est vide
-        """
         if isinstance(node_data_1["piece"],pion_classe.Pion) and isinstance(node_data_2["piece"],pion_classe.Pion):
             if node_data_1["id"] in self.current_player_dict():
                 node_data_1["piece"].setColor(self.current_player_color())
@@ -981,8 +894,6 @@ class Game_copy():
                     #Si node_data_1 est en allignement ET qu'on le change de place, on perd l'allignement
                         #de ce noeud
                     self.current_player().delete_line(node_data_1)
-                
-                print(f"    Le joueur {self.current_player_name()} va perdre le noeud {id_1} et gagner {id_2}")
 
                     #Changement de couleur des pions
                 old_color = node_data_1["piece"].getColor()
@@ -992,17 +903,12 @@ class Game_copy():
                 node_data_1["color"] = node_data_1["piece"].getColor()
                 node_data_2["color"] = node_data_2["piece"].getColor()
                     #Changement dans le dict
-                print(f"    ___AVANT : Voici les noeuds utilisés par le joueur {self.current_player_name()} : {self.current_player_dict()}")
                 self.current_player_dict()[node_data_2["id"]] = node_data_2["id"]
                 self.current_player_dict().pop(id_1,None)
-                print(f"    ___APRES : Voici les noeuds utilisés par le joueur {self.current_player_name()} : {self.current_player_dict()}")
                     #Changement de la liste des noeuds accessibles
                 index_to_remove = self.accessible_nodes.index(id_2)
-                print(f"        ___Voici les noeuds accessibles {self.accessible_nodes}")
-                print(f"        Remove ID {id_2} at the index {index_to_remove}. Then add the ID {id_1}")
                 self.accessible_nodes.remove(id_2)
                 self.accessible_nodes.append(id_1)
-                print(f"        ___Voici les nouveaux noeuds accessibles {self.accessible_nodes}")
                 
                 self.temp_list = []
     def copy_nodes(self):
@@ -1010,19 +916,7 @@ class Game_copy():
         """
             Cette fonction permet de faire une copie des noeuds pour pouvoir les modifier sans modifier les 
                 noeuds de la partie en cours, pour cela deep copy ne fonctionne pas, il faut faire une fonction 
-                qui copie les noeuds un par un en recreant les objets internes.
-                pour rappel nodes est cree dans setup.py avec principalment le bloc de code suivant :
-                nodes = {}
-                for position in positions:
-                    node_rect = pygame.Rect(position[0], position[1], node_size, node_size)
-                    node_piece = pion_classe.Pion(BRWON,position[0],position[1])
-                    nodes[node_id_start] = {"id":node_id_start,"rect": node_rect, "color": BRWON,"neighbours": [],"possible_move_nbr":0,"piece": node_piece}
-                    node_id_start += 1
-                find_neighbours(nodes)# Find neighboring nodes
-
-                return nodes
-                sur base de ca nous allons effectuer une copy du dico nodes de gma dans un autre dico  en prenant soin de recréer les objets internes
-        """
+                qui copie les noeuds un par un en recreant les objets internes."""
         nodes_copy = {}
         for node_id, node_data in self.nodes.items():
             node_rect = pygame.Rect(node_data["piece"].getPosX(),node_data["piece"].getPosY(), 15,15)
@@ -1032,18 +926,12 @@ class Game_copy():
         return nodes_copy
     
     def ennemy_player_alligned_nodes(self):
-        """
-            Rien de compliqué. Cette fonction permet de connaitre les lignes du joueur adverse
-        """
         if self.who_play == 0:
             return self.second_player.alligned_nodes
         else:
             return self.first_player.alligned_nodes
 
     def reset_piece_color( self, node_data):
-        """
-            Cette fonction permet de remettre la couleur du pion à marron
-        """
         if isinstance(node_data["piece"],pion_classe.Pion):
             node_data["piece"].setColor(BRWON)
             node_data["color"] = BRWON
