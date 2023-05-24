@@ -10,6 +10,7 @@ class Player():
         self.nodes_id = {}
         self.possible_moves = {}
         self.alligned_nodes = []
+        self.points = 0
 
     def get_id(self):
         return self.id
@@ -26,6 +27,15 @@ class Player():
     def get_nodes_id(self):
         return self.nodes_id
     
+    def get_points(self):
+        return self.points
+    def increment_point(self, value):
+        self.points += value
+    def calculate_own_points(self):
+        alligned_nodes_score = len(self.alligned_nodes)*200
+        pion_nbr_score = len(list(self.nodes_id.keys()))*10
+        self.points = alligned_nodes_score + pion_nbr_score
+
     def add_node(self, node_id):
         self.nodes_id[node_id] = node_id
 

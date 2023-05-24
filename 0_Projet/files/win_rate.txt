@@ -1,0 +1,6 @@
+The #Minimax1# win rate on #Minimax1# is #1.0# with #5# games.
+The #Minimax1# win rate on #Minimax1# is #1.0# with #5# games.
+The #Minimax1# win rate on #Minimax2# is #1.0# with #5# games.
+The #Minimax2# win rate on #Minimax1# is #1.0# with #5# games.
+The #Minimax2# win rate on #Minimax3# is #0.0# with #5# games.
+The #Minimax3# win rate on #Minimax3# is #1.0# with #5# games.

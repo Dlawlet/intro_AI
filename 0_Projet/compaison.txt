@@ -1,0 +1,31 @@
+Minimax1 VS Minimax1 __ python3 tester.py Minimax1 Minimax1 10
+Minimax1 VS Minimax2 __ python3 tester.py Minimax1 Minimax2 10
+Minimax1 VS Minimax3 __ python3 tester.py Minimax1 Minimax3 10
+Minimax1 VS Random_IA __ python3 tester.py Minimax1 Random_IA 10
+Minimax1 VS Human __ python3 tester.py Minimax1 Human 10
+
+Minimax2 VS Minimax1 __ python3 tester.py Minimax2 Human 10
+Minimax2 VS Minimax2 __ python3 tester.py Minimax2 Minimax2 10
+Minimax2 VS Minimax3 __ python3 tester.py Minimax2 Minimax3 10
+Minimax2 VS Random_IA __ python3 tester.py Minimax2 Random_IA 10
+Minimax2 VS Human __ python3 tester.py Minimax2 Human 10
+
+Minimax3 VS Minimax1 __ python3 tester.py Minimax3 Human 10
+Minimax3 VS Minimax2 __ python3 tester.py Minimax3 Minimax2 10
+Minimax3 VS Minimax3 __ python3 tester.py Minimax3 Minimax3 10
+Minimax3 VS Random_IA __ python3 tester.py Minimax3 Random_IA 10
+Minimax3 VS Human __ python3 tester.py Minimax3 Human 10
+
+Random_IA VS Minimax1 __ python3 tester.py Random_IA Minimax1 10
+Random_IA VS Minimax2 __ python3 tester.py Random_IA Minimax2 10
+Random_IA VS Minimax3 __ python3 tester.py Random_IA Minimax3 10
+Random_IA VS Random_IA __ python3 tester.py Random_IA Random_IA 10
+Random_IA VS Human __ python3 tester.py Random_IA Human 10
+
+Human VS Minimax1 __ python3 tester.py Human Minimax1 10
+Human VS Minimax2 __ python3 tester.py Human Minimax2 10
+Human VS Minimax3 __ python3 tester.py Human Minimax3 10
+Human VS Random_IA __ python3 tester.py Human Random_IA 10
+Human VS Human __ python3 tester.py Human Human 10
+
+

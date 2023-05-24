@@ -81,6 +81,7 @@ class Player_manager(Setup_manager):
             return "BRWON"
         else:
             return "Error"
+    
     def current_player_name(self):
         """
            Cette fonction permet de connaitre le nom du joueur en cours
@@ -99,14 +100,6 @@ class Player_manager(Setup_manager):
         else:
             #print("Player BLUE just played")
             return self.second_player.get_color()
-    def ennemy_player_color(self):
-        """
-            This function allows to know the color of the player who is not playing
-        """
-        if self.who_play == 0:
-            return self.second_player.get_color()
-        else:
-            return self.first_player.get_color()
     def current_player_dict(self):
         """
             this function allows to know the dictionary of the current player
@@ -123,15 +116,7 @@ class Player_manager(Setup_manager):
             return self.first_player
         else:
             return self.second_player
-        
-    def ennemy_player_dict(self):
-        """
-           this function allows to know the dictionary of the ennemy player
-        """
-        if self.who_play == 0:
-            return self.second_player.get_nodes_id()
-        else:
-            return self.first_player.get_nodes_id()
+    
     def ennemy_player_name(self):
         """
             this function allows to know the name of the ennemy player
@@ -140,6 +125,30 @@ class Player_manager(Setup_manager):
             return self.second_player.get_name()
         else:
             return self.first_player.get_name()
+    def ennemy_player_color(self):
+        """
+            This function allows to know the color of the player who is not playing
+        """
+        if self.who_play == 0:
+            return self.second_player.get_color()
+        else:
+            return self.first_player.get_color()
+    def ennemy_player_dict(self):
+        """
+           this function allows to know the dictionary of the ennemy player
+        """
+        if self.who_play == 0:
+            return self.second_player.get_nodes_id()
+        else:
+            return self.first_player.get_nodes_id()
+    def ennemy_player(self):
+        """
+           this function allows to know the ennemy player
+        """
+        if self.who_play == 0:
+            return self.second_player
+        else:
+            return self.first_player
 
     def ennemy_player_alligned_nodes(self):
         """
@@ -149,6 +158,7 @@ class Player_manager(Setup_manager):
             return self.second_player.alligned_nodes
         else:
             return self.first_player.alligned_nodes  
+    
     def switch_player(self):
         """
            this function allows to switch the current player
@@ -158,6 +168,18 @@ class Player_manager(Setup_manager):
         else:
             self.who_play = 0
     
+    def who_won(self):
+        winner_name = None
+        self.current_player().calculate_own_points() #On calcule les points du joueur en cours
+        self.ennemy_player().calculate_own_points() #On calcule les points du joueur ennemi
+        if  self.current_player().get_points() > self.ennemy_player().get_points() :
+            winner_name = self.current_player_name()
+        else:
+            winner_name = self.ennemy_player_name()
+        
+        print("LE GRAND WINNER EEEEEEEST: ",winner_name)
+        return winner_name
+        
     def decrement_player_pions(self):
         """
            this function allows to decrement the number of pions of the current player
@@ -174,8 +196,8 @@ class Player_manager(Setup_manager):
             print(f"Voici les noeuds utilisé par le joueur RED: {self.first_player.get_nodes_id()}")
             print(f"Voici les noeuds utilisé par le joueur BLUE : {self.second_player.get_nodes_id()}")
             print(f"Voici les noeuds accessibles : {self.accessible_nodes}")
-            print("____________________On passe à la deuxieme phase!!____________________\n")
-            self.phase = 1
+
+            self.game_over(self.who_won())
 
     def give_current_game_state(self):
         return [self.accessible_nodes,self.ennemy_player_dict()]
@@ -384,7 +406,7 @@ class Board(Player_manager):
                     print(f"    ___Here's the ennemy dict: {self.ennemy_player_dict()}")
                     self.accessible_nodes.append(returned_key)
                     didnt_delete = False
-                    if len(self.ennemy_player_dict()) <= 2:
+                    if len(self.ennemy_player_dict()) <= 2 and self.ennemy_player().get_pion_nbr()==0:
                         self.game_over(self.current_player_name())
             else:
                 print(f"{returned_key} appartient à un alignement de 3 pions de la même couleur. On ne peut pas le supprimer")
@@ -517,28 +539,41 @@ class Game(Board):
     def run(self, first="Random_IA", second="Random_IA"):
         # Game loop
         node_color = BLUE #n'importe quelle couleur fonctionne, c'est juste pour initialiser
+        print(f"Here are the players : {first} and {second}")
         match first:
                     case "Random_IA":
                         self.first_player = Random_IA(0,RED,"RED",self.pion_nbr)
                     case "Minimax":
                         self.first_player = Minimax_IA(0,RED,"RED",self.pion_nbr,1)
+                    case "Minimax1":
+                        self.first_player = Minimax_IA(0,RED,"RED",self.pion_nbr,1)
+                    case "Minimax2":
+                        self.first_player = Minimax_IA(0,RED,"RED",self.pion_nbr,2)
+                    case "Minimax3":
+                        self.first_player = Minimax_IA(0,RED,"RED",self.pion_nbr,3)
                     case "Human":
                         self.first_player = Human(0,RED,"RED",self.pion_nbr)
                     case _:
                         print("Error: first_player is not a valid player")
-                        print("Use one of the following: Random_IA, Minimax, Montecarlo, Human")
+                        print("Use one of the following: Random_IA, Minimax,Minimax1,Minimax2,Minimax3, Montecarlo, Human")
                         return
 
         match second:
                     case "Random_IA":
                         self.second_player = Random_IA(1,BLUE,"BLUE",self.pion_nbr)
                     case "Minimax":
-                        self.second_player = Minimax_IA(1,BLUE,"BLUE",self.pion_nbr,1)
+                        self.second_player = Minimax_IA(0,BLUE,"BLUE",self.pion_nbr,1)
+                    case "Minimax1":
+                        self.second_player = Minimax_IA(0,BLUE,"BLUE",self.pion_nbr,1)
+                    case "Minimax2":
+                        self.second_player = Minimax_IA(0,BLUE,"BLUE",self.pion_nbr,2)
+                    case "Minimax3":
+                        self.second_player = Minimax_IA(0,BLUE,"BLUE",self.pion_nbr,3)
                     case "Human":
                         self.second_player = Human(1,BLUE,"BLUE",self.pion_nbr)
                     case _:
                         print("Error: second_player is not a valid player")
-                        print("Use one of the following: Random_IA, Minimax, Montecarlo, Human")
+                        print("Use one of the following: Random_IA, Minimax,Minimax1,Minimax2,Minimax3, Montecarlo, Human")
                         return
             
         while self.running:
@@ -621,6 +656,16 @@ class Game_copy():
             return self.second_player.get_name()
         else:
             return self.first_player.get_name()      
+    def ennemy_player(self):
+        """
+           this function allows to know the ennemy player
+        """
+        if self.who_play == 0:
+            return self.second_player
+        else:
+            return self.first_player
+
+    
     def switch_player(self):
     
         if self.who_play == 0:
@@ -628,6 +673,18 @@ class Game_copy():
         else:
             self.who_play = 0
     
+
+    def who_won(self):
+        winner_name = None
+        self.current_player().calculate_own_points() #On calcule les points du joueur en cours
+        self.ennemy_player().calculate_own_points() #On calcule les points du joueur ennemi
+        if  self.current_player().get_points() > self.ennemy_player().get_points() :
+            winner_name = self.current_player_name()
+        else:
+            winner_name = self.ennemy_player_name()
+        
+        print("LE GRAND WINNER EEEEEEEST: ",winner_name)
+        return winner_name
     def decrement_player_pions(self):
       
         if self.who_play == 0:
@@ -642,8 +699,8 @@ class Game_copy():
             print(f"Voici les noeuds utilisé par le joueur RED: {self.first_player.get_nodes_id()}")
             print(f"Voici les noeuds utilisé par le joueur BLUE : {self.second_player.get_nodes_id()}")
             print(f"Voici les noeuds accessibles : {self.accessible_nodes}")
-            print("____________________On passe à la deuxieme phase!!____________________\n")
-            self.phase = 1
+
+            self.game_over(self.who_won())
 
     def change_piece_color(self,node_data):
         """
@@ -816,7 +873,7 @@ class Game_copy():
                     self.ennemy_player_dict().pop(returned_key)
                     self.accessible_nodes.append(returned_key)
                     didnt_delete = False
-                    if len(self.ennemy_player_dict()) <= 2:
+                    if len(self.ennemy_player_dict()) <= 2 and self.ennemy_player().get_pion_nbr()==0:
                         self.game_over(self.current_player_name())
             else:
                 print(f"{returned_key} appartient à un alignement de 3 pionsseaux de la même couleur. On ne peut pas le supprimer")

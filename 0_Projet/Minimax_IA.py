@@ -4,7 +4,7 @@ from setup import *
 from time import sleep
 import random
 
-class Minimax_IA(Player_IA):
+class Minimax_IA(Player):
 
     def evaluate_board(self, game_state):
         # Evaluation function to assign a score to the game state

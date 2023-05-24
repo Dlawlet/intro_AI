@@ -144,7 +144,7 @@ class Minimax_IA(Player_IA):
                 la couleur du noeud et du pion.
         """
         possibles_moves = self.game.get_accessible_nodes_data()
-        if self.game.accessible_nodes == [] or self.game.current_player().get_pion() == 0:
+        if self.game.accessible_nodes == [] or self.game.current_player().get_pion_nbr() == 0:
             self.game.game_over(self.game.current_player())
             return
         node_data = self.minimax(self.depth, -math.inf, math.inf, True, True,0, possibles_moves, self.mode, self.game)[0]
@@ -175,6 +175,3 @@ class Minimax_IA(Player_IA):
         
         if(self.game.phase == 0):
             self.play_phase_0_IA()
-            
-        elif(self.game.phase == 1):
-            self.play_phase_1_IA()
