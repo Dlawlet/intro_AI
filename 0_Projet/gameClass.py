@@ -34,7 +34,7 @@ class Setup_manager():
         
         self.phase = 0 #0: placement, 1: déplacement
         self.winner_name = None #Id du gagnant
-        self.pion_nbr = 4 #Nombre de pions par joueur
+        self.pion_nbr = 9 #Nombre de pions par joueur
         self.first_player = None
         self.second_player = None
 
@@ -108,6 +108,14 @@ class Player_manager(Setup_manager):
         else:
             #print("Player BLUE just played")
             return self.second_player.get_color()
+    def ennemy_player_color(self):
+        """
+            Rien de compliqué. Cette fonction permet de connaitre la couleur du joueur adverse
+        """
+        if self.who_play == 0:
+            return self.second_player.get_color()
+        else:
+            return self.first_player.get_color()
     def current_player_dict(self):
         """
             Rien de compliqué. Cette fonction permet de connaitre le dictionnaire du joueur en cours
@@ -446,6 +454,20 @@ class Board(Player_manager):
                 avec l'autre noeud. L'echange a lieu que si et seulement si L'UN des deux noeuds est vide
         """
         if isinstance(node_data_1["piece"],pion_classe.Pion) and isinstance(node_data_2["piece"],pion_classe.Pion):
+            if node_data_1["id"] in self.current_player_dict():
+                node_data_1["piece"].setColor(self.current_player_color())
+                node_data_1["color"] = node_data_1["piece"].getColor()
+            elif node_data_2["id"] in self.ennemy_player_dict():
+                node_data_1["piece"].setColor(self.ennemy_player_color())
+                node_data_1["color"] = node_data_1["piece"].getColor()
+
+            if node_data_2["id"] in self.current_player_dict():
+                node_data_2["piece"].setColor(self.current_player_color())
+                node_data_2["color"] = node_data_2["piece"].getColor()
+            elif node_data_2["id"] in self.ennemy_player_dict():
+                node_data_2["piece"].setColor(self.ennemy_player_color())
+                node_data_2["color"] = node_data_2["piece"].getColor()
+
             color_1 = node_data_1["piece"].getColor()
             color_2 = node_data_2["piece"].getColor()
             if (color_1 == BRWON and color_2 == BRWON) :
@@ -453,7 +475,7 @@ class Board(Player_manager):
                 return False
             else:
                 self.print_comparaison(node_data_1,node_data_2,color_1,color_2,is_print)
-                if (color_1 == BRWON or color_2 == BRWON) and (color_1 == self.current_player_color() or color_2 == self.current_player_color()) :
+                if (color_1 == self.current_player_color() and color_2 == BRWON) :
                     #Ici, on échange les pions car on sait que l'un des deux noeuds est vide
                     return True
                 else:
@@ -625,6 +647,14 @@ class Game_copy():
         else:
             #print("Player BLUE just played")
             return self.second_player.get_color()
+    def ennemy_player_color(self):
+        """
+            Rien de compliqué. Cette fonction permet de connaitre la couleur du joueur adverse
+        """
+        if self.who_play == 0:
+            return self.second_player.get_color()
+        else:
+            return self.first_player.get_color()
     def current_player_dict(self):
         """
             Rien de compliqué. Cette fonction permet de connaitre le dictionnaire du joueur en cours
@@ -742,9 +772,10 @@ class Game_copy():
                             neighbour_2_position = neighbour_2_data["rect"].center; neighbour_2_id = neighbour_2_data["id"]
                             if self.nodes_share_same_position(node_data_position,neighbour_1_position,neighbour_2_position):
                                 current_line = [neighbour_1_id,node_data_id,neighbour_2_id]
-                                self.current_player().add_line(current_line)
-                                print(f"    Allignement de 3 pionsseaux en __1__ couches de la même couleur! {current_line}")
-                                print(" game address : ",id(self))
+                                if current_line not in self.current_player().alligned_nodes:
+                                    self.current_player().add_line(current_line)
+                                    print(f"    Allignement de 3 pionsseaux en __1__ couches de la même couleur! {current_line}")
+                                    print(" game address : ",id(self))
                                 return True
 
         ### Si aucune pair de voisins (droite-gauche ou haut-bas) n'est alignée et de même couleur, on retourne False 
@@ -782,9 +813,10 @@ class Game_copy():
                                 neighbour_2_position = neighbour_2_data["rect"].center; neighbour_2_id = neighbour_2_data["id"]
                                 if self.nodes_share_same_position(node_data_position,neighbour_1_position,neighbour_2_position):
                                     current_line = [node_data_id,neighbour_1_id,neighbour_2_id]
-                                    self.current_player().add_line(current_line)
-                                    print(f"    Allignement de 3 pionsseaux en __2__ couches de la même couleur! {current_line}")
-                                    print(" game address : ",id(self))
+                                    if current_line not in self.current_player().alligned_nodes:
+                                        self.current_player().add_line(current_line)
+                                        print(f"    Allignement de 3 pionsseaux en __2__ couches de la même couleur! {current_line}")
+                                        print(" game address : ",id(self))
                                     return True
     def is_in_allignement(self,node_data):
         """
@@ -905,6 +937,20 @@ class Game_copy():
                 avec l'autre noeud. L'echange a lieu que si et seulement si L'UN des deux noeuds est vide
         """
         if isinstance(node_data_1["piece"],pion_classe.Pion) and isinstance(node_data_2["piece"],pion_classe.Pion):
+            if node_data_1["id"] in self.current_player_dict():
+                node_data_1["piece"].setColor(self.current_player_color())
+                node_data_1["color"] = node_data_1["piece"].getColor()
+            elif node_data_2["id"] in self.ennemy_player_dict():
+                node_data_1["piece"].setColor(self.ennemy_player_color())
+                node_data_1["color"] = node_data_1["piece"].getColor()
+
+            if node_data_2["id"] in self.current_player_dict():
+                node_data_2["piece"].setColor(self.current_player_color())
+                node_data_2["color"] = node_data_2["piece"].getColor()
+            elif node_data_2["id"] in self.ennemy_player_dict():
+                node_data_2["piece"].setColor(self.ennemy_player_color())
+                node_data_2["color"] = node_data_2["piece"].getColor()
+
             color_1 = node_data_1["piece"].getColor()
             color_2 = node_data_2["piece"].getColor()
             if (color_1 == BRWON and color_2 == BRWON) :
@@ -912,7 +958,7 @@ class Game_copy():
                 return False
             else:
                 self.print_comparaison(node_data_1,node_data_2,color_1,color_2,is_print)
-                if (color_1 == BRWON or color_2 == BRWON) and (color_1 == self.current_player_color() or color_2 == self.current_player_color()) :
+                if (color_1 == self.current_player_color() and color_2 == BRWON)  :
                     #Ici, on échange les pions car on sait que l'un des deux noeuds est vide
                     return True
                 else:

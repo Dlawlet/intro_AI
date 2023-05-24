@@ -90,16 +90,26 @@ class Minimax_IA(Player_IA):
                 print("ssssssssssssssssssssssssssssssssssssssssssssssssssssssssss")
                 print(node_data)
                 out = False
+                print(f"date c'est {node_data['id']} qui est selectionné  et neigbour est {node_data['neighbours']}")
                 for neigbour_id in node_data["neighbours"]:
+                    print(f"neigbour_id est {neigbour_id}")
                     for line in cp_board.current_player().alligned_nodes:
-                        if node_data not in line:
+                        print(f"line est {line}")
+                        if node_data["id"] not in line:
+                            print("le noeud n'est pas dans la ligne")
+                            print(f'longueur alligned_nodes: {len(cp_board.current_player().alligned_nodes)}')
                             cp_board.is_in_allignement(node_data)
-                            if cp_board.piece_can_switch(node_data,self.game.nodes[neigbour_id]):
+                            #check if neighbour is brown 
+                            if cp_board.nodes[neigbour_id]["piece"].getColor() == BRWON and cp_board.piece_can_switch(node_data,self.game.nodes[neigbour_id]) :
+                                print("le noeud peut switch")
                                 cp_board.temp_list.append(node_data)
                                 cp_board.temp_list.append(self.game.nodes[neigbour_id])
                                 cp_board.switch_pieces_nodes()
                                 out = True
                                 cp_board.temp_list = []
+                                cp_board.reset_piece_color(node_data)
+                                cp_board.current_player().delete_node(node_data["id"])
+                                print("aaaaaaaaaa")
                                 break
                             
                     if out :
@@ -155,7 +165,7 @@ class Minimax_IA(Player_IA):
         """
         print("dans le play_phase_0_IA")
         possibles_moves = self.game.get_accessible_nodes_data()
-        self.depth = 3
+        
         node_data = self.minimax(self.depth, -math.inf, math.inf, True, True,0, possibles_moves, self.mode, self.game)[0]
         self.game.reset_piece_color(node_data)
         self.game.current_player().delete_node(node_data["id"])
@@ -218,6 +228,7 @@ class Minimax_IA(Player_IA):
         """
         print(f"l'IA va jouer")
         self.game = game
+        self.depth = 2
         
         if(self.game.phase == 0):
             print(f"l'IA est dans la phase 0")
